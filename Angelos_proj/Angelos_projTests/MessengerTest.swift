@@ -11,6 +11,8 @@ import XCTest
 
 class MessengerTest: XCTestCase {
     
+    let messenger = Messenger()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -22,9 +24,20 @@ class MessengerTest: XCTestCase {
     }
     
     func testHasAccountSID() {
-        let messenger = Messenger()
         let result = messenger.accountSID
         let testKey = "AC8206e0751f9153124ba52132eeb775f8"
         XCTAssertEqual(result, testKey)
+    }
+    
+    func testHasAuthKey() {
+        let result = messenger.auth
+        let testAuth = "aa5b353dbfeb13c707f1bc7d7e65bcdd"
+        XCTAssertEqual(result, testAuth)
+    }
+    
+    func testHasUrl() {
+        let result = messenger.url
+        let testUrl = "https://api.twilio.com/2010-04-01/Accounts/AC8206e0751f9153124ba52132eeb775f8/Messages"
+        XCTAssertEqual(result, testUrl)
     }
 }
