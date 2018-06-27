@@ -12,7 +12,19 @@
 		0AB4D65620E2932C00BCCF61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65420E2932C00BCCF61 /* Main.storyboard */; };
 		0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65720E2932D00BCCF61 /* Assets.xcassets */; };
 		0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */; };
+		C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA0920E3984200240BE0 /* Messenger.swift */; };
+		C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA1920E39B1800240BE0 /* MessengerTest.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C114DA1420E39A6900240BE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0AB4D64520E2932C00BCCF61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0AB4D64C20E2932C00BCCF61;
+			remoteInfo = Angelos_proj;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		0AB4D64D20E2932C00BCCF61 /* Angelos_proj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Angelos_proj.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +34,21 @@
 		0AB4D65720E2932D00BCCF61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0AB4D65A20E2932D00BCCF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AB4D65C20E2932D00BCCF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C114DA0920E3984200240BE0 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
+		C114DA0F20E39A6900240BE0 /* Angelos_projTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Angelos_projTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C114DA1320E39A6900240BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C114DA1920E39B1800240BE0 /* MessengerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessengerTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		0AB4D64A20E2932C00BCCF61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C114DA0C20E39A6900240BE0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +62,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB4D64F20E2932C00BCCF61 /* Angelos_proj */,
+				C114DA1020E39A6900240BE0 /* Angelos_projTests */,
 				0AB4D64E20E2932C00BCCF61 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +71,7 @@
 			isa = PBXGroup;
 			children = (
 				0AB4D64D20E2932C00BCCF61 /* Angelos_proj.app */,
+				C114DA0F20E39A6900240BE0 /* Angelos_projTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,8 +85,18 @@
 				0AB4D65720E2932D00BCCF61 /* Assets.xcassets */,
 				0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */,
 				0AB4D65C20E2932D00BCCF61 /* Info.plist */,
+				C114DA0920E3984200240BE0 /* Messenger.swift */,
 			);
 			path = Angelos_proj;
+			sourceTree = "<group>";
+		};
+		C114DA1020E39A6900240BE0 /* Angelos_projTests */ = {
+			isa = PBXGroup;
+			children = (
+				C114DA1320E39A6900240BE0 /* Info.plist */,
+				C114DA1920E39B1800240BE0 /* MessengerTest.swift */,
+			);
+			path = Angelos_projTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +119,24 @@
 			productReference = 0AB4D64D20E2932C00BCCF61 /* Angelos_proj.app */;
 			productType = "com.apple.product-type.application";
 		};
+		C114DA0E20E39A6900240BE0 /* Angelos_projTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C114DA1620E39A6900240BE0 /* Build configuration list for PBXNativeTarget "Angelos_projTests" */;
+			buildPhases = (
+				C114DA0B20E39A6900240BE0 /* Sources */,
+				C114DA0C20E39A6900240BE0 /* Frameworks */,
+				C114DA0D20E39A6900240BE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C114DA1520E39A6900240BE0 /* PBXTargetDependency */,
+			);
+			name = Angelos_projTests;
+			productName = Angelos_projTests;
+			productReference = C114DA0F20E39A6900240BE0 /* Angelos_projTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -96,6 +149,10 @@
 				TargetAttributes = {
 					0AB4D64C20E2932C00BCCF61 = {
 						CreatedOnToolsVersion = 9.4.1;
+					};
+					C114DA0E20E39A6900240BE0 = {
+						CreatedOnToolsVersion = 9.4.1;
+						TestTargetID = 0AB4D64C20E2932C00BCCF61;
 					};
 				};
 			};
@@ -113,6 +170,7 @@
 			projectRoot = "";
 			targets = (
 				0AB4D64C20E2932C00BCCF61 /* Angelos_proj */,
+				C114DA0E20E39A6900240BE0 /* Angelos_projTests */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +186,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C114DA0D20E39A6900240BE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -136,11 +201,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				0AB4D65320E2932C00BCCF61 /* ViewController.swift in Sources */,
+				C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */,
 				0AB4D65120E2932C00BCCF61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C114DA0B20E39A6900240BE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C114DA1520E39A6900240BE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0AB4D64C20E2932C00BCCF61 /* Angelos_proj */;
+			targetProxy = C114DA1420E39A6900240BE0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0AB4D65420E2932C00BCCF61 /* Main.storyboard */ = {
@@ -310,6 +392,44 @@
 			};
 			name = Release;
 		};
+		C114DA1720E39A6900240BE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Angelos_projTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dioneestabillo.Angelos-projTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Angelos_proj.app/Angelos_proj";
+			};
+			name = Debug;
+		};
+		C114DA1820E39A6900240BE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Angelos_projTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.dioneestabillo.Angelos-projTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Angelos_proj.app/Angelos_proj";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -327,6 +447,15 @@
 			buildConfigurations = (
 				0AB4D66020E2932D00BCCF61 /* Debug */,
 				0AB4D66120E2932D00BCCF61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C114DA1620E39A6900240BE0 /* Build configuration list for PBXNativeTarget "Angelos_projTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C114DA1720E39A6900240BE0 /* Debug */,
+				C114DA1820E39A6900240BE0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
