@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Messenger
+@testable import Angelos_proj
 
 class MessengerTest: XCTestCase {
     
@@ -20,5 +20,11 @@ class MessengerTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
-
+    
+    func testHasAccountSID() {
+        let messenger = Messenger()
+        let result = messenger.accountSID
+        let testKey = "AC8206e0751f9153124ba52132eeb775f8"
+        XCTAssertEqual(result, testKey)
+    }
 }
