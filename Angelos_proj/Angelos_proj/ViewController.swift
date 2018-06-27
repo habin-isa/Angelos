@@ -19,7 +19,9 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    @IBAction func clickSos(sender: UIButton) {
+        var messenger = Messenger()
+        messenger.sendMessage()
+    }
 }
 
