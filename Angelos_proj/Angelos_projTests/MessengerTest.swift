@@ -47,9 +47,15 @@ class MessengerTest: XCTestCase {
         XCTAssertEqual(result, testParameters)
     }
     
-    func testSendMessageFunctionIsCalled() {
-        var counter = 0
-        MockAlamo.request
-        XCTAssertEqual(counter, 1)
-    }
+//    func testSendMessageFunctionIsCalled() {
+//        class MockAlamo {
+//            var counter = 0
+//            func request() -> Void {
+//                self.counter += 1
+//            }
+//        }
+//        var mock = MockAlamo()
+//        messenger.sendMessage(defaultLib: mock)
+//        XCTAssertEqual(mock.counter, 1)
+//    }
 }
