@@ -40,13 +40,13 @@ class MessengerTest: XCTestCase {
         let testUrl = "https://api.twilio.com/2010-04-01/Accounts/AC8206e0751f9153124ba52132eeb775f8/Messages"
         XCTAssertEqual(result, testUrl)
     }
-    
-    func testHasParameters() {
-        let result = messenger.parameters
-        let testParameters = ["From": "+441423740326", "To": "+447891721675", "Body": "Send me noodles"]
-        XCTAssertEqual(result, testParameters)
-    }
-    
+
+//    func testHasParameters() {
+//        let result = messenger.parameters
+//        let testParameters = ["From": "+441423740326", "To": "+447891721675", "Body": "Send me noodles"]
+//        XCTAssertEqual(result, testParameters)
+//    }
+
 //    func testSendMessageFunctionIsCalled() {
 //        class MockAlamo {
 //            var counter = 0

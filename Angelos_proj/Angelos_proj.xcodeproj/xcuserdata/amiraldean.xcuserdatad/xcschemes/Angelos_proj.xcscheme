@@ -71,6 +71,18 @@
             ReferencedContainer = "container:Angelos_proj.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "TWILIO_SID"
+            value = "AC8206e0751f9153124ba52132eeb775f8"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+         <EnvironmentVariable
+            key = "TWILIO_AUTH"
+            value = "aa5b353dbfeb13c707f1bc7d7e65bcdd"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
