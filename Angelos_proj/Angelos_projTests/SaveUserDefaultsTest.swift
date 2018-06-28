@@ -20,7 +20,7 @@ class SaveUserDefaultsTest: QuickSpec {
         describe("saving defaults") {
             context("saving the name") {
                 it("adds the name as a key value pair") {
-                    suject.saveName(name: "Charly")
+                    subject.saveName(name: "Charly")
                     expect(subject.userInfo["nameKey"]).to(equal("Charly"))
                 }
             }

@@ -8,4 +8,10 @@
 
 import Foundation
 
-class SaveUserDefaults {}
+class SaveUserDefaults {
+    var userInfo: [String: String] = [:]
+    
+    func saveName(name: String) {
+        userInfo.updateValue(name, forKey: "nameKey")
+    }
+}
