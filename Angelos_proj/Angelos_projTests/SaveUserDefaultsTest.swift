@@ -15,6 +15,7 @@ import Nimble
 
 class SaveUserDefaultsTest: QuickSpec {
     override func spec() {
-        super.setUp()
+        let subject = SaveUserDefaults()
+        
     }
 }

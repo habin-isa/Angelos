@@ -19,6 +19,7 @@
 		7E780A2220E4CF9000975F5C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A2120E4CF9000975F5C /* Alamofire.framework */; };
 		9CB54EF578267012F3F59FDA /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */; };
 		B20FDCD820E4F6820073E349 /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FDCD720E4F6820073E349 /* SaveUserDefaultsTest.swift */; };
+		B20FDCDA20E4F7C30073E349 /* SaveUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = B20FDCD920E4F7C30073E349 /* SaveUserDefaults.swift */; };
 		C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA0920E3984200240BE0 /* Messenger.swift */; };
 		C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA1920E39B1800240BE0 /* MessengerTest.swift */; };
 /* End PBXBuildFile section */
@@ -53,6 +54,7 @@
 		A12F6825BFCCD3F09EBBB98D /* Pods_Angelos_proj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_proj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA80C47637919B2E4C0BAF /* Pods-Angelos_proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.release.xcconfig"; sourceTree = "<group>"; };
 		B20FDCD720E4F6820073E349 /* SaveUserDefaultsTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserDefaultsTest.swift; sourceTree = "<group>"; };
+		B20FDCD920E4F7C30073E349 /* SaveUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveUserDefaults.swift; sourceTree = "<group>"; };
 		BFF541B5B4257269A8B04F37 /* Pods-Angelos_projTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_projTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C114DA0920E3984200240BE0 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		C114DA0F20E39A6900240BE0 /* Angelos_projTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Angelos_projTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +115,7 @@
 				0AB4D65C20E2932D00BCCF61 /* Info.plist */,
 				C114DA0920E3984200240BE0 /* Messenger.swift */,
 				7E780A0C20E42BE500975F5C /* Alamo.swift */,
+				B20FDCD920E4F7C30073E349 /* SaveUserDefaults.swift */,
 			);
 			path = Angelos_proj;
 			sourceTree = "<group>";
@@ -337,6 +340,7 @@
 				7E780A0D20E42BE500975F5C /* Alamo.swift in Sources */,
 				0AB4D65320E2932C00BCCF61 /* ViewController.swift in Sources */,
 				C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */,
+				B20FDCDA20E4F7C30073E349 /* SaveUserDefaults.swift in Sources */,
 				0AB4D65120E2932C00BCCF61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
