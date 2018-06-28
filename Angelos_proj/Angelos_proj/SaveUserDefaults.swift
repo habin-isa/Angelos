@@ -10,9 +10,10 @@ import Foundation
 
 class SaveUserDefaults {
     var userInfo: [String: String] = [:]
+    let defaults = UserDefaults.standard
     
     func saveName(name: String) {
-        userInfo.updateValue(name, forKey: "nameKey")
+        defaults.setValue(name, forKey: "nameKey")
     }
     
     func saveNumber(number: String) {
