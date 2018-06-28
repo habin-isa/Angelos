@@ -17,24 +17,38 @@ class SaveUserDefaultsTest: QuickSpec {
     override func spec() {
         let subject = SaveUserDefaults()
         
-        describe("saving defaults") {
-            context("testing the defaults") {
+        describe("SaveUserDefaults") {
+            
+            describe("Default property") {
                 it("has an attribute called defaults") {
                     expect(subject.defaults).to(equal(UserDefaults.standard))
                 }
             }
-            context("saving the name") {
+            describe("#setName") {
                 it("sets the name attribute") {
-                    subject.saveName(name: "Muzzi")
+                    subject.setName(name: "Muzzi")
                     expect(subject.defaults.string(forKey: "nameKey")).to(equal("Muzzi"))
                 }
             }
-            context("saving the number") {
+            describe("#setNumber") {
                 it("sets the number attribute") {
-                    subject.saveNumber(number: "+447794991234")
+                    subject.setNumber(number: "+447794991234")
                     expect(subject.defaults.string(forKey: "numberKey")).to(equal("+447794991234"))
                 }
             }
+            describe("#getName") {
+                it("returns the name attribute") {
+                    subject.setName(name: "Muzzi")
+                    expect(subject.getName()).to(equal("Muzzi"))
+                }
+            }
+            describe("#getNumber") {
+                it("returns the number attribute") {
+                    subject.setNumber(number: "+447794991234")
+                    expect(subject.getNumber()).to(equal("+447794991234"))
+                }
+            }
+            
         }
     }
 }

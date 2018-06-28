@@ -11,11 +11,18 @@ import Foundation
 class SaveUserDefaults {
     let defaults = UserDefaults.standard
     
-    func saveName(name: String) {
+    func setName(name: String) {
         defaults.setValue(name, forKey: "nameKey")
     }
     
-    func saveNumber(number: String) {
+    func setNumber(number: String) {
         defaults.setValue(number, forKey: "numberKey")
+    }
+    
+    func getName() -> String {
+        return defaults.string(forKey: "nameKey")!
+    }
+    func getNumber() -> String {
+        return defaults.string(forKey: "numberKey")!
     }
 }
