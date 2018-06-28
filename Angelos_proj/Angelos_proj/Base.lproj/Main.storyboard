@@ -68,14 +68,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Je-wp-a9w">
-                                <rect key="frame" x="166" y="500" width="42" height="21"/>
+                                <rect key="frame" x="104" y="500" width="172" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fjo-r9-Ff5">
-                                <rect key="frame" x="166" y="451" width="42" height="21"/>
+                                <rect key="frame" x="104" y="451" width="187" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -86,9 +86,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="nameInputField" destination="g0W-ya-xY4" id="Bak-9j-uS7"/>
+                        <outlet property="nameInputField" destination="ReW-FW-P02" id="Oir-Im-8UH"/>
                         <outlet property="nameOutputField" destination="4Je-wp-a9w" id="xHX-qo-9zq"/>
-                        <outlet property="numberInputField" destination="ReW-FW-P02" id="qmF-tD-f7K"/>
+                        <outlet property="numberInputField" destination="g0W-ya-xY4" id="ZhH-bK-aEl"/>
                         <outlet property="numberOutputField" destination="Fjo-r9-Ff5" id="ybL-GT-3n7"/>
                     </connections>
                 </viewController>
