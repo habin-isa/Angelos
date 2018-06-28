@@ -1,5 +1,19 @@
 # Angelos
-Final 2 week project @ Makers 
+This is our final 2 week project at Makers Academy.
+An app that allows a user to enter an emergency contact, then press a discrete button to alert their given contact in an emergency.
+
+## Technologies Used
+* Swift
+* XCode
+* CocoaPods - Nimble, Quick, Alamofire
+* Twilio API
+
+## Using the App
+* Clone the repo
+* Pod install
+* Plug in an Apple device
+* Build and run with your device as the selected target
+* Press Command + U to run tests in Xcode
 
 ## Contributors
 * Muzzi Aldean https://github.com/muzzi92
