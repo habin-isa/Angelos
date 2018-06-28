@@ -29,3 +29,10 @@ At our morning stand up we discussed our progress from the previous day, talked 
 
 * Dione and Muzzi worked on Twilio
 * Charly, Jess and Habin began TDDing the domain
+
+### Day 4
+
+We began day 4 by talking through the previous day's work, and dividing the responsibilities for that day. We decided that one group would finish TDDing the basic functionality required to meet our MVP, while the next pair would move on to building a new feature.
+
+* Muzzi, Charly and Dione TDDd the model, view and controller to meet the MVP
+* Jess and Habin worked out how to implement a location sharing feature
