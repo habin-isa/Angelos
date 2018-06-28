@@ -1,0 +1,6 @@
+framework module Pods_Angelos_projTests {
+  umbrella header "Pods-Angelos_projTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

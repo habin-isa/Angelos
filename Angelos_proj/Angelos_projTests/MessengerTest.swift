@@ -7,9 +7,12 @@
 //
 
 import XCTest
-@testable import Messenger
+import Alamofire
+@testable import Angelos_proj
 
 class MessengerTest: XCTestCase {
+    
+    let messenger = Messenger()
     
     override func setUp() {
         super.setUp()
@@ -20,5 +23,22 @@ class MessengerTest: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+    
+    func testHasAccountSID() {
+        let result = messenger.accountSID
+        let testKey = "AC8206e0751f9153124ba52132eeb775f8"
+        XCTAssertEqual(result, testKey)
+    }
+    
+    func testHasAuthKey() {
+        let result = messenger.auth
+        let testAuth = "aa5b353dbfeb13c707f1bc7d7e65bcdd"
+        XCTAssertEqual(result, testAuth)
+    }
 
+    func testSendMessageFunctionIsCalled() {
+        let mockAlamo = MockAlamo()
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo)
+        XCTAssertEqual(mockAlamo.counter, 1)
+    }
 }

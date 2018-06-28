@@ -1,0 +1,6 @@
+framework module Pods_Angelos_proj {
+  umbrella header "Pods-Angelos_proj-umbrella.h"
+
+  export *
+  module * { export * }
+}
