@@ -7,6 +7,7 @@
 //
 
 import XCTest
+import Alamofire
 @testable import Angelos_proj
 
 class MessengerTest: XCTestCase {
@@ -34,28 +35,10 @@ class MessengerTest: XCTestCase {
         let testAuth = "aa5b353dbfeb13c707f1bc7d7e65bcdd"
         XCTAssertEqual(result, testAuth)
     }
-    
-    func testHasUrl() {
-        let result = messenger.url
-        let testUrl = "https://api.twilio.com/2010-04-01/Accounts/AC8206e0751f9153124ba52132eeb775f8/Messages"
-        XCTAssertEqual(result, testUrl)
+
+    func testSendMessageFunctionIsCalled() {
+        let mockAlamo = MockAlamo()
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo)
+        XCTAssertEqual(mockAlamo.counter, 1)
     }
-
-//    func testHasParameters() {
-//        let result = messenger.parameters
-//        let testParameters = ["From": "+441423740326", "To": "+447891721675", "Body": "Send me noodles"]
-//        XCTAssertEqual(result, testParameters)
-//    }
-
-//    func testSendMessageFunctionIsCalled() {
-//        class MockAlamo {
-//            var counter = 0
-//            func request() -> Void {
-//                self.counter += 1
-//            }
-//        }
-//        var mock = MockAlamo()
-//        messenger.sendMessage(defaultLib: mock)
-//        XCTAssertEqual(mock.counter, 1)
-//    }
 }

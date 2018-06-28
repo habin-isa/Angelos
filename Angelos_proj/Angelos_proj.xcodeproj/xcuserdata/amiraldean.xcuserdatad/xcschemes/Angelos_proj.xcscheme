@@ -20,6 +20,20 @@
                ReferencedContainer = "container:Angelos_proj.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C114DA0E20E39A6900240BE0"
+               BuildableName = "Angelos_projTests.xctest"
+               BlueprintName = "Angelos_projTests"
+               ReferencedContainer = "container:Angelos_proj.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

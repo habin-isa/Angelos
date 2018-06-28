@@ -7,19 +7,14 @@
 //
 
 import Foundation
-import Alamofire
 
 class Messenger {
-    var accountSID = "AC8206e0751f9153124ba52132eeb775f8";
-    var auth = "aa5b353dbfeb13c707f1bc7d7e65bcdd";
-    var url = "https://api.twilio.com/2010-04-01/Accounts/AC8206e0751f9153124ba52132eeb775f8/Messages"
+    let accountSID = "AC8206e0751f9153124ba52132eeb775f8";
+    let auth = "aa5b353dbfeb13c707f1bc7d7e65bcdd";
     
-    func sendMessage(phoneNumber:String) -> Void {
-        var parameters = ["From": "+441423740326", "To": phoneNumber, "Body": "Send me noodles"]
-        Alamofire.request(url, method: .post, parameters: parameters)
-            .authenticate(user: accountSID, password: auth)
-            .responseString { response in
-                debugPrint(response)
-        }
+    func sendMessage(phoneNumber:String, alamo:Alamo = Alamo()) -> Void {
+        let url = "https://api.twilio.com/2010-04-01/Accounts/\(accountSID)/Messages"
+        let parameters = ["From": "+441423740326", "To": phoneNumber, "Body": "PLZ SEND HELP NOW"]
+        alamo.request(url: url, parameters: parameters, accountSID: accountSID, auth: auth)
     }
 }
