@@ -14,4 +14,8 @@ class SaveUserDefaults {
     func saveName(name: String) {
         userInfo.updateValue(name, forKey: "nameKey")
     }
+    
+    func saveNumber(number: String) {
+        userInfo.updateValue(number, forKey: "numberKey")
+    }
 }
