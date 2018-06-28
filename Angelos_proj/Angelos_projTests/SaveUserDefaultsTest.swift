@@ -17,5 +17,13 @@ class SaveUserDefaultsTest: QuickSpec {
     override func spec() {
         let subject = SaveUserDefaults()
         
+        describe("saving defaults") {
+            context("saving the name") {
+                it("adds the name as a key value pair") {
+                    suject.saveName(name: "Charly")
+                    expect(subject.userInfo["nameKey"]).to(equal("Charly"))
+                }
+            }
+        }
     }
 }
