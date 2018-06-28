@@ -1,6 +1,5 @@
 # Angelos
-This is our final 2 week project at Makers Academy.
-An app that allows a user to enter an emergency contact, then press a discrete button to alert their given contact in an emergency.
+This is our final 2 week project at Makers Academy. We have built app that allows a user to enter an emergency contact, then press a discrete button to alert their given contact in an emergency.
 
 ## Technologies Used
 * Swift
