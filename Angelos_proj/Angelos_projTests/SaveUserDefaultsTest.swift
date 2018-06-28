@@ -18,17 +18,21 @@ class SaveUserDefaultsTest: QuickSpec {
         let subject = SaveUserDefaults()
         
         describe("saving defaults") {
-            context("saving the user info") {
-                it("adds a number to the userInfo as a key value pair") {
-                    subject.saveNumber(number: "+447794991234")
-                    expect(subject.userInfo["numberKey"]).to(equal("+447794991234"))
-                }
+            context("testing the defaults") {
                 it("has an attribute called defaults") {
                     expect(subject.defaults).to(equal(UserDefaults.standard))
                 }
+            }
+            context("saving the name") {
                 it("sets the name attribute") {
                     subject.saveName(name: "Muzzi")
                     expect(subject.defaults.string(forKey: "nameKey")).to(equal("Muzzi"))
+                }
+            }
+            context("saving the number") {
+                it("sets the number attribute") {
+                    subject.saveNumber(number: "+447794991234")
+                    expect(subject.defaults.string(forKey: "numberKey")).to(equal("+447794991234"))
                 }
             }
         }

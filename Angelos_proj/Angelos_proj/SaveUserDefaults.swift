@@ -9,7 +9,6 @@
 import Foundation
 
 class SaveUserDefaults {
-    var userInfo: [String: String] = [:]
     let defaults = UserDefaults.standard
     
     func saveName(name: String) {
@@ -17,6 +16,6 @@ class SaveUserDefaults {
     }
     
     func saveNumber(number: String) {
-        userInfo.updateValue(number, forKey: "numberKey")
+        defaults.setValue(number, forKey: "numberKey")
     }
 }
