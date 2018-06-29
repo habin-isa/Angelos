@@ -34,7 +34,11 @@ class ViewController: UIViewController {
         Messenger().sendMessage(phoneNumber: number)
     }
     
-
+    @IBAction func clickPolice(_ sender: UIButton) {
+        print(number)
+        Messenger().sendPoliceMessage(phoneNumber: number)
+    }
+    
     @IBAction func clickSubmit(_ sender: Any) -> Void {
         name = nameInputField.text!
         number = numberInputField.text!
@@ -46,6 +50,7 @@ class ViewController: UIViewController {
         
         savedDefault.setName(name: name)
         savedDefault.setNumber(number: number)
+        Messenger().sendEmergencyContactMessage(phoneNumber: number, userName: name)
     }
     @IBOutlet weak var numberOutputField: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
