@@ -9,9 +9,20 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var savedDefault = SaveUserDefaults()
+    var name = ""
+    var number = ""
+    
+        @IBOutlet weak var numberInputField: UITextField!
+        @IBOutlet weak var nameInputField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        name = savedDefault.getName()
+        number = savedDefault.getNumber()
+        nameOutputField.text = "\(name)"
+        numberOutputField.text = "\(number)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -19,8 +30,25 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickSos(sender: UIButton) {
-        Messenger().sendMessage(phoneNumber: "+447891721675")
+        print(number)
+        Messenger().sendMessage(phoneNumber: number)
     }
+    
+
+    @IBAction func clickSubmit(_ sender: Any) -> Void {
+        name = nameInputField.text!
+        number = numberInputField.text!
+        numberInputField.text = ""
+        nameInputField.text = ""
+        
+        numberOutputField.text = "\(number)"
+        nameOutputField.text = "\(name)"
+        
+        savedDefault.setName(name: name)
+        savedDefault.setNumber(number: number)
+    }
+    @IBOutlet weak var numberOutputField: UILabel!
+    @IBOutlet weak var nameOutputField: UILabel!
     
 }
 
