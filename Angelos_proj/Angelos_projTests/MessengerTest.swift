@@ -44,8 +44,8 @@ class MessengerTest: XCTestCase {
         XCTAssertEqual(mockAlamo.counter, 1)
     }
     
-    func testMessageClassHasBody() {
-        let messageBody = "PLZ SEND HELP NOW"
-        expect(self.messenger.body).to(equal(messageBody))
+    func testBodyIsArray() {
+        let messages = ["PLZ SEND HELP NOW", "Call the Police", "Send NOODZ"]
+        expect(self.messenger.messages).to(equal(messages))
     }
 }
