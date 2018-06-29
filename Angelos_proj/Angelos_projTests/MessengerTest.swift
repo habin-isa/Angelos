@@ -8,6 +8,8 @@
 
 import XCTest
 import Alamofire
+import Quick
+import Nimble
 @testable import Angelos_proj
 
 class MessengerTest: XCTestCase {
@@ -40,5 +42,10 @@ class MessengerTest: XCTestCase {
         let mockAlamo = MockAlamo()
         messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo)
         XCTAssertEqual(mockAlamo.counter, 1)
+    }
+    
+    func testMessageClassHasBody() {
+        let messageBody = "PLZ SEND HELP NOW"
+        expect(self.messenger.body).to(equal(messageBody))
     }
 }

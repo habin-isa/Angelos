@@ -11,10 +11,11 @@ import Foundation
 class Messenger {
     let accountSID = "AC8206e0751f9153124ba52132eeb775f8";
     let auth = "aa5b353dbfeb13c707f1bc7d7e65bcdd";
+    let body = "PLZ SEND HELP NOW"
     
     func sendMessage(phoneNumber:String, alamo:Alamo = Alamo()) -> Void {
         let url = "https://api.twilio.com/2010-04-01/Accounts/\(accountSID)/Messages"
-        let parameters = ["From": "+441423740326", "To": phoneNumber, "Body": "PLZ SEND HELP NOW"]
+        let parameters = ["From": "+441423740326", "To": phoneNumber, "Body": body]
         alamo.request(url: url, parameters: parameters, accountSID: accountSID, auth: auth)
     }
 }
