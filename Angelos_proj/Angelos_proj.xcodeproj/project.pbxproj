@@ -18,10 +18,10 @@
 		7E780A2020E4CF8000975F5C /* Pods_Angelos_proj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1F20E4CF8000975F5C /* Pods_Angelos_proj.framework */; };
 		7E780A2220E4CF9000975F5C /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A2120E4CF9000975F5C /* Alamofire.framework */; };
 		9CB54EF578267012F3F59FDA /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */; };
+		B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */; };
 		C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA0920E3984200240BE0 /* Messenger.swift */; };
 		C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA1920E39B1800240BE0 /* MessengerTest.swift */; };
 		C114DA2220E4FE7200240BE0 /* Angelos_projUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA2120E4FE7200240BE0 /* Angelos_projUITests.swift */; };
-		C19436BF20E52D06005FCB24 /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */; };
 		C19436C020E52D1E005FCB24 /* SaveUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BC20E52CE8005FCB24 /* SaveUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
@@ -154,6 +154,7 @@
 		C114DA1020E39A6900240BE0 /* Angelos_projTests */ = {
 			isa = PBXGroup;
 			children = (
+				C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */,
 				C114DA1320E39A6900240BE0 /* Info.plist */,
 				7E780A0E20E42E8E00975F5C /* MockAlamo.swift */,
 				C114DA1920E39B1800240BE0 /* MessengerTest.swift */,
@@ -165,7 +166,6 @@
 			isa = PBXGroup;
 			children = (
 				C114DA2120E4FE7200240BE0 /* Angelos_projUITests.swift */,
-				C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */,
 				C114DA2320E4FE7200240BE0 /* Info.plist */,
 			);
 			path = Angelos_projUITests;
@@ -410,6 +410,7 @@
 			files = (
 				7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */,
 				C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */,
+				B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +419,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C114DA2220E4FE7200240BE0 /* Angelos_projUITests.swift in Sources */,
-				C19436BF20E52D06005FCB24 /* SaveUserDefaultsTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
