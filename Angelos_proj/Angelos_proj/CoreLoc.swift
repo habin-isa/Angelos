@@ -10,7 +10,7 @@ import Foundation
 
 import CoreLocation
 
-class CoreLoc: UIViewController <CLLocationManagerDelegate> {
+class CoreLoc{
     
     let locationManager = CLLocationManager()
     
@@ -21,12 +21,5 @@ class CoreLoc: UIViewController <CLLocationManagerDelegate> {
     func longitude() -> Double {
         return locationManager.location!.coordinate.longitude
     }
-    
-//    func setup() {
-//        locationManager.delegate = self
-//        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//        locationManager.requestWhenInUseAuthorization()
-//        locationManager.startUpdatingLocation()
-//    }
     
 }

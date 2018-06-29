@@ -40,7 +40,7 @@ class MessengerTest: XCTestCase {
 
     func testSendMessageFunctionIsCalled() {
         let mockAlamo = MockAlamo()
-        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo)
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"standard")
         XCTAssertEqual(mockAlamo.counter, 1)
     }
     
@@ -52,12 +52,6 @@ class MessengerTest: XCTestCase {
     func testBodyOfPoliceMessage () {
         let policeBody = "Call the Police"
         expect(self.messenger.messages[1]).to(equal(policeBody))
-    }
-    
-    func testSendPoliceMessageSendsMessage() {
-        let mockAlamo = MockAlamo()
-        messenger.sendPoliceMessage(phoneNumber: "456", alamo: mockAlamo)
-        XCTAssertEqual(mockAlamo.counter, 1)
     }
     
     func testAddedAsEmergencyContactMessageSends() {
