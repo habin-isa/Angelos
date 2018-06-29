@@ -50,7 +50,7 @@ class ViewController: UIViewController {
         
         savedDefault.setName(name: name)
         savedDefault.setNumber(number: number)
-        Messenger().sendEmergencyContactMessage(phoneNumber: number)
+        Messenger().sendEmergencyContactMessage(phoneNumber: number, userName: name)
     }
     @IBOutlet weak var numberOutputField: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
