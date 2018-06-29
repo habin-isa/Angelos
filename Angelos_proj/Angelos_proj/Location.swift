@@ -15,8 +15,6 @@ class Location {
         let latitude = locationManager.latitude()
         let longitude = locationManager.longitude()
         return "http://maps.apple.com/?ll=\(latitude),\(longitude)"
-        http://maps.apple.com/?daddr=50.894967,4.341626&dirflg=d&t=h
     }
-    
     
 }
