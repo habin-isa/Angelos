@@ -12,12 +12,18 @@ import AVFoundation
 
 class Ringer {
     
-    func play(ringtonePlayer: AVAudioPlayer?) {
-        ringtonePlayer?.play()
+    func play(ringtonePlayer: AVAudioPlayer?, time:Double) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: {
+            ringtonePlayer?.play()
+            self.stop(ringtonePlayer: ringtonePlayer, time: time)
+        })
     }
     
-    func stop(ringtonePlayer: AVAudioPlayer?) {
-        ringtonePlayer?.stop()
+    func stop(ringtonePlayer: AVAudioPlayer?, time:Double) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: {
+            ringtonePlayer?.stop()
+        })
     }
+    
     
 }

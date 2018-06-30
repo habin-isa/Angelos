@@ -44,17 +44,12 @@ class ViewController: UIViewController {
     
     @IBAction func clickPolice(_ sender: UIButton) {
         print(number)
-        Messenger().sendMessage(phoneNumber: number, type: "police")
+        Messenger().sendMessage(phoneNumber: number, type: "urgent")
     }
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
         let ringer = Ringer()
-        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
-            ringer.play(ringtonePlayer: self.ringtonePlayer)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
-                ringer.stop(ringtonePlayer: self.ringtonePlayer)
-            })
-        })
+        ringer.play(ringtonePlayer: ringtonePlayer, time: 10)
     }
 
     

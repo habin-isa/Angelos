@@ -14,7 +14,7 @@ class Messenger {
     let messages = ["PLZ SEND HELP NOW", "Call the Police"];
     
     func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String) -> Void {
-        let body = (type == "standard" ? messages[0] : messages[1])
+        let body = (type == "urgent" ? messages[1] : messages[0])
         messageHelper(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
