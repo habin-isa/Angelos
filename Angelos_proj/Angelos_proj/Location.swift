@@ -17,5 +17,4 @@ class Location {
         return "http://maps.apple.com/?ll=\(latitude),\(longitude)"
     }
     
-    
 }

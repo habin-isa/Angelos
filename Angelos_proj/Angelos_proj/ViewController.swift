@@ -39,12 +39,12 @@ class ViewController: UIViewController {
     
     @IBAction func clickSos(sender: UIButton) {
         print(number)
-        Messenger().sendMessage(phoneNumber: number)
+        Messenger().sendMessage(phoneNumber: number, type: "standard")
     }
     
     @IBAction func clickPolice(_ sender: UIButton) {
         print(number)
-        Messenger().sendPoliceMessage(phoneNumber: number)
+        Messenger().sendMessage(phoneNumber: number, type: "police")
     }
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
