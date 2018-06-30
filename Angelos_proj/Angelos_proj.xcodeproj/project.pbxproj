@@ -13,6 +13,7 @@
 		0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65720E2932D00BCCF61 /* Assets.xcassets */; };
 		0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */; };
 		59A375E76ADEE59D5AAFD8AC /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1B20E441B400975F5C /* Pods_Angelos_projTests.framework */; };
+		7E5A95A320E7863400B31564 /* marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E5A95A220E7863400B31564 /* marimba.mp3 */; };
 		7E780A0D20E42BE500975F5C /* Alamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0C20E42BE500975F5C /* Alamo.swift */; };
 		7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0E20E42E8E00975F5C /* MockAlamo.swift */; };
 		7E780A2020E4CF8000975F5C /* Pods_Angelos_proj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1F20E4CF8000975F5C /* Pods_Angelos_proj.framework */; };
@@ -21,6 +22,7 @@
 		7E7F921320E677260028AFA6 /* CoreLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921220E677260028AFA6 /* CoreLoc.swift */; };
 		7E7F921520E6775B0028AFA6 /* MockCoreLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921420E6775B0028AFA6 /* MockCoreLoc.swift */; };
 		7E7F921720E6778D0028AFA6 /* LocationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921620E6778D0028AFA6 /* LocationTest.swift */; };
+		7E7F921920E6D4090028AFA6 /* Ringer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921820E6D4090028AFA6 /* Ringer.swift */; };
 		9CB54EF578267012F3F59FDA /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */; };
 		B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */; };
 		C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA0920E3984200240BE0 /* Messenger.swift */; };
@@ -57,6 +59,7 @@
 		13C5E62FAD7D8DA1BACA46AD /* Pods-Angelos_projTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_projTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests.release.xcconfig"; sourceTree = "<group>"; };
 		14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_projTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B526AE69D4CEFBEF83B431E /* Pods-Angelos_proj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.debug.xcconfig"; sourceTree = "<group>"; };
+		7E5A95A220E7863400B31564 /* marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba.mp3; path = ../../../Downloads/marimba.mp3; sourceTree = "<group>"; };
 		7E780A0C20E42BE500975F5C /* Alamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamo.swift; sourceTree = "<group>"; };
 		7E780A0E20E42E8E00975F5C /* MockAlamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlamo.swift; sourceTree = "<group>"; };
 		7E780A1920E441AB00975F5C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +70,7 @@
 		7E7F921220E677260028AFA6 /* CoreLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreLoc.swift; sourceTree = "<group>"; };
 		7E7F921420E6775B0028AFA6 /* MockCoreLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreLoc.swift; sourceTree = "<group>"; };
 		7E7F921620E6778D0028AFA6 /* LocationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTest.swift; sourceTree = "<group>"; };
+		7E7F921820E6D4090028AFA6 /* Ringer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ringer.swift; sourceTree = "<group>"; };
 		A12F6825BFCCD3F09EBBB98D /* Pods_Angelos_proj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_proj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA80C47637919B2E4C0BAF /* Pods-Angelos_proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.release.xcconfig"; sourceTree = "<group>"; };
 		BFF541B5B4257269A8B04F37 /* Pods-Angelos_projTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_projTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 		0AB4D64420E2932C00BCCF61 = {
 			isa = PBXGroup;
 			children = (
+				7E5A95A220E7863400B31564 /* marimba.mp3 */,
 				0AB4D64F20E2932C00BCCF61 /* Angelos_proj */,
 				C114DA1020E39A6900240BE0 /* Angelos_projTests */,
 				C114DA2020E4FE7200240BE0 /* Angelos_projUITests */,
@@ -146,6 +151,7 @@
 				C19436BC20E52CE8005FCB24 /* SaveUserDefaults.swift */,
 				7E7F921020E676CD0028AFA6 /* Location.swift */,
 				7E7F921220E677260028AFA6 /* CoreLoc.swift */,
+				7E7F921820E6D4090028AFA6 /* Ringer.swift */,
 			);
 			path = Angelos_proj;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E5A95A320E7863400B31564 /* marimba.mp3 in Resources */,
 				0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */,
 				0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */,
 				0AB4D65620E2932C00BCCF61 /* Main.storyboard in Resources */,
@@ -414,6 +421,7 @@
 				7E7F921320E677260028AFA6 /* CoreLoc.swift in Sources */,
 				C19436C020E52D1E005FCB24 /* SaveUserDefaults.swift in Sources */,
 				7E7F921120E676CD0028AFA6 /* Location.swift in Sources */,
+				7E7F921920E6D4090028AFA6 /* Ringer.swift in Sources */,
 				0AB4D65120E2932C00BCCF61 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

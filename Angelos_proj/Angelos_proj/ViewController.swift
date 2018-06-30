@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var ringtonePlayer: AVAudioPlayer?
     
     var savedDefault = SaveUserDefaults()
     var name = ""
@@ -19,6 +22,11 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+         ringtonePlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "marimba.mp3", ofType:nil)!))
+        } catch {}
+        
         name = savedDefault.getName()
         number = savedDefault.getNumber()
         nameOutputField.text = "\(name)"
@@ -38,6 +46,11 @@ class ViewController: UIViewController {
         print(number)
         Messenger().sendPoliceMessage(phoneNumber: number)
     }
+    
+    @IBAction func clickFakeCall(_ sender: UIButton) {
+        Ringer().play(ringtonePlayer: ringtonePlayer)
+    }
+
     
     @IBAction func clickSubmit(_ sender: Any) -> Void {
         name = nameInputField.text!
