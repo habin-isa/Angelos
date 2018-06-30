@@ -48,7 +48,13 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
-        Ringer().play(ringtonePlayer: ringtonePlayer)
+        let ringer = Ringer()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
+            ringer.play(ringtonePlayer: self.ringtonePlayer)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10.0, execute: {
+                ringer.stop(ringtonePlayer: self.ringtonePlayer)
+            })
+        })
     }
 
     
@@ -67,6 +73,7 @@ class ViewController: UIViewController {
     }
     @IBOutlet weak var numberOutputField: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
+    
     
 }
 

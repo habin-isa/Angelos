@@ -16,4 +16,8 @@ class Ringer {
         ringtonePlayer?.play()
     }
     
+    func stop(ringtonePlayer: AVAudioPlayer?) {
+        ringtonePlayer?.stop()
+    }
+    
 }
