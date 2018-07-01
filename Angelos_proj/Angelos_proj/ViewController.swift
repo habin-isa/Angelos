@@ -17,8 +17,11 @@ class ViewController: UIViewController {
     var name = ""
     var number = ""
     
-        @IBOutlet weak var numberInputField: UITextField!
-        @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberInputField: UITextField!
+    @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberOutputField: UILabel!
+    @IBOutlet weak var nameOutputField: UILabel!
+    @IBOutlet weak var timeInputField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,18 +41,18 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickSos(sender: UIButton) {
-        print(number)
-        Messenger().sendMessage(phoneNumber: number, type: "standard")
+        Messenger().sendMessage(phoneNumber: number, type: "standard", userName: name)
     }
     
     @IBAction func clickPolice(_ sender: UIButton) {
-        print(number)
-        Messenger().sendMessage(phoneNumber: number, type: "urgent")
+        Messenger().sendMessage(phoneNumber: number, type: "urgent", userName: name)
     }
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
         let ringer = Ringer()
-        ringer.play(ringtonePlayer: ringtonePlayer, time: 10)
+        var setTime = Double(timeInputField.text!)!
+        timeInputField.text = ""
+        ringer.play(ringtonePlayer: ringtonePlayer, time: setTime)
     }
 
     
@@ -64,10 +67,8 @@ class ViewController: UIViewController {
         
         savedDefault.setName(name: name)
         savedDefault.setNumber(number: number)
-        Messenger().sendEmergencyContactMessage(phoneNumber: number, userName: name)
+        Messenger().sendMessage(phoneNumber: number, type: "inform", userName: name)
     }
-    @IBOutlet weak var numberOutputField: UILabel!
-    @IBOutlet weak var nameOutputField: UILabel!
     
     
 }
