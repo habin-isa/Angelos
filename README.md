@@ -1,5 +1,81 @@
 # Angelos
-This is our final 2 week project at Makers Academy. We have built app that allows a user to enter an emergency contact, then press a discrete button to alert their given contact in an emergency.
+This is our final project at Makers Academy. We have built a mobile app in 10 days that allows a user to discretely alert an emergency contact if they are in danger.
+
+## Contributors
+* Muzzi Aldean https://github.com/muzzi92
+* Dione Estabillo https://github.com/dione-dls
+* Habin Kim https://github.com/habin-isa
+* Jess Stenning https://github.com/jessicastenning
+* Charly Mannion https://github.com/CharlyMannion
+
+## Objectives
+Before getting started and settling on the idea for our final project, our team discussed and defined our objectives for the next two weeks:
+* Build a mobile app
+* Learn swift and xcode
+* Follow a TDD approach 
+* Write clean, readable code and ensure knowledge sharing
+* Follow an agile approach; daily stand-ups, check-ins and retros
+* Pairing and effective team communication
+* Have fun!
+
+## Approach
+* When we had agreed our objectives, we defined the idea for our app
+* We wrote user stories and added them to a trello board
+* With the idea in place, we began exploring the possible technologies
+* We decided to use Swift and Xcode after discussing the alternatives (React Native)
+* The team began exploring Swift and Xcode by writing small applications
+* When we felt we had a basic understanding of the technology, we defined our MVP 
+* We diagrammed the domain model, using an OOP approach
+* We defined our first two day sprint, and began working on tickets in pairs
+* We followed a TDD approach 
+* We stuck to our objectives and had daily stand-ups, check-ins retros, and knowledge sharing sessions
+
+## Challenges
+
+## Reflections
+
+## User Stories
+```
+As a User
+To avoid potentially threatening situations
+I can discreetly alert a friend via text message
+
+As a User 
+To let my emergency contact know who is in trouble
+I can enter my name into the application
+
+As a User 
+To send an alert to someone
+I can enter a friends phone number
+
+As a user
+So that it is not obvious that I am using the app
+I want it to be disguised
+
+As a user
+So my emergency contact knows they are my emergency contact
+I want to be able to send an inform message that includes my name
+
+As a user 
+So that I can send messages of differing levels of distress
+I want to be able to choose from different messages
+
+As a user
+So I can give more detail about my situation
+I want to be able to write a custom message
+
+As a user 
+So my emergency contact knows where I am
+I want the text to include my location
+
+As a user,
+So I am able to help myself if my contact does not respond
+I want to be able to initiate a fake phone call
+```
+
+## Code Snippet
+
+## Test Coverage
 
 ## Technologies Used
 * Swift
@@ -13,13 +89,6 @@ This is our final 2 week project at Makers Academy. We have built app that allow
 * Plug in an Apple device
 * Build and run with your device as the selected target
 * Press Command + U to run tests in Xcode
-
-## Contributors
-* Muzzi Aldean https://github.com/muzzi92
-* Dione Estabillo https://github.com/dione-dls
-* Habin Kim https://github.com/habin-isa
-* Jess Stenning https://github.com/jessicastenning
-* Charly Mannion https://github.com/CharlyMannion
 
 ## Week One
 
@@ -57,3 +126,7 @@ Now that we had our MVP (a user could open the app, enter their name and an emer
 * Jess and Muzzi continued working on the location feature
 * Dione and Charly added functionality to send multiple message types 
 * Habin began working on the disguise feature 
+
+## Week 2
+
+### Day 6
