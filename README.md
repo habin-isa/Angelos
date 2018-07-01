@@ -30,10 +30,6 @@ Before getting started and settling on the idea for our final project, our team 
 * We followed a TDD approach 
 * We stuck to our objectives and had daily stand-ups, check-ins retros, and knowledge sharing sessions
 
-## Challenges
-
-## Reflections
-
 ## User Stories
 ```
 As a User
@@ -84,10 +80,20 @@ I want to be able to initiate a fake phone call
 * Twilio API
 
 ## Using the App
-* Clone the repo
-* Pod install
+* Clone the repo: https://github.com/habin-isa/Angelos
+* In your terminal type:
+```
+gem install cocoapods
+
+install cocoapods
+
+open Angelos_proj.xcworkspace
+```
 * Plug in an Apple device
 * Build and run with your device as the selected target
+* Press Command + U to run tests in Xcode
+
+## Running Tests
 * Press Command + U to run tests in Xcode
 
 ## Week One
