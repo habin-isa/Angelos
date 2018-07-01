@@ -91,7 +91,6 @@ open Angelos_proj.xcworkspace
 ```
 * Plug in an Apple device
 * Build and run with your device as the selected target
-* Press Command + U to run tests in Xcode
 
 ## Running Tests
 * Press Command + U to run tests in Xcode
