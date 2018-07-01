@@ -49,3 +49,11 @@ We began day 4 by talking through the previous day's work, and dividing the resp
 
 * Muzzi, Charly and Dione TDDd the model, view and controller to meet the MVP
 * Jess and Habin worked out how to implement a location sharing feature
+
+### Day 5
+
+Now that we had our MVP (a user could open the app, enter their name and an emergency contact number that would persist, and discretely send a text) Friday morning's stand up was spent planning other features that we wanted to implement. We decided to focus on tasks that we felt we could complete before the weekend, then define another two day sprint on Monday morning which would take us to Tuesday's feature freeze,
+
+* Jess and Muzzi continued working on the location feature
+* Dione and Charly added functionality to send multiple message types 
+* Habin began working on the disguise feature 
