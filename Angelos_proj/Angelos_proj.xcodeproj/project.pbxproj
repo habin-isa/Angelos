@@ -13,7 +13,6 @@
 		0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65720E2932D00BCCF61 /* Assets.xcassets */; };
 		0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */; };
 		59A375E76ADEE59D5AAFD8AC /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1B20E441B400975F5C /* Pods_Angelos_projTests.framework */; };
-		7E5A95A320E7863400B31564 /* marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E5A95A220E7863400B31564 /* marimba.mp3 */; };
 		7E5A95B120E9545800B31564 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5A95B020E9545800B31564 /* ViewControllerTest.swift */; };
 		7E780A0D20E42BE500975F5C /* Alamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0C20E42BE500975F5C /* Alamo.swift */; };
 		7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0E20E42E8E00975F5C /* MockAlamo.swift */; };
@@ -30,6 +29,7 @@
 		C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA1920E39B1800240BE0 /* MessengerTest.swift */; };
 		C114DA2220E4FE7200240BE0 /* Angelos_projUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA2120E4FE7200240BE0 /* Angelos_projUITests.swift */; };
 		C19436C020E52D1E005FCB24 /* SaveUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BC20E52CE8005FCB24 /* SaveUserDefaults.swift */; };
+		E63C803620EA3FCC002A2D0A /* marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E63C803520EA3FCC002A2D0A /* marimba.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +85,7 @@
 		C114DA2320E4FE7200240BE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C19436BC20E52CE8005FCB24 /* SaveUserDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveUserDefaults.swift; path = Angelos_proj/SaveUserDefaults.swift; sourceTree = SOURCE_ROOT; };
 		C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SaveUserDefaultsTest.swift; path = Angelos_projTests/SaveUserDefaultsTest.swift; sourceTree = SOURCE_ROOT; };
+		E63C803520EA3FCC002A2D0A /* marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba.mp3; path = ../../../../Desktop/marimba.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				7E5A95A220E7863400B31564 /* marimba.mp3 */,
+				E63C803520EA3FCC002A2D0A /* marimba.mp3 */,
 				0AB4D64F20E2932C00BCCF61 /* Angelos_proj */,
 				C114DA1020E39A6900240BE0 /* Angelos_projTests */,
 				C114DA2020E4FE7200240BE0 /* Angelos_projUITests */,
@@ -313,7 +315,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E5A95A320E7863400B31564 /* marimba.mp3 in Resources */,
+				E63C803620EA3FCC002A2D0A /* marimba.mp3 in Resources */,
 				0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */,
 				0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */,
 				0AB4D65620E2932C00BCCF61 /* Main.storyboard in Resources */,
