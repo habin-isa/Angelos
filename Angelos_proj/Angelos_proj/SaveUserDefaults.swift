@@ -64,7 +64,7 @@ class SaveUserDefaults {
     }
     
     func getCustomMessage() -> String {
-        if let customMessage = defaults.string(forKey: "customMessagekey") {
+        if let customMessage = defaults.string(forKey: "customMessageKey") {
             return customMessage
         } else {
             return("Not nil")
