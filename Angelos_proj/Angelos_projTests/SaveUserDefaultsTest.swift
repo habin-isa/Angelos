@@ -30,9 +30,9 @@ class SaveUserDefaultsTest: QuickSpec {
                     expect(subject.defaults.string(forKey: "nameKey")).to(equal("Muzzi"))
                 }
             }
-            describe("#setNumber") {
+            describe("#setNumber1") {
                 it("sets the number attribute") {
-                    subject.setNumber(number: "+447794991234")
+                    subject.setNumber1(number: "+447794991234")
                     expect(subject.defaults.string(forKey: "numberKey")).to(equal("+447794991234"))
                 }
             }
@@ -68,8 +68,8 @@ class SaveUserDefaultsTest: QuickSpec {
             }
             describe("#getNumber") {
                 it("returns the number attribute") {
-                    subject.setNumber(number: "+447794991234")
-                    expect(subject.getNumber()).to(equal("+447794991234"))
+                    subject.setNumber1(number: "+447794991234")
+                    expect(subject.getNumber1()).to(equal("+447794991234"))
                 }
             }
             describe("#getName2") {
