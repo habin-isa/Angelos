@@ -64,6 +64,12 @@ class ViewController: UIViewController {
         Messenger().sendMessage(phoneNumber: number3, type: "urgent", userName: name)
     }
     
+    @IBAction func clickCustom(_ sender: UIButton) {
+        print(number1, number2, number3)
+        Messenger().sendCustomMessage(phoneNumber: number1, userName: name, customMessage: customMessage)
+        Messenger().sendCustomMessage(phoneNumber: number2, userName: name, customMessage: customMessage)
+        Messenger().sendCustomMessage(phoneNumber: number3, userName: name, customMessage: customMessage)
+    }
     
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
