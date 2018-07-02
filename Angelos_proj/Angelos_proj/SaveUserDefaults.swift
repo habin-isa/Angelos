@@ -58,5 +58,9 @@ class SaveUserDefaults {
             return("Not nil")
         }
     }
+    
+    func setCustomMessage(customMessage: String) {
+        defaults.setValue(customMessage, forKey: "customMessageKey")
+    }
 
 }
