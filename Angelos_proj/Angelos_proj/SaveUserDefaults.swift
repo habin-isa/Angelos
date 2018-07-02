@@ -15,8 +15,16 @@ class SaveUserDefaults {
         defaults.setValue(name, forKey: "nameKey")
     }
     
+    func setName2(name: String) {
+        defaults.setValue(name, forKey: "nameKey2")
+    }
+    
     func setNumber(number: String) {
         defaults.setValue(number, forKey: "numberKey")
+    }
+    
+    func setNumber2(number: String) {
+        defaults.setValue(number, forKey: "numberKey2")
     }
     
     func getName() -> String {
@@ -24,5 +32,12 @@ class SaveUserDefaults {
     }
     func getNumber() -> String {
         return defaults.string(forKey: "numberKey")!
+    }
+    
+    func getName2() -> String {
+        return defaults.string(forKey: "nameKey2")!
+    }
+    func getNumber2() -> String {
+        return defaults.string(forKey: "numberKey2")!
     }
 }
