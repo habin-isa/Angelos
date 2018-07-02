@@ -21,6 +21,13 @@ class Messenger {
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
+    func SendCustomMessage(phoneNumber:String, alamo:Alamo = Alamo(), userName:String, customMessage:String) -> Void {
+        var body:String
+        body = customMessage
+        body += userName
+        sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
+    }
+    
     func sendRequest(phoneNumber:String, body:String, alamo:Alamo) {
         let url = "https://api.twilio.com/2010-04-01/Accounts/\(accountSID)/Messages"
         let parameters = ["From": "+441423740326", "To": phoneNumber, "Body": body]
