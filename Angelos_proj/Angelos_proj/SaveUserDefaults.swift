@@ -20,9 +20,18 @@ class SaveUserDefaults {
     }
     
     func getName() -> String {
-        return defaults.string(forKey: "nameKey")!
+        if let name = defaults.string(forKey: "nameKey") {
+            return name
+        } else {
+            return("Not nil")
+        }
     }
+    
     func getNumber() -> String {
-        return defaults.string(forKey: "numberKey")!
+        if let number = defaults.string(forKey: "numberKey") {
+            return number
+        } else {
+            return("Not nil")
+        }
     }
 }
