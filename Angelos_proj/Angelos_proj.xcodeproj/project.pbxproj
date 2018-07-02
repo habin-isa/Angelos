@@ -26,6 +26,7 @@
 		9CB54EF578267012F3F59FDA /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */; };
 		B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */; };
 		B2DAB65D20EA6428002FD26B /* marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2DAB65C20EA6427002FD26B /* marimba.mp3 */; };
+		B2DAB66120EA8AA8002FD26B /* DateTimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAB66020EA8AA8002FD26B /* DateTimeTest.swift */; };
 		C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA0920E3984200240BE0 /* Messenger.swift */; };
 		C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA1920E39B1800240BE0 /* MessengerTest.swift */; };
 		C114DA2220E4FE7200240BE0 /* Angelos_projUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C114DA2120E4FE7200240BE0 /* Angelos_projUITests.swift */; };
@@ -76,6 +77,7 @@
 		A12F6825BFCCD3F09EBBB98D /* Pods_Angelos_proj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_proj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA80C47637919B2E4C0BAF /* Pods-Angelos_proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.release.xcconfig"; sourceTree = "<group>"; };
 		B2DAB65C20EA6427002FD26B /* marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba.mp3; sourceTree = "<group>"; };
+		B2DAB66020EA8AA8002FD26B /* DateTimeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeTest.swift; sourceTree = "<group>"; };
 		BFF541B5B4257269A8B04F37 /* Pods-Angelos_projTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_projTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C114DA0920E3984200240BE0 /* Messenger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messenger.swift; sourceTree = "<group>"; };
 		C114DA0F20E39A6900240BE0 /* Angelos_projTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Angelos_projTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -183,6 +185,7 @@
 				7E7F921420E6775B0028AFA6 /* MockCoreLoc.swift */,
 				7E7F921620E6778D0028AFA6 /* LocationTest.swift */,
 				7E5A95B020E9545800B31564 /* ViewControllerTest.swift */,
+				B2DAB66020EA8AA8002FD26B /* DateTimeTest.swift */,
 			);
 			path = Angelos_projTests;
 			sourceTree = "<group>";
@@ -437,6 +440,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B2DAB66120EA8AA8002FD26B /* DateTimeTest.swift in Sources */,
 				7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */,
 				7E7F921520E6775B0028AFA6 /* MockCoreLoc.swift in Sources */,
 				7E5A95B120E9545800B31564 /* ViewControllerTest.swift in Sources */,
