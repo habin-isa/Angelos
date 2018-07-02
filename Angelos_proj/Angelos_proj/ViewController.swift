@@ -50,7 +50,7 @@ class ViewController: UIViewController {
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
         let ringer = Ringer()
-        var setTime = Double(timeInputField.text!)!
+        let setTime = Double(timeInputField.text!)!
         timeInputField.text = ""
         ringer.play(ringtonePlayer: ringtonePlayer, time: setTime)
     }

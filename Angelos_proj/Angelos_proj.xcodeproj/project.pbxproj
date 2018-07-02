@@ -14,6 +14,7 @@
 		0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */; };
 		59A375E76ADEE59D5AAFD8AC /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1B20E441B400975F5C /* Pods_Angelos_projTests.framework */; };
 		7E5A95A320E7863400B31564 /* marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7E5A95A220E7863400B31564 /* marimba.mp3 */; };
+		7E5A95B120E9545800B31564 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5A95B020E9545800B31564 /* ViewControllerTest.swift */; };
 		7E780A0D20E42BE500975F5C /* Alamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0C20E42BE500975F5C /* Alamo.swift */; };
 		7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0E20E42E8E00975F5C /* MockAlamo.swift */; };
 		7E780A2020E4CF8000975F5C /* Pods_Angelos_proj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1F20E4CF8000975F5C /* Pods_Angelos_proj.framework */; };
@@ -60,6 +61,7 @@
 		14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_projTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6B526AE69D4CEFBEF83B431E /* Pods-Angelos_proj.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.debug.xcconfig"; sourceTree = "<group>"; };
 		7E5A95A220E7863400B31564 /* marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba.mp3; path = ../../../Downloads/marimba.mp3; sourceTree = "<group>"; };
+		7E5A95B020E9545800B31564 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		7E780A0C20E42BE500975F5C /* Alamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamo.swift; sourceTree = "<group>"; };
 		7E780A0E20E42E8E00975F5C /* MockAlamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAlamo.swift; sourceTree = "<group>"; };
 		7E780A1920E441AB00975F5C /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +178,7 @@
 				C114DA1920E39B1800240BE0 /* MessengerTest.swift */,
 				7E7F921420E6775B0028AFA6 /* MockCoreLoc.swift */,
 				7E7F921620E6778D0028AFA6 /* LocationTest.swift */,
+				7E5A95B020E9545800B31564 /* ViewControllerTest.swift */,
 			);
 			path = Angelos_projTests;
 			sourceTree = "<group>";
@@ -432,6 +435,7 @@
 			files = (
 				7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */,
 				7E7F921520E6775B0028AFA6 /* MockCoreLoc.swift in Sources */,
+				7E5A95B120E9545800B31564 /* ViewControllerTest.swift in Sources */,
 				7E7F921720E6778D0028AFA6 /* LocationTest.swift in Sources */,
 				C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */,
 				B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */,
