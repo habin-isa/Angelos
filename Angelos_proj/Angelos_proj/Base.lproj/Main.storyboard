@@ -91,6 +91,16 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact number 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKI-PL-MYy">
                                 <rect key="frame" x="27" y="236" width="139" height="21"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDJ-21-lFa">
+                                <rect key="frame" x="268" y="20" width="72" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Fake Call"/>
+                                <connections>
+                                    <action selector="clickFakeCall:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SBx-LP-KbT"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Input time in sec:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SOU-VO-wnP">
+                                <rect key="frame" x="79" y="23" width="131" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -131,6 +141,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -144,6 +155,9 @@
                         <outlet property="numberOutputField1" destination="Fjo-r9-Ff5" id="YlR-NP-sHk"/>
                         <outlet property="numberOutputField2" destination="Avb-2N-ApC" id="bNH-ub-8oZ"/>
                         <outlet property="numberOutputField3" destination="5So-Zt-ntP" id="Ar0-KL-efE"/>
+                        <outlet property="numberInputField" destination="g0W-ya-xY4" id="ZhH-bK-aEl"/>
+                        <outlet property="numberOutputField" destination="Fjo-r9-Ff5" id="ybL-GT-3n7"/>
+                        <outlet property="timeInputField" destination="ZHm-c2-80N" id="ZmH-e9-XMJ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

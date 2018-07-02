@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var ringtonePlayer: AVAudioPlayer?
     
     var savedDefault = SaveUserDefaults()
     var name = ""
@@ -19,11 +22,20 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
     @IBOutlet weak var numberInputField3: UITextField!
-    
-        @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberInputField: UITextField!
+    @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberOutputField: UILabel!
+    @IBOutlet weak var nameOutputField: UILabel!
+    @IBOutlet weak var timeInputField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+         ringtonePlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "marimba.mp3", ofType:nil)!))
+        } catch {}
+        
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
         number2 = savedDefault.getNumber2()
@@ -40,17 +52,25 @@ class ViewController: UIViewController {
     
     @IBAction func clickSos(sender: UIButton) {
         print(number1, number2, number3)
-        Messenger().sendMessage(phoneNumber: number1)
-        Messenger().sendMessage(phoneNumber: number2)
-        Messenger().sendMessage(phoneNumber: number3)
+        Messenger().sendMessage(phoneNumber: number1, type: "standard", userName: name)
+        Messenger().sendMessage(phoneNumber: number2, type: "standard", userName: name)
+        Messenger().sendMessage(phoneNumber: number3, type: "standard", userName: name)
     }
     
     @IBAction func clickPolice(_ sender: UIButton) {
         print(number1, number2, number3)
-        Messenger().sendPoliceMessage(phoneNumber: number1)
-        Messenger().sendPoliceMessage(phoneNumber: number2)
-        Messenger().sendPoliceMessage(phoneNumber: number3)
+        Messenger().sendMessage(phoneNumber: number1, type: "urgent", userName: name)
+        Messenger().sendMessage(phoneNumber: number2, type: "urgent", userName: name)
+        Messenger().sendMessage(phoneNumber: number3, type: "urgent", userName: name)
     }
+    
+    @IBAction func clickFakeCall(_ sender: UIButton) {
+        let ringer = Ringer()
+        let setTime = Double(timeInputField.text!)!
+        timeInputField.text = ""
+        ringer.play(ringtonePlayer: ringtonePlayer, time: setTime)
+    }
+
     
     @IBAction func clickSubmit(_ sender: Any) -> Void {
         name = nameInputField.text!
@@ -71,15 +91,16 @@ class ViewController: UIViewController {
         savedDefault.setNumber1(number: number1)
         savedDefault.setNumber2(number: number2)
         savedDefault.setNumber3(number: number3)
-        Messenger().sendEmergencyContactMessage(phoneNumber: number1, userName: name)
-        Messenger().sendEmergencyContactMessage(phoneNumber: number2, userName: name)
-        Messenger().sendEmergencyContactMessage(phoneNumber: number3, userName: name)
+        Messenger().sendMessage(phoneNumber: number1, type: "inform", userName: name)
+        Messenger().sendMessage(phoneNumber: number2, type: "inform", userName: name)
+        Messenger().sendMessage(phoneNumber: number3, type: "inform", userName: name)
     }
    
     @IBOutlet weak var numberOutputField1: UILabel!
     @IBOutlet weak var numberOutputField2: UILabel!
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
-    
+
+    } 
 }
 
