@@ -67,6 +67,10 @@ I want the text to include my location
 As a user,
 So I am able to help myself if my contact does not respond
 I want to be able to initiate a fake phone call
+
+As a user, 
+So I can alert multiple people
+I want to be able to enter mulitple contacts
 ```
 
 ## Code Snippet
