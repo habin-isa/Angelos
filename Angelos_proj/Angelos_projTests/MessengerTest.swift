@@ -40,29 +40,28 @@ class MessengerTest: XCTestCase {
 
     func testSendMessageFunctionIsCalled() {
         let mockAlamo = MockAlamo()
-        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo)
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"standard", userName: "Dione")
         XCTAssertEqual(mockAlamo.counter, 1)
     }
     
     func testBodyIsArray() {
-        let messages = ["PLZ SEND HELP NOW", "Call the Police"]
+        let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"]
         expect(self.messenger.messages).to(equal(messages))
     }
     
     func testBodyOfPoliceMessage () {
-        let policeBody = "Call the Police"
+        let policeBody = "Call the Police -"
         expect(self.messenger.messages[1]).to(equal(policeBody))
     }
     
-    func testSendPoliceMessageSendsMessage() {
-        let mockAlamo = MockAlamo()
-        messenger.sendPoliceMessage(phoneNumber: "456", alamo: mockAlamo)
-        XCTAssertEqual(mockAlamo.counter, 1)
+    func testBodyOfInformMessage () {
+        let informBody = "You have been listed as my emergency contact -"
+        expect(self.messenger.messages[2]).to(equal(informBody))
     }
     
     func testAddedAsEmergencyContactMessageSends() {
         let mockAlamo = MockAlamo()
-        messenger.sendEmergencyContactMessage(phoneNumber: "789", userName: "Muzzi", alamo: mockAlamo)
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"inform", userName: "Dione")
         XCTAssertEqual(mockAlamo.counter, 1)
     }
 

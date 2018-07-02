@@ -7,18 +7,29 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    
+    var ringtonePlayer: AVAudioPlayer?
     
     var savedDefault = SaveUserDefaults()
     var name = ""
     var number = ""
     
-        @IBOutlet weak var numberInputField: UITextField!
-        @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberInputField: UITextField!
+    @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberOutputField: UILabel!
+    @IBOutlet weak var nameOutputField: UILabel!
+    @IBOutlet weak var timeInputField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        do {
+         ringtonePlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "marimba.mp3", ofType:nil)!))
+        } catch {}
+        
         name = savedDefault.getName()
         number = savedDefault.getNumber()
         nameOutputField.text = "\(name)"
@@ -30,14 +41,20 @@ class ViewController: UIViewController {
     }
     
     @IBAction func clickSos(sender: UIButton) {
-        print(number)
-        Messenger().sendMessage(phoneNumber: number)
+        Messenger().sendMessage(phoneNumber: number, type: "standard", userName: name)
     }
     
     @IBAction func clickPolice(_ sender: UIButton) {
-        print(number)
-        Messenger().sendPoliceMessage(phoneNumber: number)
+        Messenger().sendMessage(phoneNumber: number, type: "urgent", userName: name)
     }
+    
+    @IBAction func clickFakeCall(_ sender: UIButton) {
+        let ringer = Ringer()
+        let setTime = Double(timeInputField.text!)!
+        timeInputField.text = ""
+        ringer.play(ringtonePlayer: ringtonePlayer, time: setTime)
+    }
+
     
     @IBAction func clickSubmit(_ sender: Any) -> Void {
         name = nameInputField.text!
@@ -50,10 +67,9 @@ class ViewController: UIViewController {
         
         savedDefault.setName(name: name)
         savedDefault.setNumber(number: number)
-        Messenger().sendEmergencyContactMessage(phoneNumber: number, userName: name)
+        Messenger().sendMessage(phoneNumber: number, type: "inform", userName: name)
     }
-    @IBOutlet weak var numberOutputField: UILabel!
-    @IBOutlet weak var nameOutputField: UILabel!
+    
     
 }
 
