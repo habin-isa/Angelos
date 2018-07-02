@@ -18,13 +18,15 @@ class ViewController: UIViewController {
     var number1 = ""
     var number2 = ""
     var number3 = ""
+    var customMessage = ""
     
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
     @IBOutlet weak var numberInputField3: UITextField!
     @IBOutlet weak var nameInputField: UITextField!
     @IBOutlet weak var timeInputField: UITextField!
-
+    @IBOutlet weak var customMsgInputField: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -36,10 +38,12 @@ class ViewController: UIViewController {
         number1 = savedDefault.getNumber1()
         number2 = savedDefault.getNumber2()
         number3 = savedDefault.getNumber3()
+        customMessage = savedDefault.getCustomMessage()
         nameOutputField.text = "\(name)"
         numberOutputField1.text = "\(number1)"
         numberOutputField2.text = "\(number2)"
         numberOutputField3.text = "\(number3)"
+        customMsgOutputField.text = "\(customMessage)"
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,6 +63,14 @@ class ViewController: UIViewController {
         Messenger().sendMessage(phoneNumber: number2, type: "urgent", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "urgent", userName: name)
     }
+    
+    @IBAction func clickCustom(_ sender: UIButton) {
+        print(number1, number2, number3)
+        Messenger().sendCustomMessage(phoneNumber: number1, userName: name, customMessage: customMessage)
+        Messenger().sendCustomMessage(phoneNumber: number2, userName: name, customMessage: customMessage)
+        Messenger().sendCustomMessage(phoneNumber: number3, userName: name, customMessage: customMessage)
+    }
+    
     
     @IBAction func clickFakeCall(_ sender: UIButton) {
         let ringer = Ringer()
@@ -91,12 +103,21 @@ class ViewController: UIViewController {
         Messenger().sendMessage(phoneNumber: number2, type: "inform", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "inform", userName: name)
     }
+    
+    @IBAction func clickSave(_ sender: UIButton) {
+        customMessage = customMsgInputField.text!
+        customMsgInputField.text = ""
+        customMsgOutputField.text = "\(customMessage)"
+        savedDefault.setCustomMessage(customMessage: customMessage)
+    }
+    
    
     @IBOutlet weak var numberOutputField1: UILabel!
     @IBOutlet weak var numberOutputField2: UILabel!
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
-
+    @IBOutlet weak var customMsgOutputField: UILabel!
+    
 }
 
 

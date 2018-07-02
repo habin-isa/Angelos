@@ -12,11 +12,20 @@ class Messenger {
     let accountSID = "AC8206e0751f9153124ba52132eeb775f8";
     let auth = "aa5b353dbfeb13c707f1bc7d7e65bcdd";
     let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"];
+    var messageCustomMessage = "";
     
     func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String, userName:String) -> Void {
         var body:String
         body = (type == "urgent" ? messages[1] : messages[0])
         if type == "inform" { body = messages[2] }
+        body += userName
+        sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
+    }
+    
+    func sendCustomMessage(phoneNumber:String, alamo:Alamo = Alamo(), userName:String, customMessage:String) -> Void {
+        var body:String
+        messageCustomMessage = customMessage
+        body = customMessage
         body += userName
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
