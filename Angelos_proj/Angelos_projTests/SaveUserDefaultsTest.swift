@@ -78,6 +78,12 @@ class SaveUserDefaultsTest: QuickSpec {
                     expect(subject.defaults.string(forKey: "customMessageKey")).to(equal("This is a custom message -"))
                 }
             }
+            describe("#getCustomMessage") {
+                it("returns the custom message attribute") {
+                    subject.setCustomMessage(customMessage: "This is a custom message -")
+                    expect(subject.getCustomMessage()).to(equal("This is a custom message -"))
+                }
+            }
         }
     }
 }
