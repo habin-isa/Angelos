@@ -142,7 +142,7 @@ Now that we had our MVP (a user could open the app, enter their name and an emer
 
 On Monday morning's stand-up we planned the two day sprint that would take us up to the feature freeze on Tuesday. We assigned tickets to each pair, and attempted to start building the features. However, things didn't go totally smoothly thanks to a few obstacles with using xcode. But we were back on track and making progress with our code by the afternoon. After a few hiccups using xcode, we were beginning to understand it's 2* rating in the app store...
 
-* Charly and Jess implemented features to add multiple contacts, re-designed the feature to allow a user to send a custom message, and started working on a time stamp
+* Charly and Jess implemented features to add multiple contacts, rallow a user to send a custom message, and started working on adding a date/time stamp
 * Dione, Muzzi and Jess started exploring how we might implement an IM chat feature
 
 ### Day 7
