@@ -8,4 +8,7 @@
 
 import Foundation
 
-class DateTime {}
+class DateTime {
+    let currentTime = "01/01/2018 11:11"
+    
+}

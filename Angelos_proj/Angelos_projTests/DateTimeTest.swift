@@ -28,7 +28,7 @@ class DateTimeTest: XCTestCase {
     
     func testExample() {
         let time = "01/01/2018 11:11"
-        expect(self.currentTime).to(equal(time))
+        expect(self.dateTime.currentTime).to(equal(time))
     }
     
 }
