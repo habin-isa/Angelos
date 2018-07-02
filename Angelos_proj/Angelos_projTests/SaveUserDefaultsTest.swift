@@ -30,10 +30,22 @@ class SaveUserDefaultsTest: QuickSpec {
                     expect(subject.defaults.string(forKey: "nameKey")).to(equal("Muzzi"))
                 }
             }
-            describe("#setNumber") {
+            describe("#setNumber1") {
                 it("sets the number attribute") {
-                    subject.setNumber(number: "+447794991234")
+                    subject.setNumber1(number: "+447794991234")
                     expect(subject.defaults.string(forKey: "numberKey")).to(equal("+447794991234"))
+                }
+            }
+            describe("#setNumber2") {
+                it("sets the number attribute") {
+                    subject.setNumber2(number: "+447718950558")
+                    expect(subject.defaults.string(forKey: "numberKey2")).to(equal("+447718950558"))
+                }
+            }
+            describe("#setNumber3") {
+                it("sets the number attribute") {
+                    subject.setNumber3(number: "+447718978668")
+                    expect(subject.defaults.string(forKey: "numberKey3")).to(equal("+447718978668"))
                 }
             }
             describe("#getName") {
@@ -42,13 +54,24 @@ class SaveUserDefaultsTest: QuickSpec {
                     expect(subject.getName()).to(equal("Muzzi"))
                 }
             }
-            describe("#getNumber") {
+            describe("#getNumber1") {
                 it("returns the number attribute") {
-                    subject.setNumber(number: "+447794991234")
-                    expect(subject.getNumber()).to(equal("+447794991234"))
+                    subject.setNumber1(number: "+447794991234")
+                    expect(subject.getNumber1()).to(equal("+447794991234"))
                 }
             }
-            
+            describe("#getNumber2") {
+                it("returns the number attribute") {
+                    subject.setNumber2(number: "+447718950558")
+                    expect(subject.getNumber2()).to(equal("+447718950558"))
+                }
+            }
+            describe("#getNumber3") {
+                it("returns the number attribute") {
+                    subject.setNumber3(number: "+447718978668")
+                    expect(subject.getNumber3()).to(equal("+447718978668"))
+                }
+            }
         }
     }
 }
