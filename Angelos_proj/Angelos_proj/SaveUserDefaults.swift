@@ -15,8 +15,16 @@ class SaveUserDefaults {
         defaults.setValue(name, forKey: "nameKey")
     }
     
-    func setNumber(number: String) {
+    func setNumber1(number: String) {
         defaults.setValue(number, forKey: "numberKey")
+    }
+    
+    func setNumber2(number: String) {
+        defaults.setValue(number, forKey: "numberKey2")
+    }
+    
+    func setNumber3(number: String) {
+        defaults.setValue(number, forKey: "numberKey3")
     }
     
     func getName() -> String {
@@ -27,11 +35,28 @@ class SaveUserDefaults {
         }
     }
     
-    func getNumber() -> String {
-        if let number = defaults.string(forKey: "numberKey") {
+    func getNumber1() -> String {
+         if let number = defaults.string(forKey: "numberKey") {
             return number
         } else {
             return("Not nil")
         }
     }
+
+    func getNumber2() -> String {
+        if let number = defaults.string(forKey: "numberKey2") {
+            return number
+        } else {
+            return("Not nil")
+        }
+    }
+    
+    func getNumber3() -> String {
+        if let number = defaults.string(forKey: "numberKey3") {
+            return number
+        } else {
+            return("Not nil")
+        }
+    }
+
 }
