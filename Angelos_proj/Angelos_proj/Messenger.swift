@@ -14,11 +14,12 @@ class Messenger {
     let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"];
     var messageCustomMessage = "";
     
-    func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String, userName:String) -> Void {
+    func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String, userName:String, dateTime:DateTime = DateTime()) -> Void {
         var body:String
         body = (type == "urgent" ? messages[1] : messages[0])
         if type == "inform" { body = messages[2] }
         body += userName
+        body += dateTime.currentTime
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
