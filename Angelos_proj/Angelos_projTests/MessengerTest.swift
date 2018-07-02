@@ -61,7 +61,7 @@ class MessengerTest: XCTestCase {
     
     func testSendCustomMessageCallsSendRequest () {
         let mockAlamo = MockAlamo()
-        messenger.sendCustomMessage(phoneNumber: "456", alamo: mockAlamo, userName: "Charly", customMessag: "This is a custom message")
+        messenger.sendCustomMessage(phoneNumber: "456", alamo: mockAlamo, userName: "Charly", customMessage: "This is a custom message")
         XCTAssertEqual(mockAlamo.counter, 1)
     }
     
