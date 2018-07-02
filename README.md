@@ -130,7 +130,7 @@ We began day 4 by talking through the previous day's work, and dividing the resp
 
 ### Day 5
 
-Now that we had our MVP (a user could open the app, enter their name and an emergency contact number that would persist, and discretely send a text) Friday morning's stand up was spent planning other features that we wanted to implement. We decided to focus on tasks that we felt we could complete before the weekend, then define another two day sprint on Monday morning which would take us to Tuesday's feature freeze,
+Now that we had our MVP (a user could open the app, enter their name and an emergency contact number that would persist, and discretely send a text) Friday morning's stand up was spent planning other features that we wanted to implement. We decided to focus on tasks that we felt we could complete before the weekend, then define another two day sprint on Monday morning which would take us to Tuesday's feature freeze.
 
 * Jess and Muzzi continued working on the location feature
 * Dione and Charly added functionality to send multiple message types 
@@ -139,3 +139,19 @@ Now that we had our MVP (a user could open the app, enter their name and an emer
 ## Week 2
 
 ### Day 6
+
+On Monday morning's stand-up we planned the two day sprint that would take us up to the feature freeze on Tuesday. We assigned tickets to each pair, and attempted to start building the features. However, things didn't go totally smoothly thanks to a few obstacles with using xcode. But we were back on track and making progress with our code by the afternoon. After a few hiccups using xcode, we were beginning to understand it's 2* rating in the app store...
+
+* Charly and Jess implemented features to add multiple contacts, re-designed the feature to allow a user to send a custom message, and started working on a time stamp
+* Dione, Muzzi and Jess started exploring how we might implement an IM chat feature
+
+### Day 7
+
+### Day 8
+
+### Day 9
+
+### Day 10
+
+Our final day!
+
