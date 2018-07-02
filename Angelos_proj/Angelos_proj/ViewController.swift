@@ -23,10 +23,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberInputField2: UITextField!
     @IBOutlet weak var numberInputField3: UITextField!
     @IBOutlet weak var nameInputField: UITextField!
-    @IBOutlet weak var numberInputField: UITextField!
-    @IBOutlet weak var nameInputField: UITextField!
-    @IBOutlet weak var numberOutputField: UILabel!
-    @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var timeInputField: UITextField!
 
     override func viewDidLoad() {
@@ -101,6 +97,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
 
-    } 
 }
+
+
 
