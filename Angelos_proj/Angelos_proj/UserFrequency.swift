@@ -9,7 +9,7 @@
 import Foundation
 
 class UserFrequency {
-    var clickCounter = 0
+    var clickCounter = 1
 //    var concernTriggered = false
     
     func click() {
@@ -17,7 +17,7 @@ class UserFrequency {
     }
     
     func triggerConcern() -> Bool {
-        if clickCounter == 10 { return true }
+        if clickCounter % 10 == 0 { return true }
         else { return false }
     }
     
