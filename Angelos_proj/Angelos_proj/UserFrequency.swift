@@ -10,16 +10,15 @@ import Foundation
 
 class UserFrequency {
     var clickCounter = 0
-    var concernTriggered = false
+//    var concernTriggered = false
     
     func click() {
         clickCounter += 1
     }
     
-    func triggerConcern() {
-        if clickCounter == 10 {
-            concernTriggered = true
-        }
+    func triggerConcern() -> Bool {
+        if clickCounter == 10 { return true }
+        else { return false }
     }
     
 }
