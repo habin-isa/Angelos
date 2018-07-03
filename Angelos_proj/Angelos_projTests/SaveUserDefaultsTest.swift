@@ -53,6 +53,10 @@ class SaveUserDefaultsTest: QuickSpec {
                     subject.setName(name: "Muzzi")
                     expect(subject.getName()).to(equal("Muzzi"))
                 }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "nameKey")
+                    expect(subject.getName()).to(equal("Not nil"))
+                }
             }
             describe("#getNumber1") {
                 it("returns the number attribute") {
