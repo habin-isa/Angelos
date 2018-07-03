@@ -53,11 +53,19 @@ class SaveUserDefaultsTest: QuickSpec {
                     subject.setName(name: "Muzzi")
                     expect(subject.getName()).to(equal("Muzzi"))
                 }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "nameKey")
+                    expect(subject.getName()).to(equal("Not nil"))
+                }
             }
             describe("#getNumber1") {
                 it("returns the number attribute") {
                     subject.setNumber1(number: "+447794991234")
                     expect(subject.getNumber1()).to(equal("+447794991234"))
+                }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "numberKey")
+                    expect(subject.getNumber1()).to(equal("Not nil"))
                 }
             }
             describe("#getNumber2") {
@@ -65,11 +73,19 @@ class SaveUserDefaultsTest: QuickSpec {
                     subject.setNumber2(number: "+447718950558")
                     expect(subject.getNumber2()).to(equal("+447718950558"))
                 }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "numberKey2")
+                    expect(subject.getNumber2()).to(equal("Not nil"))
+                }
             }
             describe("#getNumber3") {
                 it("returns the number attribute") {
                     subject.setNumber3(number: "+447718978668")
                     expect(subject.getNumber3()).to(equal("+447718978668"))
+                }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "numberKey3")
+                    expect(subject.getNumber3()).to(equal("Not nil"))
                 }
             }
             describe("#setCustomMessage") {
@@ -82,6 +98,10 @@ class SaveUserDefaultsTest: QuickSpec {
                 it("returns the custom message attribute") {
                     subject.setCustomMessage(customMessage: "This is a custom message -")
                     expect(subject.getCustomMessage()).to(equal("This is a custom message -"))
+                }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "customMessageKey")
+                    expect(subject.getCustomMessage()).to(equal("Not nil"))
                 }
             }
         }
