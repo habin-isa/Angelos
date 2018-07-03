@@ -11,7 +11,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-    var ringtonePlayer: AVAudioPlayer?
+    var ringtonePlayer = AudioPlayer()
     
     var savedDefault = SaveUserDefaults()
     var name = ""
@@ -29,11 +29,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        do {
-         ringtonePlayer = try AVAudioPlayer(contentsOf: URL(fileURLWithPath: Bundle.main.path(forResource: "marimba.mp3", ofType:nil)!))
-        } catch {}
-        
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
         number2 = savedDefault.getNumber2()

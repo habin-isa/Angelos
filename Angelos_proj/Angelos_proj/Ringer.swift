@@ -15,16 +15,16 @@ class Ringer {
     let playTime = 10.0
 
     
-    func play(ringtonePlayer: AVAudioPlayer?, time:Double) {
+    func play(ringtonePlayer:AudioPlayer, time:Double) {
         DispatchQueue.main.asyncAfter(deadline: .now() + time, execute: {
-            ringtonePlayer?.play()
+            ringtonePlayer.play()
             self.stop(ringtonePlayer: ringtonePlayer)
         })
     }
     
-    func stop(ringtonePlayer: AVAudioPlayer?) {
+    func stop(ringtonePlayer:AudioPlayer) {
         DispatchQueue.main.asyncAfter(deadline: .now() + playTime, execute: {
-            ringtonePlayer?.stop()
+            ringtonePlayer.stop()
         })
     }
     
