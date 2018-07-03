@@ -16,6 +16,7 @@
 		7E0C24C620EBD77900385849 /* MockAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C24C520EBD77900385849 /* MockAudioPlayer.swift */; };
 		7E0C24C820EBD83200385849 /* RingerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C24C720EBD83200385849 /* RingerTest.swift */; };
 		7E0C24CA20EBD8C500385849 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C24C920EBD8C500385849 /* AudioPlayer.swift */; };
+		7E0C24CC20EBDAFA00385849 /* EncryptedKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C24CB20EBDAFA00385849 /* EncryptedKeys.swift */; };
 		7E5A95B120E9545800B31564 /* ViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E5A95B020E9545800B31564 /* ViewControllerTest.swift */; };
 		7E780A0D20E42BE500975F5C /* Alamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0C20E42BE500975F5C /* Alamo.swift */; };
 		7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E780A0E20E42E8E00975F5C /* MockAlamo.swift */; };
@@ -70,6 +71,7 @@
 		7E0C24C520EBD77900385849 /* MockAudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockAudioPlayer.swift; sourceTree = "<group>"; };
 		7E0C24C720EBD83200385849 /* RingerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RingerTest.swift; sourceTree = "<group>"; };
 		7E0C24C920EBD8C500385849 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		7E0C24CB20EBDAFA00385849 /* EncryptedKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedKeys.swift; sourceTree = "<group>"; };
 		7E5A95A220E7863400B31564 /* marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = marimba.mp3; path = ../../../Downloads/marimba.mp3; sourceTree = "<group>"; };
 		7E5A95B020E9545800B31564 /* ViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTest.swift; sourceTree = "<group>"; };
 		7E780A0C20E42BE500975F5C /* Alamo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alamo.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 				B2DAB66420EA8CF2002FD26B /* DateTime.swift */,
 				B29E0C9520EB940400BBA323 /* UserFrequency.swift */,
 				7E0C24C920EBD8C500385849 /* AudioPlayer.swift */,
+				7E0C24CB20EBDAFA00385849 /* EncryptedKeys.swift */,
 			);
 			path = Angelos_proj;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				B29E0C9620EB940400BBA323 /* UserFrequency.swift in Sources */,
 				7E0C24CA20EBD8C500385849 /* AudioPlayer.swift in Sources */,
 				0AB4D65320E2932C00BCCF61 /* ViewController.swift in Sources */,
+				7E0C24CC20EBDAFA00385849 /* EncryptedKeys.swift in Sources */,
 				C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */,
 				7E7F921320E677260028AFA6 /* CoreLoc.swift in Sources */,
 				C19436C020E52D1E005FCB24 /* SaveUserDefaults.swift in Sources */,

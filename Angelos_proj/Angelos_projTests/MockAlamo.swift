@@ -11,8 +11,16 @@ import Alamofire
 @testable import Angelos_proj
 
 class MockAlamo: Alamo {
-    var counter = 0
+    
+    var requestFunctionCalled = false
+    var urlCalledWith = "none"
+    var sidCalledWith = "none"
+    var authCalledWith = "none"
+    
     override func request(url:String, parameters:Parameters, accountSID:String, auth:String) -> Void {
-        counter += 1
+        requestFunctionCalled = true
+        urlCalledWith = url
+        sidCalledWith = accountSID
+        authCalledWith = auth
     }
 }

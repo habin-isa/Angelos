@@ -9,8 +9,8 @@
 import Foundation
 
 class Messenger {
-    let accountSID = "AC8206e0751f9153124ba52132eeb775f8";
-    let auth = "aa5b353dbfeb13c707f1bc7d7e65bcdd";
+    let accountSID = EncryptedKeys().accountSID
+    let auth = EncryptedKeys().authKey
     let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"];
     var messageCustomMessage = "";
     
