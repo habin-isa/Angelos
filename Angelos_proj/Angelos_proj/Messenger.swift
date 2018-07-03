@@ -23,11 +23,12 @@ class Messenger {
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
-    func sendCustomMessage(phoneNumber:String, alamo:Alamo = Alamo(), userName:String, customMessage:String) -> Void {
+    func sendCustomMessage(phoneNumber:String, alamo:Alamo = Alamo(), userName:String, customMessage:String, dateTime:DateTime = DateTime()) -> Void {
         var body:String
         messageCustomMessage = customMessage
         body = customMessage
         body += userName
+        body += dateTime.formatDate()
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
