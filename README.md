@@ -147,6 +147,11 @@ On Monday morning's stand-up we planned the two day sprint that would take us up
 
 ### Day 7
 
+At our morning stand-up, the team agreed objective of the day was to finish adding the features we wanted to our app, whilst maintaining good coding practices. We decided it was unlikely we would be able to implement the IM chat feature by COB. We decided to instead focus on implementing a feature that tracks the frequency of app use and add a helpline directory. 
+
+* Muzzi, Jess and Charly worked on the app usage feature
+* Dione and Habin added a Helpline Directory
+
 ### Day 8
 
 ### Day 9
