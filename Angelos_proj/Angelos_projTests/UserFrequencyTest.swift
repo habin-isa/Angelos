@@ -32,4 +32,21 @@ class UserFrequencyTest: XCTestCase {
         XCTAssertEqual(1, self.userFrequency.clickCounter)
     }
     
+    func testConcernTriggeredDefault() {
+        XCTAssertFalse(self.userFrequency.concernTriggered)
+    }
+    
+    func testMultiplesOfTenSetConcernTriggerToTrue() {
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        XCTAssertTrue(self.userFrequency.concernTriggered)
+    }
 }
