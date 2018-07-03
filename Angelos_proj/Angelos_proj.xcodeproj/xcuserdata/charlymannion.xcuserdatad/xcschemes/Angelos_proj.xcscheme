@@ -38,11 +38,6 @@
                BlueprintName = "Angelos_projTests"
                ReferencedContainer = "container:Angelos_proj.xcodeproj">
             </BuildableReference>
-            <SkippedTests>
-               <Test
-                  Identifier = "MessengerTest">
-               </Test>
-            </SkippedTests>
          </TestableReference>
       </Testables>
       <MacroExpansion>
