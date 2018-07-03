@@ -71,6 +71,10 @@ I want to be able to initiate a fake phone call
 As a user, 
 So I can alert multiple people
 I want to be able to enter mulitple contacts
+
+As a user,
+So my contact knows what time I raised the alert,
+I want the message to include the date and time
 ```
 
 ## Code Snippet
