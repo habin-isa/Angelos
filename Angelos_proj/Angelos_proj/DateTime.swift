@@ -10,5 +10,5 @@ import Foundation
 
 class DateTime {
     let currentTime = "01/01/2018 11:11"
-    
+    let currentDateTime = Date()
 }
