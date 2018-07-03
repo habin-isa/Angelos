@@ -9,6 +9,13 @@
 import Foundation
 
 class DateTime {
-    let currentTime = "01/01/2018 11:11"
-    let currentDateTime = Date()
+    
+    func formatDate(currentDateTime: Date = Date()) -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "HH:mm yyyy-MM-dd"
+        let myString = formatter.string(from: currentDateTime)
+        let dateTime = "Message Sent " + myString
+        return dateTime
+    }
+    
 }

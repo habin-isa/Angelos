@@ -7,9 +7,6 @@
 //
 
 import XCTest
-import Alamofire
-import Quick
-import Nimble
 @testable import Angelos_proj
 
 class DateTimeTest: XCTestCase {
@@ -26,9 +23,11 @@ class DateTimeTest: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        let time = "01/01/2018 11:11"
-        expect(self.dateTime.currentTime).to(equal(time))
+    func testDateTime() {
+        let currentDateTime = Date(timeIntervalSinceReferenceDate: 10)
+        XCTAssertEqual("Message Sent 00:00 2001-01-01", dateTime.formatDate(currentDateTime: currentDateTime))
     }
     
 }
+
+

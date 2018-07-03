@@ -19,7 +19,7 @@ class Messenger {
         body = (type == "urgent" ? messages[1] : messages[0])
         if type == "inform" { body = messages[2] }
         body += userName
-        body += dateTime.currentDateTime
+        body += dateTime.formatDate()
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
