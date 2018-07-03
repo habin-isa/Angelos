@@ -15,33 +15,43 @@ import Nimble
 class MessengerTest: XCTestCase {
     
     let messenger = Messenger()
+    let mockAlamo = MockAlamo()
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"standard", userName: "Dione")
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
     func testHasAccountSID() {
         let result = messenger.accountSID
-        let testKey = "AC8206e0751f9153124ba52132eeb775f8"
-        XCTAssertEqual(result, testKey)
+        let testSID = EncryptedKeys().accountSID
+        XCTAssertEqual(result, testSID)
     }
     
     func testHasAuthKey() {
         let result = messenger.auth
-        let testAuth = "aa5b353dbfeb13c707f1bc7d7e65bcdd"
+        let testAuth = EncryptedKeys().authKey
         XCTAssertEqual(result, testAuth)
     }
 
     func testSendMessageFunctionIsCalled() {
-        let mockAlamo = MockAlamo()
-        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"standard", userName: "Dione")
-        XCTAssertEqual(mockAlamo.counter, 1)
+        XCTAssertEqual(mockAlamo.requestFunctionCalled, true)
+    }
+    
+    func testAlamoRequestCalledWithCorrectUrl() {
+        XCTAssertEqual(mockAlamo.urlCalledWith, "https://api.twilio.com/2010-04-01/Accounts/\(EncryptedKeys().accountSID)/Messages")
+    }
+    
+    func testAlamoRequestCalledWithCorrectSID() {
+        XCTAssertEqual(mockAlamo.sidCalledWith, EncryptedKeys().accountSID)
+    }
+    
+    func testAlamoRequestCalledWithCorrectAuthKey() {
+        XCTAssertEqual(mockAlamo.authCalledWith, EncryptedKeys().authKey)
     }
     
     func testBodyIsArray() {
@@ -68,13 +78,7 @@ class MessengerTest: XCTestCase {
     func testSendCustomMessageCallsSendRequest() {
         let mockAlamo = MockAlamo()
         messenger.sendCustomMessage(phoneNumber: "456", alamo: mockAlamo, userName: "Charly", customMessage: "This is a custom message")
-        XCTAssertEqual(mockAlamo.counter, 1)
-    }
-    
-    func testAddedAsEmergencyContactMessageSends() {
-        let mockAlamo = MockAlamo()
-        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"inform", userName: "Dione")
-        XCTAssertEqual(mockAlamo.counter, 1)
+        XCTAssertEqual(mockAlamo.requestFunctionCalled, true)
     }
 
 }
