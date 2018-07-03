@@ -40,4 +40,8 @@ class UserFrequencyTest: XCTestCase {
         userFrequency.clickCounter = 20
         XCTAssertTrue(userFrequency.triggerConcern())
     }
+    
+    func testDisplayConcernMessageIsCalled() {
+        
+    }
 }
