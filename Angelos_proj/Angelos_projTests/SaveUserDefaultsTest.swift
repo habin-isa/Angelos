@@ -65,7 +65,7 @@ class SaveUserDefaultsTest: QuickSpec {
                 }
                 it("returns nil") {
                     subject.defaults.set(nil, forKey: "numberKey")
-                    expect(subject.getName()).to(equal("Not nil"))
+                    expect(subject.getNumber1()).to(equal("Not nil"))
                 }
             }
             describe("#getNumber2") {
@@ -75,7 +75,7 @@ class SaveUserDefaultsTest: QuickSpec {
                 }
                 it("returns nil") {
                     subject.defaults.set(nil, forKey: "numberKey2")
-                    expect(subject.getName()).to(equal("Not nil"))
+                    expect(subject.getNumber2()).to(equal("Not nil"))
                 }
             }
             describe("#getNumber3") {
@@ -85,7 +85,7 @@ class SaveUserDefaultsTest: QuickSpec {
                 }
                 it("returns nil") {
                     subject.defaults.set(nil, forKey: "numberKey3")
-                    expect(subject.getName()).to(equal("Not nil"))
+                    expect(subject.getNumber3()).to(equal("Not nil"))
                 }
             }
             describe("#setCustomMessage") {
