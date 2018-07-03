@@ -25,6 +25,8 @@
 		7E7F921920E6D4090028AFA6 /* Ringer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921820E6D4090028AFA6 /* Ringer.swift */; };
 		9CB54EF578267012F3F59FDA /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */; };
 		B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */; };
+		B29E0C9420EB920500BBA323 /* UserFrequencyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29E0C9320EB920500BBA323 /* UserFrequencyTest.swift */; };
+		B29E0C9620EB940400BBA323 /* UserFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29E0C9520EB940400BBA323 /* UserFrequency.swift */; };
 		B2DAB65D20EA6428002FD26B /* marimba.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = B2DAB65C20EA6427002FD26B /* marimba.mp3 */; };
 		B2DAB66120EA8AA8002FD26B /* DateTimeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAB66020EA8AA8002FD26B /* DateTimeTest.swift */; };
 		B2DAB66520EA8CF2002FD26B /* DateTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DAB66420EA8CF2002FD26B /* DateTime.swift */; };
@@ -77,6 +79,8 @@
 		7E7F921820E6D4090028AFA6 /* Ringer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ringer.swift; sourceTree = "<group>"; };
 		A12F6825BFCCD3F09EBBB98D /* Pods_Angelos_proj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_proj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA80C47637919B2E4C0BAF /* Pods-Angelos_proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.release.xcconfig"; sourceTree = "<group>"; };
+		B29E0C9320EB920500BBA323 /* UserFrequencyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFrequencyTest.swift; sourceTree = "<group>"; };
+		B29E0C9520EB940400BBA323 /* UserFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFrequency.swift; sourceTree = "<group>"; };
 		B2DAB65C20EA6427002FD26B /* marimba.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = marimba.mp3; sourceTree = "<group>"; };
 		B2DAB66020EA8AA8002FD26B /* DateTimeTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTimeTest.swift; sourceTree = "<group>"; };
 		B2DAB66420EA8CF2002FD26B /* DateTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateTime.swift; sourceTree = "<group>"; };
@@ -163,6 +167,7 @@
 				7E7F921220E677260028AFA6 /* CoreLoc.swift */,
 				7E7F921820E6D4090028AFA6 /* Ringer.swift */,
 				B2DAB66420EA8CF2002FD26B /* DateTime.swift */,
+				B29E0C9520EB940400BBA323 /* UserFrequency.swift */,
 			);
 			path = Angelos_proj;
 			sourceTree = "<group>";
@@ -189,6 +194,7 @@
 				7E7F921620E6778D0028AFA6 /* LocationTest.swift */,
 				7E5A95B020E9545800B31564 /* ViewControllerTest.swift */,
 				B2DAB66020EA8AA8002FD26B /* DateTimeTest.swift */,
+				B29E0C9320EB920500BBA323 /* UserFrequencyTest.swift */,
 			);
 			path = Angelos_projTests;
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7E780A0D20E42BE500975F5C /* Alamo.swift in Sources */,
+				B29E0C9620EB940400BBA323 /* UserFrequency.swift in Sources */,
 				0AB4D65320E2932C00BCCF61 /* ViewController.swift in Sources */,
 				C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */,
 				7E7F921320E677260028AFA6 /* CoreLoc.swift in Sources */,
@@ -447,6 +454,7 @@
 				B2DAB66120EA8AA8002FD26B /* DateTimeTest.swift in Sources */,
 				7E780A1D20E441FD00975F5C /* MockAlamo.swift in Sources */,
 				7E7F921520E6775B0028AFA6 /* MockCoreLoc.swift in Sources */,
+				B29E0C9420EB920500BBA323 /* UserFrequencyTest.swift in Sources */,
 				7E5A95B120E9545800B31564 /* ViewControllerTest.swift in Sources */,
 				7E7F921720E6778D0028AFA6 /* LocationTest.swift in Sources */,
 				C114DA1A20E39B1800240BE0 /* MessengerTest.swift in Sources */,
