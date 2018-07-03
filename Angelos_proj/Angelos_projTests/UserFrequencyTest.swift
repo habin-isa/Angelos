@@ -23,8 +23,25 @@ class UserFrequencyTest: XCTestCase {
         super.tearDown()
     }
     
-    func testDefaultOfNoUsage() {
-        XCTAssertEqual(0, userFrequency.clicks)
+    func testDefaultOfOneClick() {
+        XCTAssertEqual(1, userFrequency.clickCounter)
     }
     
+    func testClickCounter() {
+        self.userFrequency.click()
+        XCTAssertEqual(2, userFrequency.clickCounter)
+    }
+    
+    func testConcernTriggeredDefault() {
+        XCTAssertFalse(userFrequency.triggerConcern())
+    }
+    
+    func testMultiplesOfTenTriggerConcern() {
+        userFrequency.clickCounter = 20
+        XCTAssertTrue(userFrequency.triggerConcern())
+    }
+    
+    func testDisplayConcernMessageIsCalled() {
+        
+    }
 }

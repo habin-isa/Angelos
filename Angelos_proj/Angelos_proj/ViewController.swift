@@ -55,6 +55,7 @@ class ViewController: UIViewController {
         Messenger().sendMessage(phoneNumber: number1, type: "standard", userName: name)
         Messenger().sendMessage(phoneNumber: number2, type: "standard", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "standard", userName: name)
+        UserFrequency().click()
     }
     
     @IBAction func clickPolice(_ sender: UIButton) {
@@ -62,6 +63,7 @@ class ViewController: UIViewController {
         Messenger().sendMessage(phoneNumber: number1, type: "urgent", userName: name)
         Messenger().sendMessage(phoneNumber: number2, type: "urgent", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "urgent", userName: name)
+        UserFrequency().click()
     }
     
     @IBAction func clickCustom(_ sender: UIButton) {
@@ -69,6 +71,7 @@ class ViewController: UIViewController {
         Messenger().sendCustomMessage(phoneNumber: number1, userName: name, customMessage: customMessage)
         Messenger().sendCustomMessage(phoneNumber: number2, userName: name, customMessage: customMessage)
         Messenger().sendCustomMessage(phoneNumber: number3, userName: name, customMessage: customMessage)
+        UserFrequency().click()
     }
     
     
@@ -77,6 +80,7 @@ class ViewController: UIViewController {
         let setTime = Double(timeInputField.text!)!
         timeInputField.text = ""
         ringer.play(ringtonePlayer: ringtonePlayer, time: setTime)
+        UserFrequency().click()
     }
 
     
