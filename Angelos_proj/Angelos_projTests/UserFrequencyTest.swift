@@ -24,7 +24,12 @@ class UserFrequencyTest: XCTestCase {
     }
     
     func testDefaultOfNoUsage() {
-        XCTAssertEqual(0, userFrequency.clicks)
+        XCTAssertEqual(0, self.userFrequency.clickCounter)
+    }
+    
+    func testClickCounter() {
+        self.userFrequency.click()
+        XCTAssertEqual(1, self.userFrequency.clickCounter)
     }
     
 }

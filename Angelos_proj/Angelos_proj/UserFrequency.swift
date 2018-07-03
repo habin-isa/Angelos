@@ -9,5 +9,9 @@
 import Foundation
 
 class UserFrequency {
-    var clicks = 0
+    var clickCounter = 0
+    
+    func click() {
+        clickCounter += 1
+    }
 }
