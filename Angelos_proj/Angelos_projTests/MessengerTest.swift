@@ -69,12 +69,6 @@ class MessengerTest: XCTestCase {
         expect(self.messenger.messages[2]).to(equal(informBody))
     }
     
-    func testBodyOfCustomMessage() {
-        let customBody = "This is a custom message -"
-        self.messenger.sendCustomMessage(phoneNumber: "123", userName: "Charly", customMessage: customBody)
-        expect(self.messenger.messageCustomMessage).to(equal(customBody))
-    }
-    
     func testSendCustomMessageCallsSendRequest() {
         let mockAlamo = MockAlamo()
         messenger.sendCustomMessage(phoneNumber: "456", alamo: mockAlamo, userName: "Charly", customMessage: "This is a custom message")

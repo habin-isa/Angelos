@@ -11,24 +11,15 @@ import Foundation
 class Messenger {
     let accountSID = EncryptedKeys().accountSID
     let auth = EncryptedKeys().authKey
-    let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"];
-    var messageCustomMessage = "";
+    let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"]
     
     func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String, userName:String, dateTime:DateTime = DateTime()) -> Void {
-        var body:String
-        body = (type == "urgent" ? messages[1] : messages[0])
-        if type == "inform" { body = messages[2] }
-        body += userName
-        body += dateTime.formatDate()
+        let body = createBody(type: type, dateTime: dateTime, userName: userName)
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
     func sendCustomMessage(phoneNumber:String, alamo:Alamo = Alamo(), userName:String, customMessage:String, dateTime:DateTime = DateTime()) -> Void {
-        var body:String
-        messageCustomMessage = customMessage
-        body = customMessage
-        body += userName
-        body += dateTime.formatDate()
+        let body = customMessage + userName + dateTime.formatDate()
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     
@@ -37,4 +28,14 @@ class Messenger {
         let parameters = ["From": "+441423740326", "To": phoneNumber, "Body": body]
         alamo.request(url: url, parameters: parameters, accountSID: accountSID, auth: auth)
     }
+    
+    func createBody(type:String, dateTime:DateTime, userName:String) -> String {
+        var body = (type == "urgent" ? messages[1] : messages[0])
+        if type == "inform" { body = messages[2] }
+        body += userName
+        body += dateTime.formatDate()
+        return body
+    }
+    
+    
 }

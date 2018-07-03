@@ -10,7 +10,6 @@ import Foundation
 
 class Location {
     
-    
     func returnLink(locationManager:CoreLoc = CoreLoc()) -> String {
         let latitude = locationManager.latitude()
         let longitude = locationManager.longitude()
