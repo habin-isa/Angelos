@@ -63,17 +63,29 @@ class SaveUserDefaultsTest: QuickSpec {
                     subject.setNumber1(number: "+447794991234")
                     expect(subject.getNumber1()).to(equal("+447794991234"))
                 }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "numberKey")
+                    expect(subject.getName()).to(equal("Not nil"))
+                }
             }
             describe("#getNumber2") {
                 it("returns the number attribute") {
                     subject.setNumber2(number: "+447718950558")
                     expect(subject.getNumber2()).to(equal("+447718950558"))
                 }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "numberKey2")
+                    expect(subject.getName()).to(equal("Not nil"))
+                }
             }
             describe("#getNumber3") {
                 it("returns the number attribute") {
                     subject.setNumber3(number: "+447718978668")
                     expect(subject.getNumber3()).to(equal("+447718978668"))
+                }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "numberKey3")
+                    expect(subject.getName()).to(equal("Not nil"))
                 }
             }
             describe("#setCustomMessage") {
