@@ -99,6 +99,10 @@ class SaveUserDefaultsTest: QuickSpec {
                     subject.setCustomMessage(customMessage: "This is a custom message -")
                     expect(subject.getCustomMessage()).to(equal("This is a custom message -"))
                 }
+                it("returns nil") {
+                    subject.defaults.set(nil, forKey: "customMessageKey")
+                    expect(subject.getCustomMessage()).to(equal("Not nil"))
+                }
             }
         }
     }
