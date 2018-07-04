@@ -44,7 +44,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        Page1()
+        settingsPage()
         warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
@@ -124,7 +124,7 @@ class ViewController: UIViewController{
         Messenger().sendMessage(phoneNumber: number1, type: "inform", userName: name)
         Messenger().sendMessage(phoneNumber: number2, type: "inform", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "inform", userName: name)
-        Page2()
+        homePage()
     }
     
     @IBAction func clickSave(_ sender: UIButton) {
@@ -194,7 +194,7 @@ class ViewController: UIViewController{
         Page2()
     }
     
-    func Page1() {
+    func settingsPage() {
         //buttons
         sosButton.isHidden = true
         policeButton.isHidden = true
@@ -218,7 +218,7 @@ class ViewController: UIViewController{
 //        timeInputField.isHidden = false
     }
     
-    func Page2() {
+    func homePage() {
         //buttons
         sosButton.isHidden = false
         policeButton.isHidden = false
