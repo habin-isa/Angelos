@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DpL-fB-e1k">
-                                <rect key="frame" x="139" y="513" width="97" height="72"/>
+                                <rect key="frame" x="69" y="527" width="97" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <accessibility key="accessibilityConfiguration" identifier="SOS"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
@@ -189,23 +189,23 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Warning message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="An3-ZQ-WsL">
-                                <rect key="frame" x="179" y="298" width="174" height="177"/>
+                                <rect key="frame" x="179" y="260" width="174" height="177"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xLC-Kp-GSa">
-                                <rect key="frame" x="120" y="623" width="50" height="30"/>
+                                <rect key="frame" x="113" y="623" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Display"/>
+                                <state key="normal" title="Directory"/>
                                 <connections>
                                     <action selector="DisplayText:" destination="BYZ-38-t0r" eventType="touchUpInside" id="M1g-vB-bdp"/>
                                     <action selector="readFile1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z5h-Zv-c7h"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="#directoryText" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="c38-Gx-ipC">
-                                <rect key="frame" x="21" y="318" width="333" height="201"/>
+                                <rect key="frame" x="17" y="352" width="333" height="201"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="0.5406029929577465" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
@@ -216,8 +216,12 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="callButton" destination="tDJ-21-lFa" id="9Go-qA-ZiA"/>
+                        <outlet property="callTimeLabel" destination="SOU-VO-wnP" id="fvP-Ua-2vb"/>
+                        <outlet property="customButton" destination="IRo-vl-iX4" id="V3m-rP-RdK"/>
                         <outlet property="customMsgInputField" destination="LTr-A0-jlq" id="lny-7z-ldn"/>
                         <outlet property="customMsgOutputField" destination="I1j-yK-67O" id="1Dm-c4-wtf"/>
+                        <outlet property="directoryButton" destination="xLC-Kp-GSa" id="TzL-6B-bk7"/>
                         <outlet property="nameInputField" destination="ReW-FW-P02" id="Oir-Im-8UH"/>
                         <outlet property="nameOutputField" destination="4Je-wp-a9w" id="xHX-qo-9zq"/>
                         <outlet property="numberInputField1" destination="g0W-ya-xY4" id="iWB-0F-9XN"/>
@@ -226,6 +230,8 @@
                         <outlet property="numberOutputField1" destination="Fjo-r9-Ff5" id="YlR-NP-sHk"/>
                         <outlet property="numberOutputField2" destination="Avb-2N-ApC" id="bNH-ub-8oZ"/>
                         <outlet property="numberOutputField3" destination="5So-Zt-ntP" id="Ar0-KL-efE"/>
+                        <outlet property="policeButton" destination="Vur-Zv-8Hl" id="38U-m1-MZN"/>
+                        <outlet property="sosButton" destination="DpL-fB-e1k" id="O6W-2P-x3v"/>
                         <outlet property="textView" destination="c38-Gx-ipC" id="6by-jF-mVM"/>
                         <outlet property="timeInputField" destination="uaR-Cy-uDq" id="LbI-d2-Hdy"/>
                         <outlet property="warningOutputField" destination="An3-ZQ-WsL" id="Yud-Ek-Quf"/>

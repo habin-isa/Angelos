@@ -22,7 +22,16 @@ class ViewController: UIViewController{
     var number3 = ""
     var customMessage = ""
     var userFrequency = 0
+
     
+    //buttons
+    @IBOutlet weak var callButton: UIButton!
+    @IBOutlet weak var customButton: UIButton!
+    @IBOutlet weak var policeButton: UIButton!
+    @IBOutlet weak var directoryButton: UIButton!
+    @IBOutlet weak var sosButton: UIButton!
+    
+    //input fields
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
     @IBOutlet weak var numberInputField3: UITextField!
@@ -32,6 +41,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Page1()
         warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
@@ -129,17 +139,13 @@ class ViewController: UIViewController{
     }
     
    
+    @IBOutlet weak var callTimeLabel: UILabel!
     @IBOutlet weak var numberOutputField1: UILabel!
     @IBOutlet weak var numberOutputField2: UILabel!
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var customMsgOutputField: UILabel!
     @IBOutlet weak var warningOutputField: UILabel!
-    
-    
-    
-    
-    
     
 
     @IBOutlet weak var textView: UITextView!
@@ -172,6 +178,22 @@ class ViewController: UIViewController{
     
     @IBAction func DisplayText(_ sender: Any) {
         self.textView.text = load(file: "directory")
+    }
+    
+    func Page1() {
+        sosButton.isHidden = true
+        policeButton.isHidden = true
+        customButton.isHidden = true
+        directoryButton.isHidden = true
+        callButton.isHidden = true
+        textView.isHidden = true
+        numberOutputField1.isHidden = true
+        numberOutputField2.isHidden = true
+        numberOutputField3.isHidden = true
+        customMsgOutputField.isHidden = true
+        callTimeLabel.isHidden = true
+        timeInputField.isHidden = true
+        nameOutputField.isHidden = true
     }
     
 }
