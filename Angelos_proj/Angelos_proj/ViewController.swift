@@ -11,9 +11,7 @@ import AVFoundation
 import CoreLocation
 
 class ViewController: UIViewController{
-    
-    let locationManager = CLLocationManager()
-    
+        
     var ringtonePlayer = AudioPlayer()
     
     var savedDefault = SaveUserDefaults()
