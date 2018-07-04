@@ -158,6 +158,17 @@ At our morning stand-up, the team agreed objective of the day was to finish addi
 
 ### Day 8
 
+Following the feature freeze, we spent the morning tidying up our existing features. Unfortunately some more issues with using Xcode slowed us down. After lunch, one pair moved on to tidying up the front end and adding the disguise while the other pair refactored the back end.
+
+AM:
+* Muzzi and Charly fixed an error with the geolocation
+* Dione and Habin finished off the Helpline Directory
+* Jess finished off the app usage feature
+
+PM:
+*
+*
+
 ### Day 9
 
 ### Day 10
