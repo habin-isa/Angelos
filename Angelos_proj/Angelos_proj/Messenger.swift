@@ -34,6 +34,7 @@ class Messenger {
         if type == "inform" { body = messages[2] }
         body += userName
         body += dateTime.formatDate()
+        body += Location().returnLink()
         return body
     }
     
