@@ -166,12 +166,11 @@ AM:
 * Jess finished off the app usage feature
 
 PM:
-*
-*
+* Jess and Habin worked on splitting the views and adding the disguise
+* Muzzi, Dione and Charly refactored the model
 
 ### Day 9
 
 ### Day 10
 
-Our final day!
-
+Our final day! After our careers fair, we had the opportunity to present our completed project and celebrate!
