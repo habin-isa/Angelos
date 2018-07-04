@@ -94,8 +94,6 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="customMsgInputField" destination="LTr-A0-jlq" id="lny-7z-ldn"/>
-                        <outlet property="customMsgOutputField" destination="I1j-yK-67O" id="1Dm-c4-wtf"/>
                         <outlet property="timeInputField" destination="uaR-Cy-uDq" id="LbI-d2-Hdy"/>
                         <outlet property="warningOutputField" destination="An3-ZQ-WsL" id="Yud-Ek-Quf"/>
                     </connections>
@@ -159,8 +157,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Submit"/>
                                 <connections>
-                                    <action selector="clickSubmit:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xZH-sf-r0z"/>
-                                    <segue destination="BYZ-38-t0r" kind="show" id="X6X-aK-s80"/>
+                                    <action selector="clickSubmit:" destination="atC-5b-WNH" eventType="touchUpInside" id="xvh-DK-buE"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5wS-LG-dbb">
@@ -247,13 +244,15 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
-                                    <action selector="clickSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ql-jv-ofD"/>
+                                    <action selector="clickSave:" destination="atC-5b-WNH" eventType="touchUpInside" id="JwR-lG-Jbg"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2aU-pj-5so"/>
                         <connections>
+                            <outlet property="customMsgInputField" destination="LTr-A0-jlq" id="TOU-UW-UK6"/>
+                            <outlet property="customMsgOutputField" destination="I1j-yK-67O" id="rmX-0N-1QR"/>
                             <outlet property="nameInputField" destination="ReW-FW-P02" id="7pA-S9-iGQ"/>
                             <outlet property="nameOutputField" destination="Bmd-7n-Nec" id="b4Q-H4-179"/>
                             <outlet property="numberInputField1" destination="g0W-ya-xY4" id="uJI-Ah-uaM"/>
