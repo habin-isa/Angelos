@@ -89,11 +89,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact number 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qKI-PL-MYy">
-                                <rect key="frame" x="27" y="236" width="139" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tDJ-21-lFa">
                                 <rect key="frame" x="268" y="20" width="72" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -211,6 +206,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Contact number 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lia-T8-3B6">
+                                <rect key="frame" x="27" y="248" width="139" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -218,11 +218,16 @@
                     <connections>
                         <outlet property="callButton" destination="tDJ-21-lFa" id="9Go-qA-ZiA"/>
                         <outlet property="callTimeLabel" destination="SOU-VO-wnP" id="fvP-Ua-2vb"/>
+                        <outlet property="contactNumberLabel1" destination="qgN-6h-qp3" id="QFy-bN-yAs"/>
+                        <outlet property="contactNumberLabel2" destination="2dg-md-cgV" id="HiM-MY-Q3d"/>
+                        <outlet property="contactNumberLabel3" destination="lia-T8-3B6" id="8YN-Zz-eBK"/>
                         <outlet property="customButton" destination="IRo-vl-iX4" id="V3m-rP-RdK"/>
                         <outlet property="customMsgInputField" destination="LTr-A0-jlq" id="lny-7z-ldn"/>
+                        <outlet property="customMsgLabel" destination="LtU-4o-j5z" id="PYn-PB-qEd"/>
                         <outlet property="customMsgOutputField" destination="I1j-yK-67O" id="1Dm-c4-wtf"/>
                         <outlet property="directoryButton" destination="xLC-Kp-GSa" id="TzL-6B-bk7"/>
                         <outlet property="nameInputField" destination="ReW-FW-P02" id="Oir-Im-8UH"/>
+                        <outlet property="nameLabel" destination="mVU-Th-VsR" id="wgu-93-kmb"/>
                         <outlet property="nameOutputField" destination="4Je-wp-a9w" id="xHX-qo-9zq"/>
                         <outlet property="numberInputField1" destination="g0W-ya-xY4" id="iWB-0F-9XN"/>
                         <outlet property="numberInputField2" destination="H8K-cR-a6Y" id="QKC-li-U9P"/>
@@ -231,7 +236,9 @@
                         <outlet property="numberOutputField2" destination="Avb-2N-ApC" id="bNH-ub-8oZ"/>
                         <outlet property="numberOutputField3" destination="5So-Zt-ntP" id="Ar0-KL-efE"/>
                         <outlet property="policeButton" destination="Vur-Zv-8Hl" id="38U-m1-MZN"/>
+                        <outlet property="saveCustomMsgButton" destination="mES-Xs-k4O" id="dLd-sJ-Vnb"/>
                         <outlet property="sosButton" destination="DpL-fB-e1k" id="O6W-2P-x3v"/>
+                        <outlet property="submitButton" destination="kXh-Lc-4Xr" id="N8y-Og-Mia"/>
                         <outlet property="textView" destination="c38-Gx-ipC" id="6by-jF-mVM"/>
                         <outlet property="timeInputField" destination="uaR-Cy-uDq" id="LbI-d2-Hdy"/>
                         <outlet property="warningOutputField" destination="An3-ZQ-WsL" id="Yud-Ek-Quf"/>
