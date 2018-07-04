@@ -7,29 +7,21 @@
 //
 
 import XCTest
-import Quick
-import Nimble
 import CoreLocation
 
-@testable import Pods_Angelos_proj
 @testable import Angelos_proj
 
-class LocationTest: QuickSpec, CLLocationManagerDelegate {
+class LocationTest: XCTestCase {
     
-    override func spec() {
-        
-        let subject = Location()
-        
-        describe("Location") {
-            
-            describe("Returns location variable with longitude and latitude values") {
-                it("returns the location variable") {
-                    let mockCoreLoc = MockCoreLoc()
-                    expect(subject.returnLink(locationManager: mockCoreLoc)).to(equal("http://maps.apple.com/?ll=1.23,4.56"))
-                }
-            }
-        }
-        
+    let subject = Location()
+    
+    override func setUp() {
+        super.setUp()
+    }
+    
+    func testReturnLinkReturnsLinkWithCoordinates() {
+        let mockCoreLoc = MockCoreLoc()
+        XCTAssertEqual(subject.returnLink(locationManager: mockCoreLoc), "http://maps.apple.com/?ll=1.23,4.56")
     }
     
 }

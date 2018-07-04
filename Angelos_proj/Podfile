@@ -12,8 +12,6 @@ target 'Angelos_proj' do
   target 'Angelos_projTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'Nimble'
-    pod 'Quick'
   end
 
 end

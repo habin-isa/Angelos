@@ -12,7 +12,7 @@ import AVFoundation
 
 class Ringer {
     
-    let playTime = 10.0
+    var playTime = 10.0
 
     
     func play(ringtonePlayer:AudioPlayer, time:Double) {

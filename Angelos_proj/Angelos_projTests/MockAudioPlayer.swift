@@ -12,10 +12,10 @@ import Foundation
 
 class MockAudioPlayer: AudioPlayer {
     
-    var functionCalls = "none"
+    var playWasCalled = false
     
     override func play() {
-        functionCalls = "Play was called"
+        playWasCalled = true
     }
     
 }

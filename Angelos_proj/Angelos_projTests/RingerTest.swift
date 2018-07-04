@@ -25,4 +25,13 @@ class RingerTest: XCTestCase {
         XCTAssertEqual(ringer.playTime, 10.0)
     }
     
+    func testAudioPlayersPlayFunctionWasCalled() {
+        let mockAudioPlayer = MockAudioPlayer()
+        ringer.playTime = 0.0
+        ringer.play(ringtonePlayer: mockAudioPlayer, time: 0.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            XCTAssertEqual(mockAudioPlayer.playWasCalled, true)
+        })
+    }
+    
 }

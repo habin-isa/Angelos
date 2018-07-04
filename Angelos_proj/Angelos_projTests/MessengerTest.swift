@@ -7,9 +7,6 @@
 //
 
 import XCTest
-import Alamofire
-import Quick
-import Nimble
 @testable import Angelos_proj
 
 class MessengerTest: XCTestCase {
@@ -56,17 +53,17 @@ class MessengerTest: XCTestCase {
     
     func testBodyIsArray() {
         let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"]
-        expect(self.messenger.messages).to(equal(messages))
+        XCTAssertEqual(self.messenger.messages, messages)
     }
     
     func testBodyOfPoliceMessage() {
         let policeBody = "Call the Police -"
-        expect(self.messenger.messages[1]).to(equal(policeBody))
+        XCTAssertEqual(self.messenger.messages[1], policeBody)
     }
     
     func testBodyOfInformMessage() {
         let informBody = "You have been listed as my emergency contact -"
-        expect(self.messenger.messages[2]).to(equal(informBody))
+        XCTAssertEqual(self.messenger.messages[2], informBody)
     }
     
     func testSendCustomMessageCallsSendRequest() {

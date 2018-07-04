@@ -32,9 +32,7 @@ class Messenger {
     func createBody(type:String, dateTime:DateTime, userName:String) -> String {
         var body = (type == "urgent" ? messages[1] : messages[0])
         if type == "inform" { body = messages[2] }
-        body += userName
-        body += dateTime.formatDate()
-        body += Location().returnLink()
+        body += " \(userName). \(dateTime.formatDate()). Current Location: \(Location().returnLink())"
         return body
     }
     

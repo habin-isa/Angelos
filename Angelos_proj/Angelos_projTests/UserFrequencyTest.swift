@@ -37,21 +37,21 @@ class UserFrequencyTest: XCTestCase {
     }
     
     func testMultiplesOfTenTriggerConcern() {
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
-        self.userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
         XCTAssertTrue(userFrequency.triggerConcern())
     }
     
     func testUserFrequencyKeyIsSet() {
-        self.userFrequency.click()
-        self.userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
         XCTAssertEqual(3, userFrequency.getUserFrequency())
     }
     
