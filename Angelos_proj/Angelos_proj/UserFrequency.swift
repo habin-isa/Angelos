@@ -12,8 +12,6 @@ class UserFrequency {
     let defaults = UserDefaults.standard
     var clickCounter = 1
     
-//    var concernTriggered = false
-    
     func click() {
         clickCounter += 1
         defaults.setValue(clickCounter, forKey: "userFrequencyKey")
