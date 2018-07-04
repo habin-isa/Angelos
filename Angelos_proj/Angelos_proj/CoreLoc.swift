@@ -14,6 +14,12 @@ class CoreLoc{
     
     let locationManager = CLLocationManager()
     
+    init() {
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+    }
+    
     func latitude() -> Double {
         return locationManager.location!.coordinate.latitude
     }
