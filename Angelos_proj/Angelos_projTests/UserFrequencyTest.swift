@@ -50,8 +50,8 @@ class UserFrequencyTest: XCTestCase {
     }
     
     func testUserFrequencyKeyIsSet() {
-        self.userFrequency.click()
-        self.userFrequency.click()
+        userFrequency.click()
+        userFrequency.click()
         XCTAssertEqual(3, userFrequency.getUserFrequency())
     }
     
