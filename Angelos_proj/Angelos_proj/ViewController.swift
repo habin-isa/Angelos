@@ -14,11 +14,13 @@ class ViewController: UIViewController {
     var ringtonePlayer = AudioPlayer()
     
     var savedDefault = SaveUserDefaults()
+    var frequencyDefault = UserFrequency()
     var name = ""
     var number1 = ""
     var number2 = ""
     var number3 = ""
     var customMessage = ""
+    var userFrequency = Any
     
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
@@ -34,6 +36,7 @@ class ViewController: UIViewController {
         number2 = savedDefault.getNumber2()
         number3 = savedDefault.getNumber3()
         customMessage = savedDefault.getCustomMessage()
+        userFrequency = frequencyDefault.getUserFrequency()
         nameOutputField.text = "\(name)"
         numberOutputField1.text = "\(number1)"
         numberOutputField2.text = "\(number2)"
@@ -116,6 +119,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var customMsgOutputField: UILabel!
+    @IBOutlet weak var warningOutputField: UILabel!
     
 }
 
