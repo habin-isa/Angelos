@@ -37,11 +37,26 @@ class UserFrequencyTest: XCTestCase {
     }
     
     func testMultiplesOfTenTriggerConcern() {
-        userFrequency.clickCounter = 20
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
         XCTAssertTrue(userFrequency.triggerConcern())
     }
     
-    func testDisplayConcernMessageIsCalled() {
-        
+    func testUserFrequencyKeyIsSet() {
+        self.userFrequency.click()
+        self.userFrequency.click()
+        XCTAssertEqual(3, userFrequency.getUserFrequency())
+    }
+    
+    func testUserFrequencyKeyIs0() {
+        userFrequency.defaults.set(nil, forKey: "userFrequencyKey")
+        XCTAssertEqual(0, userFrequency.getUserFrequency())
     }
 }

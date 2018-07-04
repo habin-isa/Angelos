@@ -9,16 +9,24 @@
 import Foundation
 
 class UserFrequency {
+    let defaults = UserDefaults.standard
     var clickCounter = 1
+    
 //    var concernTriggered = false
     
     func click() {
         clickCounter += 1
+        defaults.setValue(clickCounter, forKey: "userFrequencyKey")
     }
     
     func triggerConcern() -> Bool {
-        if clickCounter % 10 == 0 { return true }
-        else { return false }
+        if defaults.integer(forKey: "userFrequencyKey") % 10 == 0 {
+            return true } else {
+            return false }
+    }
+    
+    func getUserFrequency() -> Int {
+        return defaults.integer(forKey: "userFrequencyKey")
     }
     
 }

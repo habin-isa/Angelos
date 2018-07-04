@@ -15,11 +15,13 @@ class ViewController: UIViewController{
     var ringtonePlayer = AudioPlayer()
     
     var savedDefault = SaveUserDefaults()
+    var frequencyDefault = UserFrequency()
     var name = ""
     var number1 = ""
     var number2 = ""
     var number3 = ""
     var customMessage = ""
+    var userFrequency = 0
     
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
@@ -30,11 +32,13 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
         number2 = savedDefault.getNumber2()
         number3 = savedDefault.getNumber3()
         customMessage = savedDefault.getCustomMessage()
+        userFrequency = frequencyDefault.getUserFrequency()
         nameOutputField.text = "\(name)"
         numberOutputField1.text = "\(number1)"
         numberOutputField2.text = "\(number2)"
@@ -51,7 +55,9 @@ class ViewController: UIViewController{
         Messenger().sendMessage(phoneNumber: number1, type: "standard", userName: name)
         Messenger().sendMessage(phoneNumber: number2, type: "standard", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "standard", userName: name)
-        UserFrequency().click()
+        frequencyDefault.click()
+        showWarning()
+        
     }
     
     @IBAction func clickPolice(_ sender: UIButton) {
@@ -59,7 +65,8 @@ class ViewController: UIViewController{
         Messenger().sendMessage(phoneNumber: number1, type: "urgent", userName: name)
         Messenger().sendMessage(phoneNumber: number2, type: "urgent", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "urgent", userName: name)
-        UserFrequency().click()
+        frequencyDefault.click()
+        showWarning()
     }
     
     @IBAction func clickCustom(_ sender: UIButton) {
@@ -67,7 +74,8 @@ class ViewController: UIViewController{
         Messenger().sendCustomMessage(phoneNumber: number1, userName: name, customMessage: customMessage)
         Messenger().sendCustomMessage(phoneNumber: number2, userName: name, customMessage: customMessage)
         Messenger().sendCustomMessage(phoneNumber: number3, userName: name, customMessage: customMessage)
-        UserFrequency().click()
+        frequencyDefault.click()
+        showWarning()
     }
     
     
@@ -76,7 +84,8 @@ class ViewController: UIViewController{
         let setTime = Double(timeInputField.text!)!
         timeInputField.text = ""
         ringer.play(ringtonePlayer: ringtonePlayer, time: setTime)
-        UserFrequency().click()
+        frequencyDefault.click()
+        showWarning()
     }
 
     
@@ -111,12 +120,21 @@ class ViewController: UIViewController{
         savedDefault.setCustomMessage(customMessage: customMessage)
     }
     
+    func showWarning() {
+        if frequencyDefault.triggerConcern() == true {
+            warningOutputField.isHidden = false
+        } else {
+            warningOutputField.isHidden = true
+        }
+    }
+    
    
     @IBOutlet weak var numberOutputField1: UILabel!
     @IBOutlet weak var numberOutputField2: UILabel!
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var customMsgOutputField: UILabel!
+    @IBOutlet weak var warningOutputField: UILabel!
     
     
     
