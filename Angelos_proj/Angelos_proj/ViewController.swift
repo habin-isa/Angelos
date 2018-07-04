@@ -10,15 +10,9 @@ import UIKit
 import AVFoundation
 import CoreLocation
 
-class ViewController: UIViewController, CLLocationManagerDelegate{
+class ViewController: UIViewController{
     
     let locationManager = CLLocationManager()
-    
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        let locValue:CLLocationCoordinate2D = manager.location!.coordinate
-        print("location = \(locValue.latitude) \(locValue.longitude)")
-        
-    }
     
     var ringtonePlayer = AudioPlayer()
     
@@ -48,13 +42,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate{
         numberOutputField2.text = "\(number2)"
         numberOutputField3.text = "\(number3)"
         customMsgOutputField.text = "\(customMessage)"
-        
-        
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        locationManager.startUpdatingLocation()
-        
     }
 
     override func didReceiveMemoryWarning() {
