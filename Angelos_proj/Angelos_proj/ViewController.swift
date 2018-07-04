@@ -120,7 +120,7 @@ class ViewController: UIViewController {
     }
     
     func showWarning() {
-        if frequencyDefault.defaults.integer(forKey: "userFrequencyKey") % 10 == 0 {
+        if frequencyDefault.triggerConcern() == true {
             warningOutputField.isHidden = false
         } else {
             warningOutputField.isHidden = true
