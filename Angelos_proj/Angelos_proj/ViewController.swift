@@ -25,6 +25,7 @@ class ViewController: UIViewController{
 
     
     //buttons
+    @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var customButton: UIButton!
     @IBOutlet weak var policeButton: UIButton!
@@ -189,6 +190,10 @@ class ViewController: UIViewController{
         directoriesPage()
     }
     
+    @IBAction func goHome(_ sender: Any) {
+        Page2()
+    }
+    
     func Page1() {
         //buttons
         sosButton.isHidden = true
@@ -196,6 +201,7 @@ class ViewController: UIViewController{
         customButton.isHidden = true
         directoryButton.isHidden = true
         callButton.isHidden = true
+        homeButton.isHidden = true
         
         //text
         textView.isHidden = true
@@ -221,6 +227,7 @@ class ViewController: UIViewController{
         callButton.isHidden = false
         submitButton.isHidden = true
         saveCustomMsgButton.isHidden = true
+        homeButton.isHidden = true
         
         //input fields
         timeInputField.isHidden = true
@@ -257,6 +264,7 @@ class ViewController: UIViewController{
         callButton.isHidden = true
         submitButton.isHidden = true
         saveCustomMsgButton.isHidden = true
+        homeButton.isHidden = false
         
         //input fields
         timeInputField.isHidden = true
