@@ -276,7 +276,6 @@
 				C114DA0B20E39A6900240BE0 /* Sources */,
 				C114DA0C20E39A6900240BE0 /* Frameworks */,
 				C114DA0D20E39A6900240BE0 /* Resources */,
-				F2A6265C84C3C914695AB27D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -431,26 +430,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F2A6265C84C3C914695AB27D /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nimble/Nimble.framework",
-				"${BUILT_PRODUCTS_DIR}/Quick/Quick.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nimble.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Quick.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
