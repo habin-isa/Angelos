@@ -8,9 +8,10 @@
 
 import UIKit
 import AVFoundation
+import CoreLocation
 
-class ViewController: UIViewController {
-    
+class ViewController: UIViewController{
+        
     var ringtonePlayer = AudioPlayer()
     
     var savedDefault = SaveUserDefaults()
