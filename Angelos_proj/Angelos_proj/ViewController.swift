@@ -23,10 +23,6 @@ class ViewController: UIViewController{
     var customMessage = ""
     var userFrequency = 0
     
-    @IBOutlet weak var numberInputField1: UITextField!
-    @IBOutlet weak var numberInputField2: UITextField!
-    @IBOutlet weak var numberInputField3: UITextField!
-    @IBOutlet weak var nameInputField: UITextField!
     @IBOutlet weak var timeInputField: UITextField!
     @IBOutlet weak var customMsgInputField: UITextField!
     
@@ -128,9 +124,6 @@ class ViewController: UIViewController{
     }
     
    
-    @IBOutlet weak var numberOutputField1: UILabel!
-    @IBOutlet weak var numberOutputField2: UILabel!
-    @IBOutlet weak var numberOutputField3: UILabel!
 
     @IBOutlet weak var customMsgOutputField: UILabel!
     @IBOutlet weak var warningOutputField: UILabel!

@@ -12,7 +12,13 @@ import UIKit
 class SettingsController: UIViewController {
   
     @IBOutlet weak var nameOutputField: UILabel!
-
+    @IBOutlet weak var nameInputField: UITextField!
+    @IBOutlet weak var numberInputField1: UITextField!
+    @IBOutlet weak var numberInputField2: UITextField!
+    @IBOutlet weak var numberInputField3: UITextField!
+    @IBOutlet weak var numberOutputField1: UILabel!
+    @IBOutlet weak var numberOutputField2: UILabel!
+    @IBOutlet weak var numberOutputField3: UILabel!
 
     
     func viewDidLoad() {

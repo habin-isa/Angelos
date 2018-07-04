@@ -96,13 +96,6 @@
                     <connections>
                         <outlet property="customMsgInputField" destination="LTr-A0-jlq" id="lny-7z-ldn"/>
                         <outlet property="customMsgOutputField" destination="I1j-yK-67O" id="1Dm-c4-wtf"/>
-                        <outlet property="nameInputField" destination="ReW-FW-P02" id="Oir-Im-8UH"/>
-                        <outlet property="numberInputField1" destination="g0W-ya-xY4" id="iWB-0F-9XN"/>
-                        <outlet property="numberInputField2" destination="H8K-cR-a6Y" id="QKC-li-U9P"/>
-                        <outlet property="numberInputField3" destination="Ma7-YK-Hjf" id="4Gg-Is-f7I"/>
-                        <outlet property="numberOutputField1" destination="Fjo-r9-Ff5" id="YlR-NP-sHk"/>
-                        <outlet property="numberOutputField2" destination="Avb-2N-ApC" id="bNH-ub-8oZ"/>
-                        <outlet property="numberOutputField3" destination="5So-Zt-ntP" id="Ar0-KL-efE"/>
                         <outlet property="timeInputField" destination="uaR-Cy-uDq" id="LbI-d2-Hdy"/>
                         <outlet property="warningOutputField" destination="An3-ZQ-WsL" id="Yud-Ek-Quf"/>
                     </connections>
@@ -261,7 +254,14 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="2aU-pj-5so"/>
                         <connections>
+                            <outlet property="nameInputField" destination="ReW-FW-P02" id="7pA-S9-iGQ"/>
                             <outlet property="nameOutputField" destination="Bmd-7n-Nec" id="b4Q-H4-179"/>
+                            <outlet property="numberInputField1" destination="g0W-ya-xY4" id="uJI-Ah-uaM"/>
+                            <outlet property="numberInputField2" destination="H8K-cR-a6Y" id="h8c-Rg-OXO"/>
+                            <outlet property="numberInputField3" destination="Ma7-YK-Hjf" id="FZy-gK-Qmg"/>
+                            <outlet property="numberOutputField1" destination="Fjo-r9-Ff5" id="xzC-YD-3aH"/>
+                            <outlet property="numberOutputField2" destination="Avb-2N-ApC" id="Gau-Gy-14c"/>
+                            <outlet property="numberOutputField3" destination="5So-Zt-ntP" id="omY-QQ-sFw"/>
                         </connections>
                     </view>
                 </viewController>
