@@ -21,11 +21,19 @@ class CoreLoc{
     }
     
     func latitude() -> Double {
-        return locationManager.location!.coordinate.latitude
+        if let lat = locationManager.location {
+            return lat.coordinate.latitude
+        } else {
+            return(0)
+        }
     }
     
     func longitude() -> Double {
-        return locationManager.location!.coordinate.longitude
+        if let lat = locationManager.location {
+            return lat.coordinate.longitude
+        } else {
+            return(0)
+        }
     }
     
 }
