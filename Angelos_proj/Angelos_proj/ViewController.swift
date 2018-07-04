@@ -39,7 +39,6 @@ class ViewController: UIViewController{
         number3 = savedDefault.getNumber3()
         customMessage = savedDefault.getCustomMessage()
         userFrequency = frequencyDefault.getUserFrequency()
-        nameOutputField.text = "\(name)"
         numberOutputField1.text = "\(number1)"
         numberOutputField2.text = "\(number2)"
         numberOutputField3.text = "\(number3)"
@@ -132,47 +131,13 @@ class ViewController: UIViewController{
     @IBOutlet weak var numberOutputField1: UILabel!
     @IBOutlet weak var numberOutputField2: UILabel!
     @IBOutlet weak var numberOutputField3: UILabel!
-    @IBOutlet weak var nameOutputField: UILabel!
+
     @IBOutlet weak var customMsgOutputField: UILabel!
     @IBOutlet weak var warningOutputField: UILabel!
     
     
     
-    
-    
-    
 
-    @IBOutlet weak var textView: UITextView!
-    
-    @IBAction func readFile1(_ sender: Any) {
-        
-        self.textView.text = load(file: "directory")
-    }
-    
-    func load(file name:String) -> String {
-        
-        if let path = Bundle.main.path(forResource: name, ofType: "txt") {
-            
-            if let contents = try? String(contentsOfFile: path) {
-                
-                return contents
-                
-            } else {
-                
-                print("Error! - This file doesn't contain any text.")
-            }
-            
-        } else {
-            
-            print("Error! - This file doesn't exist.")
-        }
-        
-        return ""
-    }
-    
-    @IBAction func DisplayText(_ sender: Any) {
-        self.textView.text = load(file: "directory")
-    }
     
 }
 
