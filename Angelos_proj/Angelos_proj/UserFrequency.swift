@@ -19,10 +19,10 @@ class UserFrequency {
         defaults.setValue(clickCounter, forKey: "userFrequencyKey")
     }
     
-    
     func triggerConcern() -> Bool {
-        if defaults.integer(forKey: "userFrequencyKey") % 10 == 0 { return true }
-        else { return false }
+        if defaults.integer(forKey: "userFrequencyKey") % 10 == 0 {
+            return true } else {
+            return false }
     }
     
     func getUserFrequency() -> Int {
