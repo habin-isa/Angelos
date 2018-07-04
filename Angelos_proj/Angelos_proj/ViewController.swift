@@ -24,6 +24,7 @@ class ViewController: UIViewController{
     var userFrequency = 0
 
     
+    @IBOutlet weak var homeImage: UIImageView!
     //buttons
     @IBOutlet weak var featureSettingsButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
@@ -216,7 +217,7 @@ class ViewController: UIViewController{
         callButton.isHidden = true
         homeButton.isHidden = true
         settingsButton.isHidden = true
-        featureSettingsButton.isHidden = false
+        featureSettingsButton.isHidden = true
         
         //text
         textView.isHidden = true
@@ -244,6 +245,9 @@ class ViewController: UIViewController{
         nameLabel.isHidden = false
         callTimeLabel.isHidden = true
         emergencyContactsLabel.isHidden = false
+        
+        //image
+        homeImage.isHidden = true
         
     }
     
@@ -288,6 +292,9 @@ class ViewController: UIViewController{
         callTimeLabel.isHidden = true
         emergencyContactsLabel.isHidden = false
         
+        //image
+        homeImage.isHidden = true
+        
     }
     
     func homePage() {
@@ -329,6 +336,9 @@ class ViewController: UIViewController{
         
         //text
         textView.isHidden = true
+        
+        //image
+        homeImage.isHidden = false
     }
     
     func directoriesPage() {
@@ -370,6 +380,9 @@ class ViewController: UIViewController{
         
         //text
         textView.isHidden = false
+        
+        //image
+        homeImage.isHidden = true
     }
     
     func featureSettings() {
@@ -380,9 +393,10 @@ class ViewController: UIViewController{
         directoryButton.isHidden = true
         callButton.isHidden = true
         submitButton.isHidden = true
-        saveCustomMsgButton.isHidden = true
+        saveCustomMsgButton.isHidden = false
         homeButton.isHidden = false
         settingsButton.isHidden = false
+        featureSettingsButton.isHidden = true
         
         //input fields
         timeInputField.isHidden = false
@@ -410,6 +424,9 @@ class ViewController: UIViewController{
         
         //text
         textView.isHidden = true
+        
+        //image
+        homeImage.isHidden = true
     }
     
     
