@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     var number2 = ""
     var number3 = ""
     var customMessage = ""
-    var userFrequency = Any
+    var userFrequency = 0
     
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
@@ -111,6 +111,14 @@ class ViewController: UIViewController {
         customMsgInputField.text = ""
         customMsgOutputField.text = "\(customMessage)"
         savedDefault.setCustomMessage(customMessage: customMessage)
+    }
+    
+    func showWarning() {
+        if UserFrequency().triggerConcern() == false {
+            warningOutputField.isHidden = true
+        } else {
+            warningOutputField.isHidden = false
+        }
     }
     
    

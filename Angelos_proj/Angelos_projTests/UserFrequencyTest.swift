@@ -37,7 +37,16 @@ class UserFrequencyTest: XCTestCase {
     }
     
     func testMultiplesOfTenTriggerConcern() {
-        userFrequency.clickCounter = 20
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        self.userFrequency.click()
+        print(userFrequency.defaults.integer(forKey: "userFrequencyKey"))
         XCTAssertTrue(userFrequency.triggerConcern())
     }
     
