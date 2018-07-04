@@ -25,6 +25,7 @@ class ViewController: UIViewController{
 
     
     //buttons
+    @IBOutlet weak var featureSettingsButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
     @IBOutlet weak var callButton: UIButton!
     @IBOutlet weak var customButton: UIButton!
@@ -33,7 +34,8 @@ class ViewController: UIViewController{
     @IBOutlet weak var sosButton: UIButton!
     @IBOutlet weak var submitButton: UIButton!
     @IBOutlet weak var saveCustomMsgButton: UIButton!
-    
+    @IBOutlet weak var settingsButton: UIButton!
+
     //input fields
     @IBOutlet weak var numberInputField1: UITextField!
     @IBOutlet weak var numberInputField2: UITextField!
@@ -44,7 +46,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        settingsPage()
+        openingPage()
         warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
@@ -155,6 +157,7 @@ class ViewController: UIViewController{
     @IBOutlet weak var contactNumberLabel2: UILabel!
     @IBOutlet weak var contactNumberLabel3: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emergencyContactsLabel: UILabel!
     
     
     @IBOutlet weak var textView: UITextView!
@@ -191,17 +194,29 @@ class ViewController: UIViewController{
     }
     
     @IBAction func goHome(_ sender: Any) {
-        Page2()
+        homePage()
     }
     
-    func settingsPage() {
+    @IBAction func goSettings(_ sender: Any) {
+        settingsPage()
+    }
+    
+    @IBAction func gofeatureSettings(_ sender: Any) {
+        featureSettings()
+    }
+    
+    func openingPage() {
         //buttons
+        submitButton.isHidden = false
+        saveCustomMsgButton.isHidden = true
         sosButton.isHidden = true
         policeButton.isHidden = true
         customButton.isHidden = true
         directoryButton.isHidden = true
         callButton.isHidden = true
         homeButton.isHidden = true
+        settingsButton.isHidden = true
+        featureSettingsButton.isHidden = false
         
         //text
         textView.isHidden = true
@@ -213,9 +228,66 @@ class ViewController: UIViewController{
         customMsgOutputField.isHidden = true
         nameOutputField.isHidden = true
         
-//        //labels
-//        callTimeLabel.isHidden = false
-//        timeInputField.isHidden = false
+        //input fields
+        timeInputField.isHidden = true
+        numberInputField1.isHidden = false
+        numberInputField2.isHidden = false
+        numberInputField3.isHidden = false
+        nameInputField.isHidden = false
+        customMsgInputField.isHidden = true
+        
+        //labels
+        customMsgLabel.isHidden = true
+        contactNumberLabel1.isHidden = false
+        contactNumberLabel2.isHidden = false
+        contactNumberLabel3.isHidden = false
+        nameLabel.isHidden = false
+        callTimeLabel.isHidden = true
+        emergencyContactsLabel.isHidden = false
+        
+    }
+    
+    
+    func settingsPage() {
+        //buttons
+        submitButton.isHidden = false
+        saveCustomMsgButton.isHidden = true
+        sosButton.isHidden = true
+        policeButton.isHidden = true
+        customButton.isHidden = true
+        directoryButton.isHidden = true
+        callButton.isHidden = true
+        homeButton.isHidden = false
+        settingsButton.isHidden = true
+        featureSettingsButton.isHidden = false
+        
+        //text
+        textView.isHidden = true
+        
+        //output fields
+        numberOutputField1.isHidden = false
+        numberOutputField2.isHidden = false
+        numberOutputField3.isHidden = false
+        customMsgOutputField.isHidden = true
+        nameOutputField.isHidden = false
+        
+        //input fields
+        timeInputField.isHidden = true
+        numberInputField1.isHidden = false
+        numberInputField2.isHidden = false
+        numberInputField3.isHidden = false
+        nameInputField.isHidden = true
+        customMsgInputField.isHidden = true
+        
+        //labels
+        customMsgLabel.isHidden = true
+        contactNumberLabel1.isHidden = false
+        contactNumberLabel2.isHidden = false
+        contactNumberLabel3.isHidden = false
+        nameLabel.isHidden = true
+        callTimeLabel.isHidden = true
+        emergencyContactsLabel.isHidden = false
+        
     }
     
     func homePage() {
@@ -228,6 +300,8 @@ class ViewController: UIViewController{
         submitButton.isHidden = true
         saveCustomMsgButton.isHidden = true
         homeButton.isHidden = true
+        settingsButton.isHidden = false
+        featureSettingsButton.isHidden = true
         
         //input fields
         timeInputField.isHidden = true
@@ -242,6 +316,7 @@ class ViewController: UIViewController{
         numberOutputField1.isHidden = true
         numberOutputField2.isHidden = true
         numberOutputField3.isHidden = true
+        nameOutputField.isHidden = true
         
         //labels
         customMsgLabel.isHidden = true
@@ -250,6 +325,7 @@ class ViewController: UIViewController{
         contactNumberLabel3.isHidden = true
         nameLabel.isHidden = true
         callTimeLabel.isHidden = true
+        emergencyContactsLabel.isHidden = true
         
         //text
         textView.isHidden = true
@@ -265,6 +341,8 @@ class ViewController: UIViewController{
         submitButton.isHidden = true
         saveCustomMsgButton.isHidden = true
         homeButton.isHidden = false
+        settingsButton.isHidden = true
+        featureSettingsButton.isHidden = true
         
         //input fields
         timeInputField.isHidden = true
@@ -279,6 +357,7 @@ class ViewController: UIViewController{
         numberOutputField1.isHidden = true
         numberOutputField2.isHidden = true
         numberOutputField3.isHidden = true
+        nameOutputField.isHidden = true
         
         //labels
         customMsgLabel.isHidden = true
@@ -287,9 +366,50 @@ class ViewController: UIViewController{
         contactNumberLabel3.isHidden = true
         nameLabel.isHidden = true
         callTimeLabel.isHidden = true
+        emergencyContactsLabel.isHidden = true
         
         //text
         textView.isHidden = false
+    }
+    
+    func featureSettings() {
+        //buttons
+        sosButton.isHidden = true
+        policeButton.isHidden = true
+        customButton.isHidden = true
+        directoryButton.isHidden = true
+        callButton.isHidden = true
+        submitButton.isHidden = true
+        saveCustomMsgButton.isHidden = true
+        homeButton.isHidden = false
+        settingsButton.isHidden = false
+        
+        //input fields
+        timeInputField.isHidden = false
+        numberInputField1.isHidden = true
+        numberInputField2.isHidden = true
+        numberInputField3.isHidden = true
+        nameInputField.isHidden = true
+        customMsgInputField.isHidden = false
+        
+        //output fields
+        customMsgOutputField.isHidden = false
+        numberOutputField1.isHidden = true
+        numberOutputField2.isHidden = true
+        numberOutputField3.isHidden = true
+        nameOutputField.isHidden = true
+        
+        //labels
+        customMsgLabel.isHidden = false
+        contactNumberLabel1.isHidden = true
+        contactNumberLabel2.isHidden = true
+        contactNumberLabel3.isHidden = true
+        nameLabel.isHidden = true
+        callTimeLabel.isHidden = false
+        emergencyContactsLabel.isHidden = true
+        
+        //text
+        textView.isHidden = true
     }
     
     
