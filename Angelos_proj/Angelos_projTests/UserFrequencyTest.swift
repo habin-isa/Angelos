@@ -41,7 +41,9 @@ class UserFrequencyTest: XCTestCase {
         XCTAssertTrue(userFrequency.triggerConcern())
     }
     
-    func testDisplayConcernMessageIsCalled() {
-        
+    func testUserFrequencyKeyIsSet() {
+        self.userFrequency.click()
+        self.userFrequency.click()
+        XCTAssertEqual(3, userFrequency.getUserFrequency() as! Int)
     }
 }
