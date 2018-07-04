@@ -75,6 +75,14 @@ I want to be able to enter mulitple contacts
 As a user,
 So my contact knows what time I raised the alert,
 I want the message to include the date and time
+
+As a user
+So I can access related resources
+I want the app to have a helpline directory
+
+As a user
+So I consider seeking help for repeat situations
+I want the app to alert me if I am using it frequently and suggest that I seek help
 ```
 
 ## Code Snippet
@@ -158,7 +166,7 @@ At our morning stand-up, the team agreed objective of the day was to finish addi
 
 ### Day 8
 
-Following the feature freeze, we spent the morning tidying up our existing features. Unfortunately some more issues with using Xcode slowed us down. After lunch, one pair moved on to tidying up the front end and adding the disguise while the other pair refactored the back end.
+Following the feature freeze, we spent the morning tidying up our existing features. After lunch, one pair moved on to tidying up the front end and adding the disguise while the other pair refactored the back end. Unfortuntaley progress was once again hindered by Xcode glitches, which meant progress was slower than initially anticipated
 
 AM:
 * Muzzi and Charly fixed an error with the geolocation
@@ -170,6 +178,8 @@ PM:
 * Muzzi, Dione and Charly refactored the model
 
 ### Day 9
+
+Our final day of work on the project was spent tidying up the final loose ends of the project, and bringing together our presentation.
 
 ### Day 10
 
