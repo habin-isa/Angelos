@@ -117,6 +117,44 @@ class ViewController: UIViewController {
     @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var customMsgOutputField: UILabel!
     
+    
+    
+    
+    
+    
+
+    @IBOutlet weak var textView: UITextView!
+    
+    @IBAction func readFile1(_ sender: Any) {
+        
+        self.textView.text = load(file: "directory")
+    }
+    
+    func load(file name:String) -> String {
+        
+        if let path = Bundle.main.path(forResource: name, ofType: "txt") {
+            
+            if let contents = try? String(contentsOfFile: path) {
+                
+                return contents
+                
+            } else {
+                
+                print("Error! - This file doesn't contain any text.")
+            }
+            
+        } else {
+            
+            print("Error! - This file doesn't exist.")
+        }
+        
+        return ""
+    }
+    
+    @IBAction func DisplayText(_ sender: Any) {
+        self.textView.text = load(file: "directory")
+    }
+    
 }
 
 
