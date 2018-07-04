@@ -186,6 +186,7 @@ class ViewController: UIViewController{
     
     @IBAction func DisplayText(_ sender: Any) {
         self.textView.text = load(file: "directory")
+        directoriesPage()
     }
     
     func Page1() {
@@ -245,8 +246,42 @@ class ViewController: UIViewController{
         
         //text
         textView.isHidden = true
-       
+    }
+    
+    func directoriesPage() {
+        //buttons
+        sosButton.isHidden = true
+        policeButton.isHidden = true
+        customButton.isHidden = true
+        directoryButton.isHidden = true
+        callButton.isHidden = true
+        submitButton.isHidden = true
+        saveCustomMsgButton.isHidden = true
         
+        //input fields
+        timeInputField.isHidden = true
+        numberInputField1.isHidden = true
+        numberInputField2.isHidden = true
+        numberInputField3.isHidden = true
+        nameInputField.isHidden = true
+        customMsgInputField.isHidden = true
+        
+        //output fields
+        customMsgOutputField.isHidden = true
+        numberOutputField1.isHidden = true
+        numberOutputField2.isHidden = true
+        numberOutputField3.isHidden = true
+        
+        //labels
+        customMsgLabel.isHidden = true
+        contactNumberLabel1.isHidden = true
+        contactNumberLabel2.isHidden = true
+        contactNumberLabel3.isHidden = true
+        nameLabel.isHidden = true
+        callTimeLabel.isHidden = true
+        
+        //text
+        textView.isHidden = false
     }
     
     
