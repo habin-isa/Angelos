@@ -46,4 +46,9 @@ class UserFrequencyTest: XCTestCase {
         self.userFrequency.click()
         XCTAssertEqual(3, userFrequency.getUserFrequency() as! Int)
     }
+    
+    func testUserFrequencyKeyIs0() {
+        userFrequency.defaults.set(nil, forKey: "userFrequencyKey")
+        XCTAssertEqual(0, userFrequency.getUserFrequency() as! Int)
+    }
 }

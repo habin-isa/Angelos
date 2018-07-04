@@ -16,7 +16,7 @@ class UserFrequency {
     
     func click() {
         clickCounter += 1
-        defaults.setValue(clickCounter, forKey: "frequencyKey")
+        defaults.setValue(clickCounter, forKey: "userFrequencyKey")
     }
     
     
@@ -26,7 +26,7 @@ class UserFrequency {
     }
     
     func getUserFrequency() -> Any {
-        if let userFrequency = defaults.object(forKey: "frequencyKey") {
+        if let userFrequency = defaults.object(forKey: "userFrequencyKey") {
             return userFrequency
         } else {
             return(0)
