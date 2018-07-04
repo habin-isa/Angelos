@@ -30,17 +30,17 @@ class SaveUserDefaultsTest: XCTestCase {
     }
     
     func testSetNumber() {
-        subject.setNumber1(number: "+447794991234")
+        subject.setNumber(number: "+447794991234")
         XCTAssertEqual(subject.defaults.string(forKey: "numberKey"), "+447794991234")
     }
 
     func testSetNumber2() {
-        subject.setNumber2(number: "+447718950558")
+        subject.setNumber(number: "+447718950558")
         XCTAssertEqual(subject.defaults.string(forKey: "numberKey2"), "+447718950558")
     }
     
     func testSetNumber3() {
-        subject.setNumber3(number: "+447718978668")
+        subject.setNumber(number: "+447718978668")
         XCTAssertEqual(subject.defaults.string(forKey: "numberKey3"), "+447718978668")
     }
     
@@ -55,7 +55,7 @@ class SaveUserDefaultsTest: XCTestCase {
     }
     
     func testGetNumber() {
-        subject.setNumber1(number: "+447794991234")
+        subject.setNumber(number: "+447794991234")
         XCTAssertEqual(subject.getNumber1(), "+447794991234")
     }
     

@@ -15,18 +15,25 @@ class SaveUserDefaults {
         defaults.setValue(name, forKey: "nameKey")
     }
     
-    func setNumber1(number: String) {
-        defaults.setValue(number, forKey: "numberKey")
+    func setNumber(number: String) {
+        if isNumberOneEmpty() { defaults.setValue(number, forKey: "numberKey") }
+        if isNumberTwoEmpty() { defaults.setValue(number, forKey: "numberKey2") }
+        if isNumberThreeEmpty() { defaults.setValue(number, forKey: "numberKey3") }
     }
     
-    func setNumber2(number: String) {
-        defaults.setValue(number, forKey: "numberKey2")
+    func isNumberOneEmpty() -> Bool {
+        return defaults.string(forKey: "numberKey") == nil
     }
     
-    func setNumber3(number: String) {
-        defaults.setValue(number, forKey: "numberKey3")
+    func isNumberTwoEmpty() -> Bool {
+        return defaults.string(forKey: "numberKey2") == nil
     }
-    
+
+    func isNumberThreeEmpty() -> Bool {
+        return defaults.string(forKey: "numberKey3") == nil
+    }
+
+
     func getName() -> String {
         if let name = defaults.string(forKey: "nameKey") {
             return name

@@ -105,9 +105,9 @@ class ViewController: UIViewController{
         nameOutputField.text = "\(name)"
         
         savedDefault.setName(name: name)
-        savedDefault.setNumber1(number: number1)
-        savedDefault.setNumber2(number: number2)
-        savedDefault.setNumber3(number: number3)
+        savedDefault.setNumber(number: number1)
+        savedDefault.setNumber(number: number2)
+        savedDefault.setNumber(number: number3)
         Messenger().sendMessage(phoneNumber: number1, type: "inform", userName: name)
         Messenger().sendMessage(phoneNumber: number2, type: "inform", userName: name)
         Messenger().sendMessage(phoneNumber: number3, type: "inform", userName: name)
