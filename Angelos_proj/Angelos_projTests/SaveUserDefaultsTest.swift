@@ -12,111 +12,61 @@ import XCTest
 
 class SaveUserDefaultsTest: XCTestCase {
     
-    let subject = SaveUserDefaults()
-    let messenger = Messenger()
-    let mockAlamo = MockAlamo()
+    var mockUserDef = MockUserDef()
+    var subject = SaveUserDefaults(defaultlib: MockUserDef())
     
     override func setUp() {
         super.setUp()
+        subject = SaveUserDefaults(defaultlib: mockUserDef)
     }
 
     func testHasDefaultProperty() {
-        XCTAssertEqual(subject.defaults, UserDefaults.standard)
+        XCTAssertNotNil(subject.defaults)
     }
     
-    func testSetName() {
+    func testSetNameCallsSetValue() {
         subject.setName(name: "Muzzi")
-        XCTAssertEqual(subject.defaults.string(forKey: "nameKey"), "Muzzi")
+        XCTAssertEqual(mockUserDef.setValueCalled, true)
     }
     
-    func testSetNumber() {
-        subject.setNumber(number: "+447794991234")
-        XCTAssertEqual(subject.defaults.string(forKey: "numberKey"), "+447794991234")
+    func testSetNameCallsSetValueWithName() {
+        subject.setName(name: "Muzzi")
+        XCTAssertEqual(mockUserDef.setValueFirstParamter, "Muzzi")
     }
 
-    func testSetNumber2() {
-        subject.setNumber(number: "+447718950558")
-        XCTAssertEqual(subject.defaults.string(forKey: "numberKey2"), "+447718950558")
-    }
-    
-    func testSetNumber3() {
-        subject.setNumber(number: "+447718978668")
-        XCTAssertEqual(subject.defaults.string(forKey: "numberKey3"), "+447718978668")
-    }
-    
-    func testGetName() {
+    func testSetNameCallsSetValueWithKey() {
         subject.setName(name: "Muzzi")
-        XCTAssertEqual(subject.getName(), "Muzzi")
+        XCTAssertEqual(mockUserDef.setValueSecondParamter, "nameKey")
     }
     
-    func testGetNameNil() {
-        subject.defaults.set(nil, forKey: "nameKey")
-        XCTAssertEqual(subject.getName(), "Not nil")
+    func testGetNameCallsGetValue() {
+        XCTAssertEqual(subject.getName(), "getValue was called with nameKey")
     }
     
-    func testGetNumber() {
-        subject.setNumber(number: "+447794991234")
-        XCTAssertEqual(subject.getNumber1(), "+447794991234")
+    func testGetNumberOneCallsGetValue() {
+        XCTAssertEqual(subject.getNumber1(), "getValue was called with numberKey")
     }
     
-    func testGetNilNumber() {
-        subject.defaults.set(nil, forKey: "numberKey")
-        XCTAssertEqual(subject.getNumber1(), "Not nil")
+    func testGetNumberTwoCallsGetValue() {
+        XCTAssertEqual(subject.getNumber2(), "getValue was called with numberKey2")
     }
     
-    func testSetCustomMessage() {
+    func testGetNumberThreeCallsGetValue() {
+        XCTAssertEqual(subject.getNumber3(), "getValue was called with numberKey3")
+    }
+    
+    func testSetCustomMessageCallsSetValueWithMessage() {
         subject.setCustomMessage(customMessage: "This is a custom message -")
-        XCTAssertEqual(subject.defaults.string(forKey: "customMessageKey"), "This is a custom message -")
+        XCTAssertEqual(mockUserDef.setValueFirstParamter, "This is a custom message -")
     }
     
-    func testGetCustomMessage() {
+    func testSetCustomMessageCallsSetValueWithKey() {
         subject.setCustomMessage(customMessage: "This is a custom message -")
-        XCTAssertEqual(subject.getCustomMessage(), "This is a custom message -")
+        XCTAssertEqual(mockUserDef.setValueSecondParamter, "customMessageKey")
     }
     
-    func testCustomMessageNil() {
-        subject.defaults.set(nil, forKey: "customMessageKey")
-        XCTAssertEqual(subject.getCustomMessage(), "Not nil")
+    func testGetCustomMessageCallsGetValue() {
+        XCTAssertEqual(subject.getCustomMessage(), "getValue was called with customMessageKey")
     }
-    
-    
-
-//            describe("#getNumber2") {
-//                it("returns the number attribute") {
-//                    subject.setNumber2(number: "+447718950558")
-//                    expect(subject.getNumber2()).to(equal("+447718950558"))
-//                }
-//                it("returns nil") {
-//                    subject.defaults.set(nil, forKey: "numberKey2")
-//                    expect(subject.getNumber2()).to(equal("Not nil"))
-//                }
-//            }
-//            describe("#getNumber3") {
-//                it("returns the number attribute") {
-//                    subject.setNumber3(number: "+447718978668")
-//                    expect(subject.getNumber3()).to(equal("+447718978668"))
-//                }
-//                it("returns nil") {
-//                    subject.defaults.set(nil, forKey: "numberKey3")
-//                    expect(subject.getNumber3()).to(equal("Not nil"))
-//                }
-//            }
-//            describe("#setCustomMessage") {
-//                it("sets the custom message attribute") {
-//                    subject.setCustomMessage(customMessage: "This is a custom message -")
-//                    expect(subject.defaults.string(forKey: "customMessageKey")).to(equal("This is a custom message -"))
-//                }
-//            }
-//            describe("#getCustomMessage") {
-//                it("returns the custom message attribute") {
-//                    subject.setCustomMessage(customMessage: "This is a custom message -")
-//                    expect(subject.getCustomMessage()).to(equal("This is a custom message -"))
-//                }
-//                it("returns nil") {
-//                    subject.defaults.set(nil, forKey: "customMessageKey")
-//                    expect(subject.getCustomMessage()).to(equal("Not nil"))
-//                }
-//            }
-//        }
  
 }

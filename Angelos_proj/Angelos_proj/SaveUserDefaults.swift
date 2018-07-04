@@ -9,73 +9,58 @@
 import Foundation
 
 class SaveUserDefaults {
-    let defaults = UserDefaults.standard
+    
+    var defaults:UserDef
+    
+    init(defaultlib:UserDef = UserDef()) {
+        defaults = defaultlib
+    }
     
     func setName(name: String) {
-        defaults.setValue(name, forKey: "nameKey")
+        defaults.setValue(value: name, key: "nameKey")
     }
     
     func setNumber(number: String) {
-        if isNumberOneEmpty() { defaults.setValue(number, forKey: "numberKey") }
-        if isNumberTwoEmpty() { defaults.setValue(number, forKey: "numberKey2") }
-        if isNumberThreeEmpty() { defaults.setValue(number, forKey: "numberKey3") }
+        if isNumberOneEmpty() { defaults.setValue(value: number, key: "numberKey") }
+        if isNumberTwoEmpty() { defaults.setValue(value: number, key: "numberKey2") }
+        if isNumberThreeEmpty() { defaults.setValue(value: number, key: "numberKey3") }
     }
     
     func isNumberOneEmpty() -> Bool {
-        return defaults.string(forKey: "numberKey") == nil
+        return defaults.getValue(key: "numberKey") == nil
     }
     
     func isNumberTwoEmpty() -> Bool {
-        return defaults.string(forKey: "numberKey2") == nil
+        return defaults.getValue(key: "numberKey2") == nil
     }
 
     func isNumberThreeEmpty() -> Bool {
-        return defaults.string(forKey: "numberKey3") == nil
+        return defaults.getValue(key: "numberKey3") == nil
     }
 
 
     func getName() -> String {
-        if let name = defaults.string(forKey: "nameKey") {
-            return name
-        } else {
-            return("Not nil")
-        }
+        return defaults.getValue(key: "nameKey")!
     }
     
     func getNumber1() -> String {
-         if let number = defaults.string(forKey: "numberKey") {
-            return number
-        } else {
-            return("Not nil")
-        }
+        return defaults.getValue(key: "numberKey")!
     }
 
     func getNumber2() -> String {
-        if let number = defaults.string(forKey: "numberKey2") {
-            return number
-        } else {
-            return("Not nil")
-        }
+        return defaults.getValue(key: "numberKey2")!
     }
     
     func getNumber3() -> String {
-        if let number = defaults.string(forKey: "numberKey3") {
-            return number
-        } else {
-            return("Not nil")
-        }
+        return defaults.getValue(key: "numberKey3")!
     }
     
     func setCustomMessage(customMessage: String) {
-        defaults.setValue(customMessage, forKey: "customMessageKey")
+        defaults.setValue(value: customMessage, key: "customMessageKey")
     }
     
     func getCustomMessage() -> String {
-        if let customMessage = defaults.string(forKey: "customMessageKey") {
-            return customMessage
-        } else {
-            return("Not nil")
-        }
+        return defaults.getValue(key: "customMessageKey")!
     }
 
 }
