@@ -70,7 +70,7 @@ class ViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         locationHandler.permission()
-        openingPage()
+        homePage()
         warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
@@ -420,7 +420,7 @@ class ViewController: UIViewController{
         featureSettingsButton.isHidden = true
         
         //input fields
-        timeInputField.isHidden = false
+        timeInputField.isHidden = true
         numberInputField1.isHidden = true
         numberInputField2.isHidden = true
         numberInputField3.isHidden = true
@@ -440,7 +440,7 @@ class ViewController: UIViewController{
         contactNumberLabel2.isHidden = true
         contactNumberLabel3.isHidden = true
         nameLabel.isHidden = true
-        callTimeLabel.isHidden = false
+        callTimeLabel.isHidden = true
         emergencyContactsLabel.isHidden = true
         
         //text
