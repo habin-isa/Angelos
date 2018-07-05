@@ -166,7 +166,7 @@ At our morning stand-up, the team agreed objective of the day was to finish addi
 
 ### Day 8
 
-Following the feature freeze, we spent the morning tidying up our existing features. After lunch, one pair moved on to tidying up the front end and adding the disguise while the other pair refactored the back end. Unfortuntaley progress was once again hindered by Xcode glitches, which meant progress was slower than initially anticipated
+Following the feature freeze, we spent the morning tidying up our existing features. After lunch, one pair moved on to tidying up the front end and adding the disguise while the other pair refactored the back end. Unfortunately progress was once again hindered by Xcode glitches, which meant progress was slower than initially anticipated
 
 AM:
 * Muzzi and Charly fixed an error with the geolocation
@@ -181,6 +181,10 @@ PM:
 
 Our final day of work on the project was spent tidying up the final loose ends of the project, and bringing together our presentation.
 
+* Jess and Charly added a fake call screen and got the fake call function to work as we wanted
+* Muzzi and Habin got the app to ask permission to use your location
+* Dione wrote feature tests
+
 ### Day 10
 
-Our final day! After our careers fair, we had the opportunity to present our completed project and celebrate!
+Our final day! After the careers fair, we had the opportunity to demo and present our completed project and celebrate!
