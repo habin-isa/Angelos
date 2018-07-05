@@ -88,6 +88,7 @@ I want the app to alert me if I am using it frequently and suggest that I seek h
 ## Code Snippet
 
 ## Test Coverage
+* Unit Tests (Model): 96.41%
 
 ## Technologies Used
 * Swift
