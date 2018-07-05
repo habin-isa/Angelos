@@ -30,6 +30,9 @@ Before getting started and settling on the idea for our final project, our team 
 * We followed a TDD approach 
 * We stuck to our objectives and had daily stand-ups, check-ins retros, and knowledge sharing sessions
 
+## Using the App
+* Check out our wiki for instructions on using the app from a user's perspective: https://github.com/habin-isa/Angelos/wiki/Thursday-5th-July-(Day-9)---Our-App-Store-Description
+
 ## User Stories
 ```
 As a User
@@ -84,9 +87,6 @@ As a user
 So I consider seeking help for repeat situations
 I want the app to alert me if I am using it frequently and suggest that I seek help
 ```
-
-## Code Snippet
-
 ## Test Coverage
 * Unit Tests (Model): 96.41%
 
