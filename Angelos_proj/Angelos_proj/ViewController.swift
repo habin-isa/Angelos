@@ -13,6 +13,8 @@ import CoreLocation
 class ViewController: UIViewController{
         
     var ringtonePlayer = AudioPlayer()
+    let messenger = Messenger()
+    let locationHandler = Messenger().coordinates.locationManager
     
     var savedDefault = SaveUserDefaults()
     var frequencyDefault = UserFrequency()
@@ -66,6 +68,7 @@ class ViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationHandler.permission()
         openingPage()
         warningOutputField.isHidden = true
         name = savedDefault.getName()
@@ -87,9 +90,9 @@ class ViewController: UIViewController{
     
     @IBAction func clickSos(sender: UIButton) {
         print(number1, number2, number3)
-        Messenger().sendMessage(phoneNumber: number1, type: "standard", userName: name)
-        Messenger().sendMessage(phoneNumber: number2, type: "standard", userName: name)
-        Messenger().sendMessage(phoneNumber: number3, type: "standard", userName: name)
+        messenger.sendMessage(phoneNumber: number1, type: "standard", userName: name)
+        messenger.sendMessage(phoneNumber: number2, type: "standard", userName: name)
+        messenger.sendMessage(phoneNumber: number3, type: "standard", userName: name)
         frequencyDefault.click()
         showWarning()
         
@@ -97,18 +100,18 @@ class ViewController: UIViewController{
     
     @IBAction func clickPolice(_ sender: UIButton) {
         print(number1, number2, number3)
-        Messenger().sendMessage(phoneNumber: number1, type: "urgent", userName: name)
-        Messenger().sendMessage(phoneNumber: number2, type: "urgent", userName: name)
-        Messenger().sendMessage(phoneNumber: number3, type: "urgent", userName: name)
+        messenger.sendMessage(phoneNumber: number1, type: "urgent", userName: name)
+        messenger.sendMessage(phoneNumber: number2, type: "urgent", userName: name)
+        messenger.sendMessage(phoneNumber: number3, type: "urgent", userName: name)
         frequencyDefault.click()
         showWarning()
     }
     
     @IBAction func clickCustom(_ sender: UIButton) {
         print(number1, number2, number3)
-        Messenger().sendCustomMessage(phoneNumber: number1, userName: name, customMessage: customMessage)
-        Messenger().sendCustomMessage(phoneNumber: number2, userName: name, customMessage: customMessage)
-        Messenger().sendCustomMessage(phoneNumber: number3, userName: name, customMessage: customMessage)
+        messenger.sendCustomMessage(phoneNumber: number1, userName: name, customMessage: customMessage)
+        messenger.sendCustomMessage(phoneNumber: number2, userName: name, customMessage: customMessage)
+        messenger.sendCustomMessage(phoneNumber: number3, userName: name, customMessage: customMessage)
         frequencyDefault.click()
         showWarning()
     }
@@ -143,9 +146,9 @@ class ViewController: UIViewController{
         savedDefault.setNumber(number: number1)
         savedDefault.setNumber(number: number2)
         savedDefault.setNumber(number: number3)
-        Messenger().sendMessage(phoneNumber: number1, type: "inform", userName: name)
-        Messenger().sendMessage(phoneNumber: number2, type: "inform", userName: name)
-        Messenger().sendMessage(phoneNumber: number3, type: "inform", userName: name)
+        messenger.sendMessage(phoneNumber: number1, type: "inform", userName: name)
+        messenger.sendMessage(phoneNumber: number2, type: "inform", userName: name)
+        messenger.sendMessage(phoneNumber: number3, type: "inform", userName: name)
         homePage()
     }
     

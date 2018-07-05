@@ -16,8 +16,11 @@ class CoreLoc{
     
     init() {
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
+    }
+    
+    func permission() {
+        locationManager.requestWhenInUseAuthorization()
     }
     
     func latitude() -> Double {

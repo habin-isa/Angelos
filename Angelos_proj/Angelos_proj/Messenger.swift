@@ -12,6 +12,7 @@ class Messenger {
     let accountSID = EncryptedKeys().accountSID
     let auth = EncryptedKeys().authKey
     let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"]
+    let coordinates = Location()
     
     func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String, userName:String, dateTime:DateTime = DateTime()) -> Void {
         let body = createBody(type: type, dateTime: dateTime, userName: userName)
@@ -32,7 +33,7 @@ class Messenger {
     func createBody(type:String, dateTime:DateTime, userName:String) -> String {
         var body = (type == "urgent" ? messages[1] : messages[0])
         if type == "inform" { body = messages[2] }
-        body += " \(userName). \(dateTime.formatDate()). Current Location: \(Location().returnLink())"
+        body += " \(userName). \(dateTime.formatDate()). Current Location: \(coordinates.returnLink())"
         return body
     }
     

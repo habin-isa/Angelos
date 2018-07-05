@@ -20,8 +20,8 @@ class LocationTest: XCTestCase {
     }
     
     func testReturnLinkReturnsLinkWithCoordinates() {
-        let mockCoreLoc = MockCoreLoc()
-        XCTAssertEqual(subject.returnLink(locationManager: mockCoreLoc), "http://maps.apple.com/?ll=1.23,4.56")
+        subject.locationManager = MockCoreLoc()
+        XCTAssertEqual(subject.returnLink(), "http://maps.apple.com/?ll=1.23,4.56")
     }
     
 }
