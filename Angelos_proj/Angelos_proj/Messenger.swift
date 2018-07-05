@@ -11,7 +11,7 @@ import Foundation
 class Messenger {
     let accountSID = EncryptedKeys().accountSID
     let auth = EncryptedKeys().authKey
-    let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"]
+    let messages = ["Your friend has activated a distress signal. Please check up on them at the given location. -", "Your friend has activated an emergency alert. Please notify the authorities of their location. -", "You have been listed as an emergency contact for -"]
     let coordinates = Location()
     
     func sendMessage(phoneNumber:String, alamo:Alamo = Alamo(), type:String, userName:String, dateTime:DateTime = DateTime()) -> Void {

@@ -25,13 +25,7 @@
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>bye</string>
-	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
-	<string>hi</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
+	<string>Swift Exit requires location permission in order to let your emergency contacts know where you are!</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

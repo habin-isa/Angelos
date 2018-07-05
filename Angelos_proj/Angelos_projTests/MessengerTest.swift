@@ -36,7 +36,7 @@ class MessengerTest: XCTestCase {
     }
 
     func testSendMessageFunctionIsCalled() {
-        XCTAssertEqual(mockAlamo.requestFunctionCalled, true)
+        XCTAssertTrue(mockAlamo.requestFunctionCalled)
     }
     
     func testAlamoRequestCalledWithCorrectUrl() {
@@ -52,24 +52,24 @@ class MessengerTest: XCTestCase {
     }
     
     func testBodyIsArray() {
-        let messages = ["PLZ SEND HELP NOW -", "Call the Police -", "You have been listed as my emergency contact -"]
+        let messages = ["Your friend has activated a distress signal. Please check up on them at the given location. -", "Your friend has activated an emergency alert. Please notify the authorities of their location. -", "You have been listed as an emergency contact for -"]
         XCTAssertEqual(self.messenger.messages, messages)
     }
     
     func testBodyOfPoliceMessage() {
-        let policeBody = "Call the Police -"
+        let policeBody = "Your friend has activated an emergency alert. Please notify the authorities of their location. -"
         XCTAssertEqual(self.messenger.messages[1], policeBody)
     }
     
     func testBodyOfInformMessage() {
-        let informBody = "You have been listed as my emergency contact -"
+        let informBody = "You have been listed as an emergency contact for -"
         XCTAssertEqual(self.messenger.messages[2], informBody)
     }
     
     func testSendCustomMessageCallsSendRequest() {
         let mockAlamo = MockAlamo()
         messenger.sendCustomMessage(phoneNumber: "456", alamo: mockAlamo, userName: "Charly", customMessage: "This is a custom message")
-        XCTAssertEqual(mockAlamo.requestFunctionCalled, true)
+        XCTAssertTrue(mockAlamo.requestFunctionCalled)
     }
 
 }
