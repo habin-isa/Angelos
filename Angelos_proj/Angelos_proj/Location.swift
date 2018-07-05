@@ -10,7 +10,9 @@ import Foundation
 
 class Location {
     
-    func returnLink(locationManager:CoreLoc = CoreLoc()) -> String {
+    var locationManager = CoreLoc()
+    
+    func returnLink() -> String {
         let latitude = locationManager.latitude()
         let longitude = locationManager.longitude()
         return "http://maps.apple.com/?ll=\(latitude),\(longitude)"
