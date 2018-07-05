@@ -32,16 +32,18 @@ class Angelos_projUITests: XCTestCase {
 //        XCUIApplication().buttons["SOS"].tap()
 //    }
     
-    func testInputNameAndNumber() {
     
+
+    
+    func inputAllData () {
+        
         let app = XCUIApplication()
         let nameTextField = app.textFields["Name"]
         let textFieldElementQuery = app.otherElements.containing(.staticText, identifier:"Your name")
         let numberTextField1 = textFieldElementQuery.children(matching: .textField).element(boundBy: 1)
         let numberTextField2 = app.textFields["Number"]
         let numberTextField3 = textFieldElementQuery.children(matching: .textField).element(boundBy: 3)
-        let submitButton = app.buttons["Submit"]
-        
+    
         nameTextField.tap()
         nameTextField.typeText("Muzzi")
         numberTextField1.tap()
@@ -50,6 +52,20 @@ class Angelos_projUITests: XCTestCase {
         numberTextField2.typeText("2345678901")
         numberTextField3.tap()
         numberTextField3.typeText("3456789012")
+        
+    }
+    
+    func testInputNameAndNumber() {
+        
+        let app = XCUIApplication()
+        let nameTextField = app.textFields["Name"]
+        let textFieldElementQuery = app.otherElements.containing(.staticText, identifier:"Your name")
+        let numberTextField1 = textFieldElementQuery.children(matching: .textField).element(boundBy: 1)
+        let numberTextField2 = app.textFields["Number"]
+        let numberTextField3 = textFieldElementQuery.children(matching: .textField).element(boundBy: 3)
+        let submitButton = app.buttons["Submit"]
+    
+        inputAllData()
 
         XCTAssertEqual(nameTextField.exists, true)
         XCTAssertEqual(numberTextField1.exists, true)
@@ -57,5 +73,68 @@ class Angelos_projUITests: XCTestCase {
         XCTAssertEqual(numberTextField3.exists, true)
         XCTAssertEqual(submitButton.exists, true)
         
+    }
+    
+    func testGoesToDecoyPageSettingsButtonisVisible () {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let settingsButton = app.buttons["Settings"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(settingsButton.exists, true)
+
+    }
+    
+    func testGoesToDecoyPageFakeCallButtonisVisible () {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let fakeCallButton = app.buttons["Fake Call"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(fakeCallButton.exists, true)
+        
+    }
+    
+    func testGoesToDecoyPagePoliceButtonisVisible () {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let policeButton = app.buttons["POLICE"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(policeButton.exists, true)
+        
+    }
+    
+    func testGoesToDecoyPageSOSButtonisVisible() {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let sosButton = app.buttons["SOS"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(sosButton.exists, true)
+    }
+    
+    func testGoesToDecoyPageCustomButtonisVisible() {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let customButton = app.buttons["CUSTOM"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(customButton.exists, true)
     }
 }
