@@ -19,7 +19,7 @@ class UserDef {
         if let value = defaults.string(forKey: key) {
             return value
         } else {
-            return("Not nil")
+            return("")
         }
     }
 }
