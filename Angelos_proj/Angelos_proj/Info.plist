@@ -28,6 +28,10 @@
 	<string>bye</string>
 	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
 	<string>hi</string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
+	<key>CFBundleDisplayName</key>
+	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
