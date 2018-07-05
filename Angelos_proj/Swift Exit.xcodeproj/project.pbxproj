@@ -313,7 +313,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Habin Kim";
+				ORGANIZATIONNAME = "Panic Attap";
 				TargetAttributes = {
 					0AB4D64C20E2932C00BCCF61 = {
 						CreatedOnToolsVersion = 9.4.1;
