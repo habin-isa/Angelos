@@ -125,4 +125,16 @@ class Angelos_projUITests: XCTestCase {
         submitButton.tap()
         XCTAssertEqual(sosButton.exists, true)
     }
+    
+    func testGoesToDecoyPageCustomButtonisVisible() {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let customButton = app.buttons["CUSTOM"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(customButton.exists, true)
+    }
 }
