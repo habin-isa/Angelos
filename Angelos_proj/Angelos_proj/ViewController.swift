@@ -59,7 +59,6 @@ class ViewController: UIViewController{
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var customMsgOutputField: UILabel!
-    @IBOutlet weak var warningOutputField: UILabel!
     @IBOutlet weak var customMsgLabel: UILabel!
     @IBOutlet weak var contactNumberLabel1: UILabel!
     @IBOutlet weak var contactNumberLabel2: UILabel!
@@ -71,7 +70,6 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         locationHandler.permission()
         homePage()
-        warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
         number2 = savedDefault.getNumber2()
@@ -163,9 +161,8 @@ class ViewController: UIViewController{
     
     func showWarning() {
         if frequencyDefault.triggerConcern() == true {
-            warningOutputField.isHidden = false
+            warningMessageShow(true)
         } else {
-            warningOutputField.isHidden = true
         }
     }
     
@@ -219,6 +216,18 @@ class ViewController: UIViewController{
     
     @IBAction func gofeatureSettings(_ sender: Any) {
         featureSettings()
+    }
+    
+    func warningMessageShow(_ animated: Bool) {
+        createAlert(title: "Hi there!", message: "You seem to be using our app frequently - please consider referring to your settings directory for further support")
+    }
+    
+    func createAlert(title: String, message: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     //page layouts
