@@ -33,16 +33,29 @@ class Angelos_projUITests: XCTestCase {
 //    }
     
     func testInputNameAndNumber() {
-        
+    
         let app = XCUIApplication()
         let nameTextField = app.textFields["Name"]
-        let numberTextField = app.textFields["Number"]
+        let textFieldElementQuery = app.otherElements.containing(.staticText, identifier:"Your name")
+        let numberTextField1 = textFieldElementQuery.children(matching: .textField).element(boundBy: 1)
+        let numberTextField2 = app.textFields["Number"]
+        let numberTextField3 = textFieldElementQuery.children(matching: .textField).element(boundBy: 3)
+        let submitButton = app.buttons["Submit"]
+        
         nameTextField.tap()
-        nameTextField.typeText("My Name")
-        numberTextField.tap()
-        numberTextField.typeText("1234567890")
-        app.buttons["Submit"].tap()
+        nameTextField.typeText("Muzzi")
+        numberTextField1.tap()
+        numberTextField1.typeText("1234567890")
+        numberTextField2.tap()
+        numberTextField2.typeText("2345678901")
+        numberTextField3.tap()
+        numberTextField3.typeText("3456789012")
+
         XCTAssertEqual(nameTextField.exists, true)
-        XCTAssertEqual(numberTextField.exists, true)
+        XCTAssertEqual(numberTextField1.exists, true)
+        XCTAssertEqual(numberTextField2.exists, true)
+        XCTAssertEqual(numberTextField3.exists, true)
+        XCTAssertEqual(submitButton.exists, true)
+        
     }
 }
