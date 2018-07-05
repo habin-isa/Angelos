@@ -59,7 +59,6 @@ class ViewController: UIViewController{
     @IBOutlet weak var numberOutputField3: UILabel!
     @IBOutlet weak var nameOutputField: UILabel!
     @IBOutlet weak var customMsgOutputField: UILabel!
-    @IBOutlet weak var warningOutputField: UILabel!
     @IBOutlet weak var customMsgLabel: UILabel!
     @IBOutlet weak var contactNumberLabel1: UILabel!
     @IBOutlet weak var contactNumberLabel2: UILabel!
@@ -71,7 +70,6 @@ class ViewController: UIViewController{
         super.viewDidLoad()
         locationHandler.permission()
         homePage()
-        warningOutputField.isHidden = true
         name = savedDefault.getName()
         number1 = savedDefault.getNumber1()
         number2 = savedDefault.getNumber2()
@@ -165,7 +163,6 @@ class ViewController: UIViewController{
         if frequencyDefault.triggerConcern() == true {
             warningMessageShow(true)
         } else {
-            warningOutputField.isHidden = true
         }
     }
     
