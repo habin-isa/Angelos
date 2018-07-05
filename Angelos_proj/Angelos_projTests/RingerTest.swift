@@ -34,4 +34,13 @@ class RingerTest: XCTestCase {
         })
     }
     
+    func testAudioPlayersStopFunctionWasCalled() {
+        let mockAudioPlayer = MockAudioPlayer()
+        ringer.playTime = 0.0
+        ringer.play(ringtonePlayer: mockAudioPlayer, time: 0.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
+            XCTAssertEqual(mockAudioPlayer.stopWasCalled, true)
+        })
+    }
+    
 }
