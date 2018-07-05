@@ -246,12 +246,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="IMG_1636" translatesAutoresizingMaskIntoConstraints="NO" id="ozK-hK-5sI">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
                         <outlet property="callButton" destination="tDJ-21-lFa" id="9Go-qA-ZiA"/>
+                        <outlet property="callImage" destination="ozK-hK-5sI" id="O6p-oY-AQW"/>
                         <outlet property="callTimeLabel" destination="SOU-VO-wnP" id="fvP-Ua-2vb"/>
                         <outlet property="contactNumberLabel1" destination="qgN-6h-qp3" id="QFy-bN-yAs"/>
                         <outlet property="contactNumberLabel2" destination="2dg-md-cgV" id="HiM-MY-Q3d"/>
@@ -290,6 +295,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="IMG_1636" width="1242" height="2208"/>
         <image name="reset-your-iphones-home-screen-layout.w1456" width="749" height="1334"/>
     </resources>
 </document>
