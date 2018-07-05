@@ -88,7 +88,7 @@ class Angelos_projUITests: XCTestCase {
 
     }
     
-    func testGoesToDecoyPageCallButtonisVisible () {
+    func testGoesToDecoyPageFakeCallButtonisVisible () {
         
         let app = XCUIApplication()
         let submitButton = app.buttons["Submit"]
@@ -98,6 +98,26 @@ class Angelos_projUITests: XCTestCase {
         
         submitButton.tap()
         XCTAssertEqual(fakeCallButton.exists, true)
+        
+    }
+    
+    func testGoesToDecoyPagePoliceButtonisVisible () {
+        
+        let app = XCUIApplication()
+        let submitButton = app.buttons["Submit"]
+        let policeButton = app.buttons["POLICE"]
+        
+        inputAllData()
+        
+        submitButton.tap()
+        XCTAssertEqual(policeButton.exists, true)
+        
+    }
+    
+    func test() {
+        
+//        app.buttons["SOS"].tap()
+//        app.buttons["CUSTOM"].tap()
         
     }
 }
