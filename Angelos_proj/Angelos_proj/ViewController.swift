@@ -25,6 +25,7 @@ class ViewController: UIViewController{
 
     //image
     @IBOutlet weak var homeImage: UIImageView!
+    @IBOutlet weak var callImage: UIImageView!
     
     //text
     @IBOutlet weak var textView: UITextView!
@@ -117,9 +118,10 @@ class ViewController: UIViewController{
     @IBAction func clickFakeCall(_ sender: UIButton) {
         let ringer = Ringer()
         timeInputField.text = ""
-        ringer.play(ringtonePlayer: ringtonePlayer, time: 5)
+        ringer.play(ringtonePlayer: ringtonePlayer, time: 10)
         frequencyDefault.click()
         showWarning()
+        fakeCallScreen()
     }
 
     
@@ -190,6 +192,15 @@ class ViewController: UIViewController{
         return ""
     }
     
+    func fakeCallScreen() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            self.callImage.isHidden = false
+        }
+        DispatchQueue.main.asyncAfter(deadline: .now() + 20) {
+            self.callImage.isHidden = true
+        }
+    }
+    
     @IBAction func DisplayText(_ sender: Any) {
         self.textView.text = load(file: "directory")
         directoriesPage()
@@ -251,6 +262,7 @@ class ViewController: UIViewController{
         
         //image
         homeImage.isHidden = true
+        callImage.isHidden = true
         
     }
     
@@ -297,6 +309,7 @@ class ViewController: UIViewController{
         
         //image
         homeImage.isHidden = true
+        callImage.isHidden = true
         
     }
     
@@ -342,6 +355,7 @@ class ViewController: UIViewController{
         
         //image
         homeImage.isHidden = false
+        callImage.isHidden = true
     }
     
     func directoriesPage() {
@@ -386,6 +400,7 @@ class ViewController: UIViewController{
         
         //image
         homeImage.isHidden = true
+        callImage.isHidden = true
     }
     
     func featureSettings() {
@@ -430,6 +445,7 @@ class ViewController: UIViewController{
         
         //image
         homeImage.isHidden = true
+        callImage.isHidden = true
     }
     
     
