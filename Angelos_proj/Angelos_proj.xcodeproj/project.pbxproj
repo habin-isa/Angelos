@@ -29,6 +29,7 @@
 		7E7F921520E6775B0028AFA6 /* MockCoreLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921420E6775B0028AFA6 /* MockCoreLoc.swift */; };
 		7E7F921720E6778D0028AFA6 /* LocationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921620E6778D0028AFA6 /* LocationTest.swift */; };
 		7E7F921920E6D4090028AFA6 /* Ringer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E7F921820E6D4090028AFA6 /* Ringer.swift */; };
+		7EC88DB320ED8EE70008111C /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EC88DB220ED8EE70008111C /* SettingsViewController.swift */; };
 		9CB54EF578267012F3F59FDA /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */; };
 		B25D47DF20E668D0003F6D1A /* SaveUserDefaultsTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C19436BE20E52D06005FCB24 /* SaveUserDefaultsTest.swift */; };
 		B29E0C9420EB920500BBA323 /* UserFrequencyTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B29E0C9320EB920500BBA323 /* UserFrequencyTest.swift */; };
@@ -91,6 +92,7 @@
 		7E7F921420E6775B0028AFA6 /* MockCoreLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreLoc.swift; sourceTree = "<group>"; };
 		7E7F921620E6778D0028AFA6 /* LocationTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTest.swift; sourceTree = "<group>"; };
 		7E7F921820E6D4090028AFA6 /* Ringer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ringer.swift; sourceTree = "<group>"; };
+		7EC88DB220ED8EE70008111C /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		A12F6825BFCCD3F09EBBB98D /* Pods_Angelos_proj.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_proj.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AFBA80C47637919B2E4C0BAF /* Pods-Angelos_proj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_proj.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_proj/Pods-Angelos_proj.release.xcconfig"; sourceTree = "<group>"; };
 		B29E0C9320EB920500BBA323 /* UserFrequencyTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserFrequencyTest.swift; sourceTree = "<group>"; };
@@ -174,6 +176,7 @@
 				0AB4D65020E2932C00BCCF61 /* AppDelegate.swift */,
 				0AB4D65220E2932C00BCCF61 /* ViewController.swift */,
 				0AB4D65420E2932C00BCCF61 /* Main.storyboard */,
+				7EC88DB220ED8EE70008111C /* SettingsViewController.swift */,
 				0AB4D65720E2932D00BCCF61 /* Assets.xcassets */,
 				0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */,
 				0AB4D65C20E2932D00BCCF61 /* Info.plist */,
@@ -448,6 +451,7 @@
 				C114DA0A20E3984200240BE0 /* Messenger.swift in Sources */,
 				7E7F921320E677260028AFA6 /* CoreLoc.swift in Sources */,
 				C19436C020E52D1E005FCB24 /* SaveUserDefaults.swift in Sources */,
+				7EC88DB320ED8EE70008111C /* SettingsViewController.swift in Sources */,
 				7E7F921120E676CD0028AFA6 /* Location.swift in Sources */,
 				7E7F921920E6D4090028AFA6 /* Ringer.swift in Sources */,
 				B2DAB66520EA8CF2002FD26B /* DateTime.swift in Sources */,
