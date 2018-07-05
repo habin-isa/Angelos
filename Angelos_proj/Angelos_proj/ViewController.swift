@@ -23,8 +23,12 @@ class ViewController: UIViewController{
     var customMessage = ""
     var userFrequency = 0
 
-    
+    //image
     @IBOutlet weak var homeImage: UIImageView!
+    
+    //text
+    @IBOutlet weak var textView: UITextView!
+    
     //buttons
     @IBOutlet weak var featureSettingsButton: UIButton!
     @IBOutlet weak var homeButton: UIButton!
@@ -44,6 +48,21 @@ class ViewController: UIViewController{
     @IBOutlet weak var nameInputField: UITextField!
     @IBOutlet weak var timeInputField: UITextField!
     @IBOutlet weak var customMsgInputField: UITextField!
+    
+    //output fields
+    @IBOutlet weak var callTimeLabel: UILabel!
+    @IBOutlet weak var numberOutputField1: UILabel!
+    @IBOutlet weak var numberOutputField2: UILabel!
+    @IBOutlet weak var numberOutputField3: UILabel!
+    @IBOutlet weak var nameOutputField: UILabel!
+    @IBOutlet weak var customMsgOutputField: UILabel!
+    @IBOutlet weak var warningOutputField: UILabel!
+    @IBOutlet weak var customMsgLabel: UILabel!
+    @IBOutlet weak var contactNumberLabel1: UILabel!
+    @IBOutlet weak var contactNumberLabel2: UILabel!
+    @IBOutlet weak var contactNumberLabel3: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emergencyContactsLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -146,24 +165,6 @@ class ViewController: UIViewController{
         }
     }
     
-   
-    @IBOutlet weak var callTimeLabel: UILabel!
-    @IBOutlet weak var numberOutputField1: UILabel!
-    @IBOutlet weak var numberOutputField2: UILabel!
-    @IBOutlet weak var numberOutputField3: UILabel!
-    @IBOutlet weak var nameOutputField: UILabel!
-    @IBOutlet weak var customMsgOutputField: UILabel!
-    @IBOutlet weak var warningOutputField: UILabel!
-    @IBOutlet weak var customMsgLabel: UILabel!
-    @IBOutlet weak var contactNumberLabel1: UILabel!
-    @IBOutlet weak var contactNumberLabel2: UILabel!
-    @IBOutlet weak var contactNumberLabel3: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
-    @IBOutlet weak var emergencyContactsLabel: UILabel!
-    
-    
-    @IBOutlet weak var textView: UITextView!
-    
     @IBAction func readFile1(_ sender: Any) {
         
         self.textView.text = load(file: "directory")
@@ -206,6 +207,8 @@ class ViewController: UIViewController{
     @IBAction func gofeatureSettings(_ sender: Any) {
         featureSettings()
     }
+    
+    //page layouts
     
     func openingPage() {
         //buttons
