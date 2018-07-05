@@ -31,12 +31,12 @@ class SaveUserDefaultsTest: XCTestCase {
     
     func testSetNameCallsSetValueWithName() {
         subject.setName(name: "Muzzi")
-        XCTAssertEqual(mockUserDef.setValueFirstParamter, "Muzzi")
+        XCTAssertEqual(mockUserDef.setValueFirstParameter, "Muzzi")
     }
 
     func testSetNameCallsSetValueWithKey() {
         subject.setName(name: "Muzzi")
-        XCTAssertEqual(mockUserDef.setValueSecondParamter, "nameKey")
+        XCTAssertEqual(mockUserDef.setValueSecondParameter, "nameKey")
     }
     
     func testGetNameCallsGetValue() {
@@ -57,16 +57,34 @@ class SaveUserDefaultsTest: XCTestCase {
     
     func testSetCustomMessageCallsSetValueWithMessage() {
         subject.setCustomMessage(customMessage: "This is a custom message -")
-        XCTAssertEqual(mockUserDef.setValueFirstParamter, "This is a custom message -")
+        XCTAssertEqual(mockUserDef.setValueFirstParameter, "This is a custom message -")
     }
     
     func testSetCustomMessageCallsSetValueWithKey() {
         subject.setCustomMessage(customMessage: "This is a custom message -")
-        XCTAssertEqual(mockUserDef.setValueSecondParamter, "customMessageKey")
+        XCTAssertEqual(mockUserDef.setValueSecondParameter, "customMessageKey")
     }
     
     func testGetCustomMessageCallsGetValue() {
         XCTAssertEqual(subject.getCustomMessage(), "getValue was called with customMessageKey")
     }
+    
+    func testIsNumberOneEmpty() {
+        XCTAssertFalse(subject.isNumberOneEmpty())
+    }
+    
+    func testIsNumberTwoEmpty() {
+        XCTAssertFalse(subject.isNumberTwoEmpty())
+    }
+    
+    func testIsNumberThreeEmpty() {
+        XCTAssertFalse(subject.isNumberThreeEmpty())
+    }
+    
+//    func testSetNumberCallsSetValue() {
+//        XCTAssertEqual(subject.isNumberOneEmpty(), true)
+//    }
+    
+    
  
 }

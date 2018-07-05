@@ -13,14 +13,14 @@ class MockUserDef: UserDef {
     
     var setValueCalled = false
     var getValueCalled = false
-    var setValueFirstParamter:String? = nil
-    var setValueSecondParamter:String? = nil
-    var getValueFirstParamter:String? = nil 
+    var setValueFirstParameter:String? = nil
+    var setValueSecondParameter:String? = nil
+    var getValueFirstParameter:String? = nil
     
     override func setValue(value: String, key: String) {
         setValueCalled = true
-        setValueFirstParamter = value
-        setValueSecondParamter = key
+        setValueFirstParameter = value
+        setValueSecondParameter = key
     }
     
     override func getValue(key: String) -> String {

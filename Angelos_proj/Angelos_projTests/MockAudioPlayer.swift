@@ -13,9 +13,14 @@ import Foundation
 class MockAudioPlayer: AudioPlayer {
     
     var playWasCalled = false
+    var stopWasCalled = false
     
     override func play() {
         playWasCalled = true
+    }
+    
+    override func stop() {
+        stopWasCalled = true
     }
     
 }
