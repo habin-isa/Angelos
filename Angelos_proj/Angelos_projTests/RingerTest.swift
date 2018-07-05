@@ -30,7 +30,7 @@ class RingerTest: XCTestCase {
         ringer.playTime = 0.0
         ringer.play(ringtonePlayer: mockAudioPlayer, time: 0.0)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            XCTAssertEqual(mockAudioPlayer.playWasCalled, true)
+            XCTAssertTrue(mockAudioPlayer.playWasCalled)
         })
     }
     
@@ -39,7 +39,7 @@ class RingerTest: XCTestCase {
         ringer.playTime = 0.0
         ringer.play(ringtonePlayer: mockAudioPlayer, time: 0.0)
         DispatchQueue.main.asyncAfter(deadline: .now() + 3.0, execute: {
-            XCTAssertEqual(mockAudioPlayer.stopWasCalled, true)
+            XCTAssertTrue(mockAudioPlayer.stopWasCalled)
         })
     }
     

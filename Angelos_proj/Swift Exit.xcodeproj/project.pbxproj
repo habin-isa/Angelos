@@ -11,7 +11,6 @@
 		0AB4D65320E2932C00BCCF61 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AB4D65220E2932C00BCCF61 /* ViewController.swift */; };
 		0AB4D65620E2932C00BCCF61 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65420E2932C00BCCF61 /* Main.storyboard */; };
 		0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65720E2932D00BCCF61 /* Assets.xcassets */; };
-		0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */; };
 		59A375E76ADEE59D5AAFD8AC /* Pods_Angelos_projTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E780A1B20E441B400975F5C /* Pods_Angelos_projTests.framework */; };
 		7E0C24C620EBD77900385849 /* MockAudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C24C520EBD77900385849 /* MockAudioPlayer.swift */; };
 		7E0C24C820EBD83200385849 /* RingerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E0C24C720EBD83200385849 /* RingerTest.swift */; };
@@ -67,7 +66,6 @@
 		0AB4D65220E2932C00BCCF61 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0AB4D65520E2932C00BCCF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0AB4D65720E2932D00BCCF61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0AB4D65A20E2932D00BCCF61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0AB4D65C20E2932D00BCCF61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		13C5E62FAD7D8DA1BACA46AD /* Pods-Angelos_projTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Angelos_projTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Angelos_projTests/Pods-Angelos_projTests.release.xcconfig"; sourceTree = "<group>"; };
 		14DE7F13C718D9866A2A92A7 /* Pods_Angelos_projTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Angelos_projTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,7 +173,6 @@
 				0AB4D65220E2932C00BCCF61 /* ViewController.swift */,
 				0AB4D65420E2932C00BCCF61 /* Main.storyboard */,
 				0AB4D65720E2932D00BCCF61 /* Assets.xcassets */,
-				0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */,
 				0AB4D65C20E2932D00BCCF61 /* Info.plist */,
 				C114DA0920E3984200240BE0 /* Messenger.swift */,
 				7E780A0C20E42BE500975F5C /* Alamo.swift */,
@@ -313,7 +310,7 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0940;
 				LastUpgradeCheck = 0940;
-				ORGANIZATIONNAME = "Habin Kim";
+				ORGANIZATIONNAME = "Panic Attap";
 				TargetAttributes = {
 					0AB4D64C20E2932C00BCCF61 = {
 						CreatedOnToolsVersion = 9.4.1;
@@ -328,7 +325,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0AB4D64820E2932C00BCCF61 /* Build configuration list for PBXProject "Angelos_proj" */;
+			buildConfigurationList = 0AB4D64820E2932C00BCCF61 /* Build configuration list for PBXProject "Swift Exit" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -354,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2DAB65D20EA6428002FD26B /* marimba.mp3 in Resources */,
-				0AB4D65B20E2932D00BCCF61 /* LaunchScreen.storyboard in Resources */,
 				C19B8ACD20ECE711005C02CB /* directory.txt in Resources */,
 				0AB4D65820E2932D00BCCF61 /* Assets.xcassets in Resources */,
 				0AB4D65620E2932C00BCCF61 /* Main.storyboard in Resources */,
@@ -503,14 +499,6 @@
 				0AB4D65520E2932C00BCCF61 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0AB4D65920E2932D00BCCF61 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0AB4D65A20E2932D00BCCF61 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -745,7 +733,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0AB4D64820E2932C00BCCF61 /* Build configuration list for PBXProject "Angelos_proj" */ = {
+		0AB4D64820E2932C00BCCF61 /* Build configuration list for PBXProject "Swift Exit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0AB4D65D20E2932D00BCCF61 /* Debug */,
