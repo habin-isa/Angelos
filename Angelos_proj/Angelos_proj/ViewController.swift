@@ -135,6 +135,7 @@ class ViewController: UIViewController{
         customMsgInputField.text = ""
         customMsgOutputField.text = "\(customMessage)"
         savedDefault.setCustomMessage(customMessage: customMessage)
+        customMsgOutputField.isHidden = false
     }
     
     func showWarning() {
@@ -395,7 +396,7 @@ class ViewController: UIViewController{
         submitButton.isHidden = true
         saveCustomMsgButton.isHidden = false
         homeButton.isHidden = false
-        settingsButton.isHidden = false
+        settingsButton.isHidden = true
         featureSettingsButton.isHidden = true
         
         //input fields
@@ -407,7 +408,7 @@ class ViewController: UIViewController{
         customMsgInputField.isHidden = false
         
         //output fields
-        customMsgOutputField.isHidden = false
+        customMsgOutputField.isHidden = true
         numberOutputField1.isHidden = true
         numberOutputField2.isHidden = true
         numberOutputField3.isHidden = true
