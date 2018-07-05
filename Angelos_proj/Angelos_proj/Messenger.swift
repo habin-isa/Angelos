@@ -20,7 +20,7 @@ class Messenger {
     }
     
     func sendCustomMessage(phoneNumber:String, alamo:Alamo = Alamo(), userName:String, customMessage:String, dateTime:DateTime = DateTime()) -> Void {
-        let body = customMessage + userName + dateTime.formatDate()
+        let body = customMessage + userName + dateTime.formatDate() + coordinates.returnLink()
         sendRequest(phoneNumber: phoneNumber, body: body, alamo: alamo)
     }
     

@@ -16,7 +16,7 @@ class MessengerTest: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"standard", userName: "Dione")
+        
     }
     
     override func tearDown() {
@@ -40,6 +40,7 @@ class MessengerTest: XCTestCase {
     }
     
     func testAlamoRequestCalledWithCorrectUrl() {
+        messenger.sendMessage(phoneNumber: "123", alamo: mockAlamo, type:"standard", userName: "Dione")
         XCTAssertEqual(mockAlamo.urlCalledWith, "https://api.twilio.com/2010-04-01/Accounts/\(EncryptedKeys().accountSID)/Messages")
     }
     
