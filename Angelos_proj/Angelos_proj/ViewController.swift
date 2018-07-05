@@ -307,7 +307,7 @@ class ViewController: UIViewController{
         numberInputField1.isHidden = false
         numberInputField2.isHidden = false
         numberInputField3.isHidden = false
-        nameInputField.isHidden = true
+        nameInputField.isHidden = false
         customMsgInputField.isHidden = true
         
         //labels
@@ -315,7 +315,7 @@ class ViewController: UIViewController{
         contactNumberLabel1.isHidden = false
         contactNumberLabel2.isHidden = false
         contactNumberLabel3.isHidden = false
-        nameLabel.isHidden = true
+        nameLabel.isHidden = false
         callTimeLabel.isHidden = true
         emergencyContactsLabel.isHidden = false
         
