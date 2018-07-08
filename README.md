@@ -1,4 +1,4 @@
-# Angelos
+# Swift Exit
 This is our final project at Makers Academy. We have built a mobile app in 10 days that allows a user to discretely alert an emergency contact if they are in danger.
 
 ## Contributors
