@@ -189,3 +189,6 @@ Our final day of work on the project was spent tidying up the final loose ends o
 ### Day 10
 
 Our final day! After the careers fair, we had the opportunity to demo and present our completed project and celebrate!
+
+Check out our final presentation slides here: https://docs.google.com/presentation/d/1eqyvy3hob6UbwXifRYum8_YHTwCQhh5fMyQDj-ybH6M/edit
+
