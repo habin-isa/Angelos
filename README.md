@@ -192,3 +192,4 @@ Our final day! After the careers fair, we had the opportunity to demo and presen
 
 Check out our final presentation slides here: https://docs.google.com/presentation/d/1eqyvy3hob6UbwXifRYum8_YHTwCQhh5fMyQDj-ybH6M/edit
 
+You can also see a video of our presentation here (We come on at 29 mins): https://www.facebook.com/MakersAcademy/videos/1745533522207024/
